@@ -6,6 +6,8 @@ This reposiroty is mainly for staff where they find any issues or wanna bring so
 
 Please use the [issue tracker](https://github.com/SavandBros/www.kloud51.com/issues) to open up new issues.
 
+Note: Our frontend people are lazy to work with Github Issues, seems it's easy for them to get their tools with Github, So todoist come to be better option for them.
+
 
 ## Wiki
 
