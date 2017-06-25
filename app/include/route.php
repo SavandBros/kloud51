@@ -75,7 +75,6 @@ class Route {
 
 // Let's add some routes
 Route::add("home", "/", "Web Hosting - ");
-Route::add("hello", "/hello", "Hello Page - ");
 
 // Default route
 $base = Route::find("home");
