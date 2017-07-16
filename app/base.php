@@ -1,5 +1,6 @@
 <?php
 // Requirements
+require "include/connection.php";
 require "include/route.php";
 ?>
 <!DOCTYPE html>
