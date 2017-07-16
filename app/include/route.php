@@ -68,13 +68,13 @@ class Route {
         return static::$instances;
     }
 
-    public static function add($name, $url, $title = null, $is_html = true) {
+    public static function add($name, $url, $title = null, $is_html = false) {
         return static::$instances[$name] = new static($name, $url, $title, $is_html);
     }
 }
 
 // Let's add some routes
-Route::add("home", "/", "Web Hosting - ");
+Route::add("home", "/");
 
 // Default route
 $base = Route::find("home");
