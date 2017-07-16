@@ -4,6 +4,21 @@
 
 /* Global */
 
+body {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+[bold] {
+    font-weight: bold;
+}
+
+
 /* Navbar */
 
 .navbar-brand {
