@@ -75,4 +75,94 @@ a {
     background-image: url("../img/header.jpg");
 }
 
+
+/* Plans */
+
+.plan-wrapper {
+    padding: 5px;
+}
+
+.plan {
+    border: 1px solid #ddd;
+    border-top: none;
+    padding: 0;
+    text-align: center;
+}
+
+.plan * {
+    margin: 0;
+}
+
+.plan>div {
+    padding: 20px 0;
+    background: #fff;
+}
+
+.plan .featured {
+    position: absolute;
+    top: -30px;
+    left: 20px;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.plan .head {
+    background: #333;
+    color: #fff;
+    padding-bottom: 90px;
+    border-top: 6px solid #333;
+}
+
+.plan .head h1 {
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.plan .head p {
+    opacity: 0.5;
+}
+
+.plan .price {
+    padding: 0;
+    border: none;
+}
+
+.plan .price div {
+    border: 6px solid #333;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    line-height: 140px;
+    background: #fff;
+    margin-top: -75px;
+    display: inline-block;
+}
+
+.plan .price span {
+    font-size: 5em;
+}
+
+.plan .price small {
+    font-size: 2em;
+}
+
+.plan .detail {
+    line-height: 2em;
+}
+
+.plan .order {
+    background: #333;
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.plan .order a {
+    padding: 10px 20px;
+    letter-spacing: 1px;
+    font-size: large;
+    border-radius: 100px;
+    box-shadow: none;
 }
