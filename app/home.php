@@ -55,29 +55,27 @@ $plans = $db->select("SELECT * FROM `plans`");
     </div>
   </div>
 </div>
-<div class="container-fluid bg-1">
-  <div class="container s-pad-y">
-    <!-- Title -->
-    <h1 bold>
-      <a href="#features">Main Features</a>
-      <i class="fa fa-fw fa-cubes pull-right"></i>
-    </h1>
-    <div class="row s-mar-top text-center">
-      <div class="col-md-4">
-        <img src="assets/img/home/creditcard.png">
-        <h2>Money Back Guarantee</h2>
-        <p>Not fully satisfied with our services? Request a refund within 7 days of the initial purchase.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="assets/img/home/cpanel-logo.png">
-        <h2>Simplified Interface</h2>
-        <p>cPanel and Softaculous included for that 1-click installation in an easy-to-use interface. No coding skill required.</p>
-      </div>
-      <div class="col-md-4">
-        <img src="assets/img/home/crossroads.png">
-        <h2>Free Migration</h2>
-        <p>Send us a migration request in the support section, we'll handle the dirty work for you.</p>
-      </div>
+
+<!-- Main features -->
+<div class="container s-pad-y-hard" id="main-features">
+  <!-- Title -->
+  <h1 class="header"><a href="#main-features">Main Features</a></h1>
+  <!-- Feature list -->
+  <div class="row s-mar-top text-center">
+    <div class="col-md-4">
+      <img src="assets/img/home/creditcard.png" class="feature-image">
+      <h2>Money Back Guarantee</h2>
+      <p>Not fully satisfied with our services? Request a refund within 7 days of the initial purchase.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="assets/img/home/cpanel.png" class="feature-image">
+      <h2>Simplified Interface</h2>
+      <p>cPanel and Softaculous included for that 1-click installation in an easy-to-use interface. No coding skill required.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="assets/img/home/crossroads.png" class="feature-image">
+      <h2>Free Migration</h2>
+      <p>Send us a migration request in the support section, we'll handle the dirty work for you.</p>
     </div>
   </div>
 </div>
