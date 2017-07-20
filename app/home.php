@@ -15,13 +15,10 @@ $plans = $db->select("SELECT * FROM `plans`");
 </div>
 
 <!-- Web hosting plans -->
-<div class="container-fluid bg-1">
-  <div class="container s-pad-y-hard">
+<div class="container-fluid bg-1 s-pad-y-hard" id="plans">
+  <div class="container">
     <!-- Title -->
-    <h1 bold>
-      <a href="#plans">Web Hosting Plans</a>
-      <i class="fa fa-fw fa-server pull-right"></i>
-    </h1>
+    <h1 class="header"><a href="#plans">Web Hosting Plans</a></h1>
     <!-- Plans -->
     <div class="row s-mar-top">
       <?php foreach ($plans as $plan): ?>
@@ -58,13 +55,36 @@ $plans = $db->select("SELECT * FROM `plans`");
     </div>
   </div>
 </div>
+
+<!-- Main features -->
+<div class="container s-pad-y-hard" id="main-features">
+  <!-- Title -->
+  <h1 class="header"><a href="#main-features">Main Features</a></h1>
+  <!-- Feature list -->
+  <div class="row s-mar-top text-center">
+    <div class="col-md-4">
+      <img src="assets/img/home/creditcard.png" class="feature-image">
+      <h2>Money Back Guarantee</h2>
+      <p>Not fully satisfied with our services? Request a refund within 7 days of the initial purchase.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="assets/img/home/cpanel.png" class="feature-image">
+      <h2>Simplified Interface</h2>
+      <p>cPanel and Softaculous included for that 1-click installation in an easy-to-use interface. No coding skill required.</p>
+    </div>
+    <div class="col-md-4">
+      <img src="assets/img/home/crossroads.png" class="feature-image">
+      <h2>Free Migration</h2>
+      <p>Send us a migration request in the support section, we'll handle the dirty work for you.</p>
+    </div>
+  </div>
+</div>
+
 <!-- Why Kloud51? -->
 <div class="container-fluid bg-1" id="why">
   <div class="container s-pad-y-hard">
     <!-- Title -->
-    <h1 bold>
-      <a href="#why">Why Kloud51?</a>
-    </h1>
+    <h1 class="header"><a href="#why">Why Kloud51?</a></h1>
     <!-- Reasons -->
     <div class="row s-mar-top text-center">
       <div class="col-md-4">
