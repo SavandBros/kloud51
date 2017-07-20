@@ -172,3 +172,12 @@ a {
     border-radius: 100px;
     box-shadow: none;
 }
+
+
+/* Feature image */
+
+.feature-image {
+    border-radius: 100%;
+    padding: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
