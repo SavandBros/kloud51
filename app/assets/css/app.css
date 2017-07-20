@@ -20,6 +20,10 @@ p {
     font-weight: bold;
 }
 
+[height] {
+    line-height: 25px;
+}
+
 
 /* Navbar */
 
