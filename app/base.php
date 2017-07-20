@@ -50,6 +50,28 @@ require "include/route.php";
   <div class="page">
     <?php include $base->include; ?>
   </div>
+  <div class="container-fluid s-pad-no">
+    <div class="social row">
+      <a class="col-md-2 col-xs-4" target="_blank" href="http://forum.kloud51.com" title="Kloud51 Forum">
+        <i class="fa fa-cloud"></i>
+      </a>                    
+      <a class="col-md-2 col-xs-4" target="_blank" href="https://twitter.com/Kloud51" style="background: #0084b4">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a class="col-md-2 col-xs-4" target="_blank" href="https://instagram.com/Kloud51/" style="background: #3f729b">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a class="col-md-2 col-xs-4" target="_blank" href="https://www.facebook.com/savand.bros" style="background: #3b5998">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a class="col-md-2 col-xs-4" target="_blank" href="https://plus.google.com/+Kloud51Host" style="background: #dc4e41">
+        <i class="fa fa-google-plus"></i>
+      </a>
+      <a class="col-md-2 col-xs-4" target="_blank" href="https://www.linkedin.com/company/savand.bros" style="background: #0077b5">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </div>
+  </div>
 
   <!-- Load scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
