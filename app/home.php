@@ -15,13 +15,10 @@ $plans = $db->select("SELECT * FROM `plans`");
 </div>
 
 <!-- Web hosting plans -->
-<div class="container-fluid bg-1">
-  <div class="container s-pad-y-hard">
+<div class="container-fluid bg-1 s-pad-y-hard" id="plans">
+  <div class="container">
     <!-- Title -->
-    <h1 bold>
-      <a href="#plans">Web Hosting Plans</a>
-      <i class="fa fa-fw fa-server pull-right"></i>
-    </h1>
+    <h1 class="header"><a href="#plans">Web Hosting Plans</a></h1>
     <!-- Plans -->
     <div class="row s-mar-top">
       <?php foreach ($plans as $plan): ?>
