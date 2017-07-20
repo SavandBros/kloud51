@@ -80,6 +80,7 @@ $plans = $db->select("SELECT * FROM `plans`");
   </div>
 </div>
 
+<!-- Why kloud51 -->
 <div class="container-fluid bg-1" id="why">
   <div class="container s-pad-y-hard">
     <!-- Title -->
