@@ -65,17 +65,112 @@ $plans = $db->select("SELECT * FROM `plans`");
     <div class="col-md-4">
       <img src="assets/img/home/creditcard.png" class="feature-image">
       <h2>Money Back Guarantee</h2>
-      <p>Not fully satisfied with our services? Request a refund within 7 days of the initial purchase.</p>
+      <h4 height class="o-fade-soft">Not fully satisfied with our services? Request a refund within 7 days of the initial purchase.</h4>
     </div>
     <div class="col-md-4">
       <img src="assets/img/home/cpanel.png" class="feature-image">
       <h2>Simplified Interface</h2>
-      <p>cPanel and Softaculous included for that 1-click installation in an easy-to-use interface. No coding skill required.</p>
+      <h4 height class="o-fade-soft">cPanel and Softaculous included for that 1-click installation in an easy-to-use interface. No coding skill required.</h4>
     </div>
     <div class="col-md-4">
       <img src="assets/img/home/crossroads.png" class="feature-image">
       <h2>Free Migration</h2>
-      <p>Send us a migration request in the support section, we'll handle the dirty work for you.</p>
+      <h4 height class="o-fade-soft">Send us a migration request in the support section, we'll handle the dirty work for you.</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Why kloud51 -->
+<div class="container-fluid bg-1" id="why">
+  <div class="container s-pad-y-hard">
+    <!-- Title -->
+    <h1 class="header"><a href="#why">Why Kloud51?</a></h1>
+    <!-- Reasons -->
+    <div class="row why-list">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fa fa-check-circle" style="color: #2ecc71"></i>
+          </div>
+          <div class="col-sm-9">
+            <h3>Quality Hosting</h3>
+            <p>
+              With a selection of server hardware and infrastructure sourced from
+              globally-reputable providers, we guarantee 99.9% uptime 24 hours a day, 7 days a week.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fa fa-shield" style="color: tomato"></i>
+          </div>
+          <div class="col-sm-9">
+            <h3>Complete Protection</h3>
+            <p>
+              We provide anti-DDoS, Firewalls, and Antivirus to protect your data,
+              with options for RAID-1 or RAID-10 redundancy for that extra-sensitive information.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fa fa-comments" style="color: #9b59b6"></i>
+          </div>
+          <div class="col-sm-9">
+            <h3>Excellent Support</h3>
+            <p>
+              Having issues? We are dedicated to swiftly resolving issues and will assign
+              a technician you help you every step of the way for techniclal help.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fa fa-code" style="color: #1abc9c"></i>
+          </div>
+          <div class="col-sm-9">
+            <h3>Constant Development</h3>
+            <p>
+              We are always improving and developing to add more features and better services.
+              Missing something? Let us know so we can work on it!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fa fa-database" style="color: #e67e22"></i>
+          </div>
+          <div class="col-sm-9">
+            <h3>Solid Infrastructure</h3>
+            <p>
+              Kloud51 servers are being maintained round-the-clock by our technical staff
+              and are connected to a global network with over 3 Tbps of total bandwidth.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fa fa-bolt" style="color: #3498db"></i>
+          </div>
+          <div class="col-sm-9">
+            <h3>Lightning Performance</h3>
+            <p>
+              All of our servers feature high-performance hardware with optimized configurations,
+              and are constantly being monitored by our developers and admins.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
