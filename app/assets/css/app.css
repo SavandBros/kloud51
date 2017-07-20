@@ -1,17 +1,15 @@
 /* Import */
 
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600");
+@import url("https://fonts.googleapis.com/css?family=Play");
 
 /* Global */
 
 body {
-    font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
+    font-family: "Play", sans-serif;
 }
 
 a {
     text-decoration: none !important;
-    font-weight: 600 !important;
 }
 
 [bold] {
@@ -117,7 +115,6 @@ a {
 
 .plan .head h1 {
     letter-spacing: 2px;
-    font-weight: bold;
 }
 
 .plan .head p {
