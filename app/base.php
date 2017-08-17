@@ -15,7 +15,7 @@ require "include/route.php";
   <link rel="icon" href="assets/img/favicon.ico">
 
   <!-- Load stylesheets -->
-  <link rel="stylesheet" href="//getbootstrap.com/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="//fontawesome.io/assets/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="assets/css/shorties.css">
   <link rel="stylesheet" href="assets/css/app.css">
@@ -270,7 +270,7 @@ require "include/route.php";
 
   <!-- Load scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="//getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="assets/js/app.js"></script>
 
   <!-- Page footer -->
