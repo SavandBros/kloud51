@@ -174,23 +174,23 @@ require "include/route.php";
             <!-- Links -->
             <div class="links">
               <!-- SSD -->
-              <a href="//kloud51.com/ssd-vps-hosting"><i class="fa fa-server"></i> SSD VPS Hosting</a>
+              <a href="/ssd-vps-hosting"><i class="fa fa-server"></i> SSD VPS Hosting</a>
               <!-- WordPress -->
-              <a href="//kloud51.com/wordpress-hosting"><i class="fa fa-wordpress"></i> WordPress Hosting</a>
+              <a href="/wordpress-hosting"><i class="fa fa-wordpress"></i> WordPress Hosting</a>
               <!-- Joomla -->
-              <a href="//kloud51.com/joomla-hosting"><i class="fa fa-joomla"></i> Joomla Hosting</a>
+              <a href="/joomla-hosting"><i class="fa fa-joomla"></i> Joomla Hosting</a>
               <!-- WHMCS -->
-              <a href="//kloud51.com/whmcs-hosting"><i class="fa fa-cogs"></i> WHMCS Hosting</a>
+              <a href="/whmcs-hosting"><i class="fa fa-cogs"></i> WHMCS Hosting</a>
               <!-- MyBB -->
-              <a href="//kloud51.com/mybb-hosting"><i class="fa fa-comments"></i> MyBB Hosting</a>
+              <a href="/mybb-hosting"><i class="fa fa-comments"></i> MyBB Hosting</a>
               <!-- MariaDB -->
-              <a href="//kloud51.com/MariaDB-hosting"><i class="fa fa-database"></i> MariaDB Hosting</a>
+              <a href="/MariaDB-hosting"><i class="fa fa-database"></i> MariaDB Hosting</a>
               <!-- bbPress -->
-              <a href="//kloud51.com/bbPress-hosting"><i class="fa fa-database"></i> bbPress Hosting</a>
+              <a href="/bbPress-hosting"><i class="fa fa-database"></i> bbPress Hosting</a>
               <!-- Softaculous -->
-              <a href="//kloud51.com/softaculous-hosting"><i class="fa fa-cube"></i> Softaculous</a>
+              <a href="/softaculous-hosting"><i class="fa fa-cube"></i> Softaculous</a>
               <!-- PrestaShop -->
-              <a href="//kloud51.com/prestashop-hosting"><i class="fa fa-shopping-cart"></i> PrestaShop</a>
+              <a href="/prestashop-hosting"><i class="fa fa-shopping-cart"></i> PrestaShop</a>
             </div>
           </div>
         </div>
