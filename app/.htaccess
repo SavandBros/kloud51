@@ -1,7 +1,5 @@
-ErrorDocument 404 /
-ErrorDocument 403 /
-
 Options -MultiViews
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ base.php [QSA,L]
