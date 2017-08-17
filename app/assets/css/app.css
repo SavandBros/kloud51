@@ -10,6 +10,7 @@ body {
 
 a {
     text-decoration: none !important;
+    outline: none !important;
 }
 
 p {
@@ -225,4 +226,84 @@ p {
     .why-list .row div {
         text-align: center !important;
     }
+}
+
+
+/* Footer social */
+
+.footer .social .row {
+    text-align: center;
+    margin: 0;
+}
+
+.footer .social a {
+    background: #006BC9;
+    color: #FFF;
+    font-size: 2em;
+    padding: 5px 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer .social a:hover {
+    text-shadow: 0 0 20px #FFF;
+}
+
+
+/* Footer sections */
+
+.footer .section {
+    background: url("../img/footer.jpg");
+    color: #aaa;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer .section .fa {
+    text-align: center;
+    border: 1px solid #444;
+    margin-right: 5px;
+    border-radius: 100%;
+    font-size: smaller;
+}
+
+.footer .section h4 {
+    padding-left: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer .section .row>div:hover h4 {
+    color: #fff;
+    border-color: #337ab7;
+}
+
+.footer .section h4 .fa {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.footer .section .links>a {
+    display: block;
+    padding: 8px;
+    margin-bottom: 2px;
+    color: #888;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer .section .links>a:hover,
+.footer .section .links>a:focus,
+.footer .section .links>a[aria-expanded=true] {
+    background: rgba(0, 0, 0, 0.2);
+    padding-left: 15px;
+    color: #fff;
+}
+
+.footer .section .links>a .fa {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
 }
