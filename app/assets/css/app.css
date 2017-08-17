@@ -10,6 +10,7 @@ body {
 
 a {
     text-decoration: none !important;
+    outline: none !important;
 }
 
 p {
@@ -255,3 +256,28 @@ p {
     color: #aaa;
 }
 
+.footer .section .links>a {
+    display: block;
+    padding: 8px;
+    color: #888;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer .section .links>a:hover,
+.footer .section .links>a:focus {
+    background: rgba(0, 0, 0, 0.2);
+    padding-left: 15px;
+    color: #fff;
+}
+
+.footer .section .links>a .fa {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #444;
+    border-radius: 100%;
+    font-size: smaller;
+    margin-right: 5px;
+}
