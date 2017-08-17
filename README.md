@@ -12,8 +12,8 @@ Web Hosting, Blazing Fast SSD VPS, Domain Names and SSL Certificate.
 
 ```ini
 [database]
-host=HOST_HERE
-username=kloud51
-password=PASSWORD_HERE
-database=kloud51
+host =
+username =
+password =
+database =
 ```
