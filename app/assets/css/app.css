@@ -254,6 +254,8 @@ p {
 .footer .section {
     background: url("../img/footer.jpg");
     color: #aaa;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .footer .section .links>a {
