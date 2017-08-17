@@ -85,7 +85,7 @@ require "include/route.php";
           <!-- Company -->
           <div class="col-md-3">
             <!-- Title -->
-            <h4><i class="fa fa-cloud"></i> Comapny</h4>
+            <h4>Comapny</h4>
             <!-- Links -->
             <div class="links">
               <!-- What's up -->
@@ -96,6 +96,8 @@ require "include/route.php";
               <a href="//kloud51.com/announcements.php"><i class="fa fa-bullhorn"></i> Announcements</a>
               <!-- About -->
               <a href="//kloud51.com/about"><i class="fa fa-info-circle"></i> About</a>
+              <!-- Badges -->
+              <a href="http://badge.kloud51.com"><i class="fa fa-tags"></i> Badges</a>
               <!-- Legal -->
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <i class="fa fa-gavel"></i> Legal <b class="caret"></b>
@@ -107,14 +109,12 @@ require "include/route.php";
                 <li><a href="//kloud51.com/refunds">Refund Policy</a></li>
                 <li><a href="//kloud51.com/privacy">Privacy Policy</a></li>
               </ul>
-              <!-- Badges -->
-              <a href="http://badge.kloud51.com"><i class="fa fa-tags"></i> Badges</a>
             </div>
           </div>
           <!-- Services -->
           <div class="col-md-3">
             <!-- Title -->
-            <h4><i class="fa fa-cubes"></i> Services</h4>
+            <h4>Services</h4>
             <!-- Links -->
             <div class="links">
               <!-- Web Hosting (cPanel) -->
@@ -150,7 +150,7 @@ require "include/route.php";
           <!-- Support -->
           <div class="col-md-3">
             <!-- Title -->
-            <h4><i class="fa fa-phone-square"></i> Support</h4>
+            <h4>Support</h4>
             <!-- Links -->
             <div class="links">
               <!-- VM Manager -->              
@@ -170,7 +170,7 @@ require "include/route.php";
           <!-- Hosting -->
           <div class="col-md-3">
             <!-- Title -->            
-            <h4><i class="fa fa-globe"></i> Hosting</h4>
+            <h4>Hosting</h4>
             <!-- Links -->
             <div class="links">
               <!-- SSD -->
