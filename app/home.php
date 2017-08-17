@@ -65,17 +65,26 @@ $plans = $db->select("SELECT * FROM `plans`");
     <div class="col-md-4">
       <img src="assets/img/home/creditcard.png" class="feature-image">
       <h2>Money Back Guarantee</h2>
-      <h4 height class="o-fade-soft">Not fully satisfied with our services? Request a refund within 7 days of the initial purchase.</h4>
+      <h4 height class="o-fade-soft">
+        Not fully satisfied with our services? Request a
+        refund within 7 days of the initial purchase.
+      </h4>
     </div>
     <div class="col-md-4">
       <img src="assets/img/home/cpanel.png" class="feature-image">
       <h2>Simplified Interface</h2>
-      <h4 height class="o-fade-soft">cPanel and Softaculous included for that 1-click installation in an easy-to-use interface. No coding skill required.</h4>
+      <h4 height class="o-fade-soft">
+        cPanel and Softaculous included for that 1-click installation
+        in an easy-to-use interface. No coding skill required.
+      </h4>
     </div>
     <div class="col-md-4">
       <img src="assets/img/home/crossroads.png" class="feature-image">
       <h2>Free Migration</h2>
-      <h4 height class="o-fade-soft">Send us a migration request in the support section, we'll handle the dirty work for you.</h4>
+      <h4 height class="o-fade-soft">
+        Send us a migration request in the support section,
+        we'll handle the dirty work for you.
+      </h4>
     </div>
   </div>
 </div>
