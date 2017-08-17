@@ -26,19 +26,22 @@ require "include/route.php";
   <nav class="navbar navbar-default navbar-static-top">
     <div class="container">
       <div class="navbar-header">
+        <!-- Toggle button -->
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <!-- Brand -->
         <a class="navbar-brand" href="/">Kloud51</a>
       </div>
       <div class="collapse navbar-collapse" id="nav">
+        <!-- Nav links -->
         <ul class="nav navbar-nav">
           <?php foreach (Route::all() as $route): ?>
           <li class="<?php if ($base->name == $route->name): ?>active<?php endif; ?>">
-            <a href="<?=$base->url?>"><?=$base->label?></a>
+            <a href="<?=$route->url?>"><?=$route->label?></a>
           </li>
           <?php endforeach; ?>
         </ul>
