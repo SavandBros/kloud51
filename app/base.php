@@ -149,53 +149,75 @@ require "include/route.php";
           </div>
           <!-- Support -->
           <div class="col-md-3">
+            <!-- Title -->
             <h4><i class="fa fa-phone-square"></i> Support</h4>
-                <a href="https://vmanager.kloud51.com">
-                  <i class="fa fa-fw fa-server"></i> VM Manager
-                </a>
-                <a href="https://forum.kloud51.com/t/feature-requests">
-                  <i class="fa fa-fw fa-star-half-o"></i> Feature Requests
-                </a>
-                <a href="//kloud51.com/knowledgebase.php">
-                  <i class="fa fa-book"></i> Knowledgebase
-                </a>
-                <a href="https://kloud51.com/serverstatus.php">
-                  <i class="fa fa-fw fa-info-circle"></i> Server Status
-                </a>
-                <a href="https://kloud51.com/contact.php">
-                  <i class="fa fa-fw fa-comments"></i> Contact Us
-                </a>
+            <!-- Links -->
+            <div class="links">
+              <!-- VM Manager -->              
+              <a href="https://vmanager.kloud51.com">
+                <i class="fa fa-fw fa-server"></i> VM Manager
+              </a>
+              <!-- Requests -->              
+              <a href="https://forum.kloud51.com/t/feature-requests">
+                <i class="fa fa-fw fa-star-half-o"></i> Feature Requests
+              </a>
+              <!-- Knowledgebase -->              
+              <a href="//kloud51.com/knowledgebase.php">
+                <i class="fa fa-book"></i> Knowledgebase
+              </a>
+              <!-- Server Status -->              
+              <a href="https://kloud51.com/serverstatus.php">
+                <i class="fa fa-fw fa-info-circle"></i> Server Status
+              </a>
+              <!-- Contact Us -->              
+              <a href="https://kloud51.com/contact.php">
+                <i class="fa fa-fw fa-comments"></i> Contact Us
+              </a>
+            </div>
           </div>
           <!-- Hosting -->
           <div class="col-md-3">
+            <!-- Title -->            
             <h4><i class="fa fa-fw fa-globe"></i> Hosting</h4>
-                <a href="//kloud51.com/ssd-vps-hosting">
-                  <i class="fa fa-server fa-fw"></i> SSD VPS Hosting
-                </a>
-                <a href="//kloud51.com/wordpress-hosting">
-                  <i class="fa fa-wordpress fa-fw"></i> WordPress Hosting
-                </a>
-                <a href="//kloud51.com/joomla-hosting">
-                  <i class="fa fa-fw fa-joomla"></i> Joomla Hosting
-                </a>
-                <a href="//kloud51.com/whmcs-hosting">
-                  <i class="fa fa-cogs"></i> WHMCS Hosting
-                </a>
-                <a href="//kloud51.com/mybb-hosting">
-                  <i class="fa fa-fw fa-comments"></i> MyBB Hosting
-                </a>
-                <a href="//kloud51.com/MariaDB-hosting">
-                  <i class="fa fa-fw fa-database"></i> MariaDB Hosting
-                </a>
-                <a href="//kloud51.com/bbPress-hosting">
-                  <i class="fa fa-fw fa-database"></i> bbPress Hosting
-                </a>
-                <a href="//kloud51.com/softaculous-hosting">
-                  <i class="fa fa-fw fa-cube"></i> Softaculous
-                </a>
-                <a href="//kloud51.com/prestashop-hosting">
-                  <i class="fa fa-fw fa-shopping-cart"></i> PrestaShop
-                </a>
+            <!-- Links -->
+            <div class="links">
+              <!-- SSD -->
+              <a href="//kloud51.com/ssd-vps-hosting">
+                <i class="fa fa-server fa-fw"></i> SSD VPS Hosting
+              </a>
+              <!-- WordPress -->
+              <a href="//kloud51.com/wordpress-hosting">
+                <i class="fa fa-wordpress fa-fw"></i> WordPress Hosting
+              </a>
+              <!-- Joomla -->
+              <a href="//kloud51.com/joomla-hosting">
+                <i class="fa fa-fw fa-joomla"></i> Joomla Hosting
+              </a>
+              <!-- WHMCS -->
+              <a href="//kloud51.com/whmcs-hosting">
+                <i class="fa fa-cogs"></i> WHMCS Hosting
+              </a>
+              <!-- MyBB -->
+              <a href="//kloud51.com/mybb-hosting">
+                <i class="fa fa-fw fa-comments"></i> MyBB Hosting
+              </a>
+              <!-- MariaDB -->
+              <a href="//kloud51.com/MariaDB-hosting">
+                <i class="fa fa-fw fa-database"></i> MariaDB Hosting
+              </a>
+              <!-- bbPress -->
+              <a href="//kloud51.com/bbPress-hosting">
+                <i class="fa fa-fw fa-database"></i> bbPress Hosting
+              </a>
+              <!-- Softaculous -->
+              <a href="//kloud51.com/softaculous-hosting">
+                <i class="fa fa-fw fa-cube"></i> Softaculous
+              </a>
+              <!-- PrestaShop -->
+              <a href="//kloud51.com/prestashop-hosting">
+                <i class="fa fa-fw fa-shopping-cart"></i> PrestaShop
+              </a>
+            </div>
           </div>
         </div>
       </div>
