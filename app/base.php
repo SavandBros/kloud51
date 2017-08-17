@@ -41,7 +41,7 @@ require "include/route.php";
         <ul class="nav navbar-nav">
           <?php foreach (Route::all() as $route): ?>
           <li class="<?php if ($base->name == $route->name): ?>active<?php endif; ?>">
-            <a href="<?=$route->url?>"><?=$route->label?></a>
+            <a href="/<?=$route->url?>"><?=$route->label?></a>
           </li>
           <?php endforeach; ?>
         </ul>
