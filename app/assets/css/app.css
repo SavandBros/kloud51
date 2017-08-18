@@ -310,20 +310,17 @@ p {
 
 .copy-right {
     opacity: 0.9;
-    color: #999;
     padding: 70px 0;
     text-align: center;
-    -webkit-text-shadow: -1px -1px 1px #111;
-    text-shadow: -1px -1px 1px #111;
+    cursor: default;
 }
 
 .payment-methods {
     text-align: center;
-    font-size: 3em;
+    font-size: 3.3em;
     padding: 50px 0;
     color: #555;
-    -webkit-text-shadow: -1px -1px #222;
-    text-shadow: -1px -1px #111;
+    cursor: default;
 }
 
 .payment-methods .fa {
