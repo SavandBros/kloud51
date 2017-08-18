@@ -231,6 +231,28 @@ p {
 }
 
 
+/* Affiliate */
+
+.title-header {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+}
+
+.title-header + hr {
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #337ab7;
+}
+
+.content {
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    color: #555;
+}
+
+
 /* Footer social */
 
 .footer .social .row {
