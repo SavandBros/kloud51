@@ -247,7 +247,7 @@ p {
     margin-top: 10px;
 }
 
-.content {
+.container-content p {
     font-size: 15px;
     display: block;
     color: #666;
