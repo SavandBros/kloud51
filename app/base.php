@@ -209,7 +209,7 @@ require "include/route.php";
               Made with <span class="text-danger">love</span> and brought to you by Kloud51,
               a Savand Bros brand <span class="text-danger"><3</span>.
             </p>
-            <p>&copy; 2015-2017 Savand Bros. Kloud51. All Rights Reserved.</p>
+            <p>&copy; <?php echo date("Y"); ?> Savand Bros. Kloud51. All Rights Reserved.</p>
           </div>
           <!-- Payment methods -->
           <div class="col-lg-6 payments text-center" tooltip title="Payment methods">
