@@ -243,6 +243,8 @@ p {
     max-width: 50px;
     border-width: 3px;
     border-color: #337ab7;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
 .content {
