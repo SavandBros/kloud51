@@ -212,7 +212,7 @@ require "include/route.php";
             <p>&copy; 2015-2017 Savand Bros. Kloud51. All Rights Reserved.</p>
           </div>
           <!-- Payment methods -->
-          <div class="col-lg-6 payments" tooltip title="Payment methods">
+          <div class="col-lg-6 payments text-center" tooltip title="Payment methods">
             <i class="fa fa-cc-paypal"></i>
             <i class="fa fa-cc-mastercard"></i>
             <i class="fa fa-cc-amex"></i>
