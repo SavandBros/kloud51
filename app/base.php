@@ -219,6 +219,50 @@ require "include/route.php";
         </div>
       </div>
     </div>
+    <!-- Copyright & payment methods -->
+    <div class="copyright container-fluid">
+      <div class="container">
+        <div class="row">
+          <!-- Copyright -->
+          <div class="col-lg-6">
+            <p>
+              Made with <span class="text-danger">love</span> and brought to you by Kloud51,
+              a Savand Bros brand <span class="text-danger"><3</span>.
+            </p>
+            <p>&copy; <?php echo date("Y"); ?> Savand Bros. Kloud51. All Rights Reserved.</p>
+          </div>
+          <!-- Payment methods -->
+          <div class="col-lg-6 payments text-center" tooltip title="Payment methods">
+            <i class="fa fa-cc-paypal" title="PayPal"></i>
+            <i class="fa fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fa fa-cc-amex" title="American Express"></i>
+            <i class="fa fa-cc-visa" title="Visa"></i>
+            <i class="fa fa-btc" title="Bitcoin"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid goal s-pad-y">
+      <div class="container">
+        <div class="row">
+          <!-- Copyright -->
+          <div class="col-lg-3">
+            <a href="/affiliate-army-program">
+              <img src="assets/img/logo-white.png">
+            </a>
+          </div>
+          <!-- Goal -->
+          <div class="col-lg-9">
+            <p>
+              Our goal is to provide out of this world web hosting hosting and Linux SSD VPS services,
+              become a loved brand and have a little fun on the side.
+              We offer Premium web hosting services at low prices to
+              our customers without compromising reliability and great customer service.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Load scripts -->
