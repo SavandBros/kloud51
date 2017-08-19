@@ -332,7 +332,7 @@ p {
     background: #111;
 }
 
-.footer .goal .goal-content {
+.footer .goal p {
     color: #666;
     line-height: 25px;
     font-weight: 100;
