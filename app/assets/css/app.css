@@ -252,10 +252,11 @@ p {
 /* Footer sections */
 
 .footer .section {
-    background: url("../img/footer.jpg");
+    background: #222;
     color: #aaa;
     padding-top: 50px;
     padding-bottom: 50px;
+    border-bottom: 1px solid #333;
 }
 
 .footer .section .fa {
@@ -307,3 +308,34 @@ p {
     height: 25px;
     line-height: 25px;
 }
+
+
+/* Footer copyright */
+
+.footer .copyright {
+    padding: 70px 0;
+    background: #222;
+    color: #666;
+}
+
+.footer .payments .fa {
+    text-align: center;
+    font-size: 2.8em;
+    padding: 15px 5px;
+    color: #555;
+    text-shadow: -1px -1px #111;
+}
+
+/* Footer goal */
+
+.footer .goal {
+    background: #111;
+}
+
+.footer .goal p {
+    color: #666;
+    line-height: 25px;
+    font-weight: 100;
+    font-style: italic;
+}
+
