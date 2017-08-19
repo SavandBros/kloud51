@@ -213,11 +213,11 @@ require "include/route.php";
           </div>
           <!-- Payment methods -->
           <div class="col-lg-6 payments text-center" tooltip title="Payment methods">
-            <i class="fa fa-cc-paypal"></i>
-            <i class="fa fa-cc-mastercard"></i>
-            <i class="fa fa-cc-amex"></i>
-            <i class="fa fa-cc-visa"></i>
-            <i class="fa fa-btc"></i>
+            <i class="fa fa-cc-paypal" title="PayPal"></i>
+            <i class="fa fa-cc-mastercard" title="Mastercard"></i>
+            <i class="fa fa-cc-amex" title="American Express"></i>
+            <i class="fa fa-cc-visa" title="Visa"></i>
+            <i class="fa fa-btc" title="Bitcoin"></i>
           </div>
         </div>
       </div>
