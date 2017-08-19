@@ -232,7 +232,7 @@ require "include/route.php";
             </a>
           </div>
           <!-- Goal -->
-          <div class="col-lg-9 goal-content">
+          <div class="col-lg-9">
             <p>
               Our goal is to provide out of this world web hosting hosting and Linux SSD VPS services,
               become a loved brand and have a little fun on the side.
