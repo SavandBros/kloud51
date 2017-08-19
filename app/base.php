@@ -236,7 +236,8 @@ require "include/route.php";
             <p>
               Our goal is to provide out of this world web hosting hosting and Linux SSD VPS services,
               become a loved brand and have a little fun on the side.
-              We offer Premium web hosting services at low prices to our customers without compromising reliability and great customer service.
+              We offer Premium web hosting services at low prices to
+              our customers without compromising reliability and great customer service.
             </p>
           </div>
         </div>
