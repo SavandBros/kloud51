@@ -106,3 +106,9 @@
 .cur-no {
     pointer-events: none;
 }
+
+/* Font Awesome */
+
+.fa-6x {
+    font-size: 6em;
+}
