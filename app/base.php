@@ -228,7 +228,7 @@ require "include/route.php";
           <!-- Copyright -->
           <div class="col-lg-3">
             <a href="/affiliate-army-program">
-              <img src="assets/img/logo-white.png" alt="">
+              <img src="assets/img/logo-white.png">
             </a>
           </div>
           <!-- Goal -->
