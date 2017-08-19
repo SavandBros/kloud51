@@ -198,17 +198,22 @@ require "include/route.php";
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Copyright & payment methods -->
+    <div class="copyright container-fluid">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 copy-right">
-            <span class="small">
+          <!-- Copyright -->
+          <div class="col-lg-6">
+            <p>
               Made with <span class="text-danger">love</span> and brought to you by Kloud51,
-              a Savand Bros brand <span class="text-danger"><3</span>
-              <br>
-              © 2015-2017 Savand Bros. Kloud51. All Rights Reserved.
-            </span>
+              a Savand Bros brand <span class="text-danger"><3</span>.
+            </p>
+            <p>&copy; 2015-2017 Savand Bros. Kloud51. All Rights Reserved.</p>
           </div>
-          <div class="payment-methods col-lg-6" title="Payment methods">
+          <!-- Payment methods -->
+          <div class="col-lg-6 payments" tooltip title="Payment methods">
             <i class="fa fa-cc-paypal"></i>
             <i class="fa fa-cc-mastercard"></i>
             <i class="fa fa-cc-amex"></i>
