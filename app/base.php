@@ -199,7 +199,6 @@ require "include/route.php";
         </div>
       </div>
     </div>
-
     <!-- Copyright & payment methods -->
     <div class="copyright container-fluid">
       <div class="container">
@@ -219,6 +218,26 @@ require "include/route.php";
             <i class="fa fa-cc-amex"></i>
             <i class="fa fa-cc-visa"></i>
             <i class="fa fa-btc"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid goal s-pad-y">
+      <div class="container">
+        <div class="row">
+          <!-- Copyright -->
+          <div class="col-lg-3">
+            <a href="/affiliate-army-program">
+              <img src="assets/img/logo-white.png" alt="">
+            </a>
+          </div>
+          <!-- Goal -->
+          <div class="col-lg-9 goal-content">
+            <p>
+              Our goal is to provide out of this world web hosting hosting and Linux SSD VPS services,
+              become a loved brand and have a little fun on the side.
+              We offer Premium web hosting services at low prices to our customers without compromising reliability and great customer service.
+            </p>
           </div>
         </div>
       </div>
