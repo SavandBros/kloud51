@@ -130,7 +130,7 @@ require "include/route.php";
                 <li><a href="//kloud51.com/tos">Terms of Service</a></li>
                 <li><a href="//kloud51.com/acceptable-use-policy">Acceptable Use Policy</a></li>
                 <li><a href="//kloud51.com/refunds">Refund Policy</a></li>
-                <li><a href="//kloud51.com/privacy">Privacy Policy</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
