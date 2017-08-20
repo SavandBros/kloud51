@@ -38,11 +38,12 @@ p {
         height: 70px;
         padding-right: 40px;
     }
-    .navbar a {
+    .navbar .navbar-nav>li>a,
+    .navbar-brand {
         padding-top: 25px !important;
         padding-bottom: 25px !important;
     }
-    .navbar .navbar-nav a {
+    .navbar .navbar-nav>li>a {
         border: none;
         border-bottom: 3px solid transparent;
         padding-right: 20px;
@@ -52,11 +53,12 @@ p {
         letter-spacing: 1px;
         transition: all 0.2s ease-in-out;
     }
-    .navbar .navbar-nav a:hover {
+    .navbar .navbar-nav>li>a:hover {
         border-bottom-color: #eee;
     }
-    .navbar .navbar-nav .active a {
-        border-bottom-color: #337ab7;
+    .navbar .navbar-nav>.active>a,
+    .navbar .navbar-nav>.open>a {
+        border-bottom-color: #337ab7 !important;
         background: whitesmoke !important;
     }
     .navbar-brand {
@@ -229,6 +231,28 @@ p {
 }
 
 
+/* Affiliate */
+
+.title-header {
+    display: block;
+    text-align: center;
+}
+
+.title-header + hr {
+    max-width: 50px;
+    border-width: 3px;
+    border-color: #337ab7;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.container-content p {
+    font-size: 15px;
+    display: block;
+    color: #666;
+}
+
+
 /* Footer social */
 
 .footer .social .row {
@@ -310,6 +334,12 @@ p {
 }
 
 
+/* Dropdown */
+
+.dropdown-menu>li>a {
+    padding: 8px 20px;
+}
+
 /* Footer copyright */
 
 .footer .copyright {
@@ -338,4 +368,3 @@ p {
     font-weight: 100;
     font-style: italic;
 }
-

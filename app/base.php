@@ -17,8 +17,8 @@ require "include/route.php";
   <!-- Load stylesheets -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="//fontawesome.io/assets/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="assets/css/shorties.css">
-  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="/assets/css/shorties.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
 </head>
 
 <body>
@@ -39,10 +39,30 @@ require "include/route.php";
       <div class="collapse navbar-collapse" id="nav">
         <!-- Nav links -->
         <ul class="nav navbar-nav">
-          <?php foreach (Route::all() as $route): ?>
-          <li class="<?php if ($base->name == $route->name): ?>active<?php endif; ?>">
-            <a href="<?=$route->url?>"><?=$route->label?></a>
+          <!-- All links -->
+          <?php foreach (Route::all_with_dropdown() as $link): ?>
+          <?php if ($link["dropdown"]): ?>
+          <!-- Dropdown -->
+          <li class="dropdown">
+            <!-- Dropdown label -->
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <?=$link["dropdown"]?> <span class="caret"></span>
+            </a>
+            <!-- Dropdown links -->
+            <ul class="dropdown-menu">
+              <?php foreach ($link["links"] as $dropdown_route): ?>
+              <li class="<?php if ($base->name == $dropdown_route->name): ?>active<?php endif; ?>">
+                <a href="<?=$dropdown_route->url?>"><?=$dropdown_route->label?></a>
+              </li>
+              <?php endforeach; ?>
+            </ul>
           </li>
+          <?php else: ?>
+          <!-- Link -->
+          <li class="<?php if ($base->name == $link["route"]->name): ?>active<?php endif; ?>">
+            <a href="<?=$link["route"]->url?>"><?=$link["route"]->label?></a>
+          </li>
+          <?php endif; ?>
           <?php endforeach; ?>
         </ul>
       </div>
@@ -204,7 +224,7 @@ require "include/route.php";
       <div class="container">
         <div class="row">
           <!-- Copyright -->
-          <div class="col-lg-6">
+          <div class="col-lg-6 text-center-mobile">
             <p>
               Made with <span class="text-danger">love</span> and brought to you by Kloud51,
               a Savand Bros brand <span class="text-danger"><3</span>.
@@ -222,17 +242,18 @@ require "include/route.php";
         </div>
       </div>
     </div>
-    <div class="container-fluid goal s-pad-y">
+    <div class="container-fluid goal s-pad-y text-center-mobile">
       <div class="container">
         <div class="row">
           <!-- Copyright -->
-          <div class="col-lg-3">
+          <div class="col-md-3 col-lg-3">
             <a href="/affiliate-army-program">
-              <img src="assets/img/logo-white.png">
+              <img src="/assets/img/logo-white.png">
             </a>
           </div>
+          <div class="s-mobile-soft"></div>
           <!-- Goal -->
-          <div class="col-lg-9">
+          <div class="col-md-9 col-lg-9">
             <p>
               Our goal is to provide out of this world web hosting hosting and Linux SSD VPS services,
               become a loved brand and have a little fun on the side.
@@ -248,7 +269,7 @@ require "include/route.php";
   <!-- Load scripts -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="/assets/js/app.js"></script>
 
   <!-- Page footer -->
   <?=$base->extra?>

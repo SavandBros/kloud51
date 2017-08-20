@@ -31,6 +31,18 @@
     padding-bottom: 100px;
 }
 
+@media (max-width: 992px) {
+    .s-mobile {
+        padding: 20px 0 20px 0;
+    }
+    .s-mobile-soft {
+        padding: 10px 0 10px 0;        
+    }
+    .text-center-mobile {
+        text-align: center;
+    }
+}
+
 
 /* Backgrounds */
 
@@ -105,4 +117,10 @@
 
 .cur-no {
     pointer-events: none;
+}
+
+/* Font Awesome */
+
+.fa-6x {
+    font-size: 6em;
 }
