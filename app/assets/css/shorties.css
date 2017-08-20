@@ -35,6 +35,9 @@
     .s-mobile {
         padding: 20px 0 20px 0;
     }
+    .s-mobile-soft {
+        padding: 10px 0 10px 0;        
+    }
     .text-center-mobile {
         text-align: center;
     }
