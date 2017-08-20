@@ -12,7 +12,7 @@ require "include/route.php";
 
   <!-- Title and favicon -->
   <title><?php if (!empty($base->title)): ?><?=$base->title;?><?php endif ?>Kloud51</title>
-  <link rel="icon" href="assets/img/favicon.ico">
+  <link rel="icon" href="/assets/img/favicon.ico">
 
   <!-- Load stylesheets -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
