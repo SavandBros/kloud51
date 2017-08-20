@@ -105,6 +105,7 @@ class Route {
 Route::add("home");
 Route::add("affiliate", "/program/affiliate-army", "Afflicate Army Program", "Program", true);
 Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true);
+Route::add("tos", "/tos", "tos", null, true);
 
 // Default route
 $base = Route::find("home");
