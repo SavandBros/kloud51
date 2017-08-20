@@ -251,6 +251,7 @@ require "include/route.php";
               <img src="/assets/img/logo-white.png">
             </a>
           </div>
+          <div class="s-mobile-soft"></div>
           <!-- Goal -->
           <div class="col-md-9 col-lg-9">
             <p>
