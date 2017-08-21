@@ -45,7 +45,7 @@ class Route {
       $this->include = $name . ".html";
     }
     
-    $this->label = ucwords($name);
+    $this->label = ucwords($title);
   }
 
   public static function find($name) {
@@ -102,9 +102,10 @@ class Route {
 
 
 // Let's add some routes
-Route::add("home");
+Route::add("home", "/", "Home");
 Route::add("affiliate", "/program/affiliate-army", "Afflicate Army Program", "Program", true);
 Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true);
+Route::add("aup", "/acceptable-use-policy", "Acceptable Use Policy", null, true);
 Route::add("privacy", "/privacy", "Privacy Policy - ", null, true);
 
 // Default route
