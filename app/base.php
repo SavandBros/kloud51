@@ -127,7 +127,7 @@ require "include/route.php";
               </a>
               <!-- Legal (dropdown) -->
               <ul class="dropdown-menu">
-                <li><a href="//kloud51.com/tos">Terms of Service</a></li>
+                <li><a href="/tos">Terms of Service</a></li>
                 <li><a href="/acceptable-use-policy">Acceptable Use Policy</a></li>
                 <li><a href="/refunds">Refund Policy</a></li>
                 <li><a href="/privacy">Privacy Policy</a></li>
