@@ -205,7 +205,7 @@ require "include/route.php";
               <!-- WHMCS -->
               <a href="/whmcs-hosting"><i class="fa fa-cogs"></i> WHMCS Hosting</a>
               <!-- MyBB -->
-              <a href="/mybb-hosting"><i class="fa fa-comments"></i> MyBB Hosting</a>
+              <a href="/hostings/mybb"><i class="fa fa-comments"></i> MyBB Hosting</a>
               <!-- MariaDB -->
               <a href="/MariaDB-hosting"><i class="fa fa-database"></i> MariaDB Hosting</a>
               <!-- bbPress -->
