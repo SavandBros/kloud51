@@ -106,6 +106,7 @@ Route::add("home", "/", "Home");
 Route::add("affiliate", "/program/affiliate-army", "Afflicate Army Program", "Program", true);
 Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true);
 Route::add("aup", "/acceptable-use-policy", "Acceptable Use Policy", null, true);
+Route::add("privacy", "/privacy", "Privacy Policy - ", null, true);
 
 // Default route
 $base = Route::find("home");
