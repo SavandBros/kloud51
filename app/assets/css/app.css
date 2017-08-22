@@ -103,6 +103,16 @@ p {
     color: #fff;
 }
 
+.btn-outline.dark {
+    border-color: #444;
+    color: #444;
+}
+
+.btn-outline.dark:hover,
+.btn-outline.dark:focus {
+    background: #444;
+    color: #fff;
+}
 
 
 /* Cover */
