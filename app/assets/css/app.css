@@ -103,6 +103,8 @@ p {
     color: #fff;
 }
 
+
+
 /* Cover */
 
 .cover {
@@ -254,6 +256,9 @@ p {
     }
     .icon-title .row div {
         text-align: center !important;
+    }
+    .btn-outline {
+        font-size: 12px;
     }
 }
 
