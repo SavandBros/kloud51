@@ -86,7 +86,8 @@ p {
     transition: ease-in-out all 0.2s;
 }
 
-.btn-outline:hover {
+.btn-outline:hover,
+.btn-outline:focus {
     background: #337ab7;
     color: #fff;
 }
