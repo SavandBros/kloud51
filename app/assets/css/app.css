@@ -76,6 +76,32 @@ p {
 }
 
 
+/* Buttons */
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #337ab7;
+    -webkit-transition: ease-in-out all 0.2s;
+    -moz-transition: ease-in-out all 0.2s;
+    transition: ease-in-out all 0.2s;
+}
+
+.btn-outline:hover {
+    background: #337ab7;
+    color: #fff;
+}
+
+.btn-outline.success {
+    border-color: #5cb85c;
+    color: #5cb85c;
+}
+
+.btn-outline.success:hover,
+.btn-outline.success:focus {
+    background: #5cb85c;
+    color: #fff;
+}
+
 /* Cover */
 
 .cover {
