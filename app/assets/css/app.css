@@ -197,15 +197,15 @@ p {
 
 /* Why list */
 
-.why-list>div {
+.icon-title>div {
     margin-bottom: 40px;
 }
 
-.why-list .row div:first-of-type {
+.icon-title .row div:first-of-type {
     text-align: right;
 }
 
-.why-list .fa {
+.icon-title .fa {
     font-size: 40px;
     text-align: center;
     width: 85px;
@@ -217,15 +217,15 @@ p {
     margin-top: 25px;
 }
 
-.why-list p {
+.icon-title p {
     opacity: 0.8;
 }
 
 @media (max-width: 768px) {
-    .why-list .fa {
+    .icon-title .fa {
         margin: 0 0 10px 0 !important;
     }
-    .why-list .row div {
+    .icon-title .row div {
         text-align: center !important;
     }
 }
