@@ -112,6 +112,7 @@ Route::add("privacy", "/privacy", "Privacy Policy - ", null, true);
 
 Route::add("mybb", "/hosting/mybb", "MyBB - ", "Hostings", true);
 Route::add("mariadb", "/hosting/MariaDB", "MariaDB - ", "Hostings", true);
+Route::add("bbpress", "/hosting/bbPress", "bbPress - ", "Hostings", true);
 
 // Default route
 $base = Route::find("home");
