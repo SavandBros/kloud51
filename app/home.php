@@ -95,7 +95,7 @@ $plans = $db->select("SELECT * FROM `plans`");
     <!-- Title -->
     <h1 class="header"><a href="#why">Why Kloud51?</a></h1>
     <!-- Reasons -->
-    <div class="row why-list">
+    <div class="row icon-title">
       <div class="col-lg-6">
         <div class="row">
           <div class="col-sm-3">
