@@ -106,9 +106,11 @@ Route::add("home", "/", "Home");
 
 Route::add("affiliate", "/program/affiliate-army", "Afflicate Army Program", "Program", true);
 Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true);
+Route::add("tos", "/tos", "Terms Of Service - ", null, true);
 
 Route::add("aup", "/acceptable-use-policy", "Acceptable Use Policy", null, true);
 Route::add("privacy", "/privacy", "Privacy Policy - ", null, true);
+Route::add("refund", "/refunds", "Refund Policy - ", null, true);
 
 Route::add("mybb", "/hosting/mybb", "MyBB - ", "Hostings", true);
 Route::add("mariadb", "/hosting/MariaDB", "MariaDB - ", "Hostings", true);
