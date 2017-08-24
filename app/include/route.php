@@ -102,19 +102,19 @@ class Route {
 
 
 // Let's add some routes
-Route::add("home", "/", "Home");
+Route::add("home", "/", null, null, false, true);
 
-Route::add("affiliate", "/program/affiliate-army", "Afflicate Army Program", "Program", true);
-Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true);
-Route::add("tos", "/tos", "Terms Of Service - ", null, true);
+Route::add("affiliate", "/program/affiliate-army", "Afflicate Army Program", "Program", true, true);
+Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true, true);
 
-Route::add("aup", "/acceptable-use-policy", "Acceptable Use Policy", null, true);
-Route::add("privacy", "/privacy", "Privacy Policy - ", null, true);
-Route::add("refund", "/refunds", "Refund Policy - ", null, true);
+Route::add("tos", "/legal/tos", "Terms Of Service", "Legal");
+Route::add("aup", "/legal/acceptable-use-policy", "Acceptable Use Policy", "Legal");
+Route::add("privacy", "/legal/privacy", "Privacy Policy", "Legal");
+Route::add("refund", "/legal/refunds", "Refund Policy", "Legal");
 
-Route::add("mybb", "/hosting/mybb", "MyBB - ", "Hostings", true);
-Route::add("mariadb", "/hosting/MariaDB", "MariaDB - ", "Hostings", true);
-Route::add("bbpress", "/hosting/bbPress", "bbPress - ", "Hostings", true);
+Route::add("mybb", "/hosting/mybb", "MyBB", "Hosting");
+Route::add("mariadb", "/hosting/mariadb", "MariaDB", "Hosting");
+Route::add("bbpress", "/hosting/bbpress", "bbPress", "Hosting");
 
 // Default route
 $base = Route::find("home");
