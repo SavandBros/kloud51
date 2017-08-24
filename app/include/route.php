@@ -19,9 +19,6 @@ class Route {
   // Is html or php file
   public $is_html;
 
-  // File name to include
-  public $include;
-
   // User friendly label
   public $label;
 
@@ -31,21 +28,29 @@ class Route {
   // Belong to dropdown
   public $dropdown;
 
+  // Only for header
+  public $header;
+
   protected static $instances = array();
 
-  private function __construct($name, $url, $title, $dropdown, $is_html) {
+  private function __construct($name, $url, $title, $dropdown, $is_html, $header) {
     $this->name = $name;
     $this->url = $url;
     $this->title = $title;
     $this->is_html = $is_html;
-    $this->include = $name . ".php";
     $this->dropdown = $dropdown;
-    
-    if ($this->is_html) {
-      $this->include = $name . ".html";
-    }
-    
+    $this->header = $header;
     $this->label = ucwords($title);
+
+    // Label is name if (if no title)
+    if (!$title) {
+      $this->label = ucwords($name);
+    }
+
+    // Add dash at the end of the title (if has title)
+    if ($title) {
+      $this->title = $title . " - ";
+    }
   }
 
   public static function find($name) {
@@ -69,14 +74,14 @@ class Route {
   }
 
   // Get all routes as links and dropdowns
-  public static function all_with_dropdown() {
+  public static function all_with_dropdown($header = true) {
     $links = [];
     $added_dropdowns = [];
     // Loop all routes
     foreach(static::all() as $route) {
       $link = [];
       // If dropdown already added, skip
-      if (in_array($route->dropdown, $added_dropdowns)) {
+      if (in_array($route->dropdown, $added_dropdowns) || $route->header !== true) {
         continue;
       }
       // For dropdowns
@@ -95,8 +100,11 @@ class Route {
     return $links;
   }
 
-  public static function add($name, $url = "/", $title = null, $dropdown = null, $is_html = false) {
-    return static::$instances[$name] = new static($name, $url, $title, $dropdown, $is_html);
+  // Construct
+  public static function add($name, $url = "/", $title = null, $dropdown = null, $is_html = true, $header = false) {
+    return static::$instances[$name] = new static($name, $url, $title, $dropdown, $is_html, $header);
+  }
+
   // Get the include url of the page
   public function get_include() {
     $ext = "php";
