@@ -197,23 +197,23 @@ require "include/route.php";
             <!-- Links -->
             <div class="links">
               <!-- SSD -->
-              <a href="/ssd-vps-hosting"><i class="fa fa-server"></i> SSD VPS Hosting</a>
+              <a href="/hosting/ssd-vps"><i class="fa fa-server"></i> SSD VPS Hosting</a>
               <!-- WordPress -->
-              <a href="/wordpress-hosting"><i class="fa fa-wordpress"></i> WordPress Hosting</a>
-              <!-- Joomla -->
-              <a href="/joomla-hosting"><i class="fa fa-joomla"></i> Joomla Hosting</a>
-              <!-- WHMCS -->
-              <a href="/whmcs-hosting"><i class="fa fa-cogs"></i> WHMCS Hosting</a>
-              <!-- MyBB -->
-              <a href="/hostings/mybb"><i class="fa fa-comments"></i> MyBB Hosting</a>
-              <!-- MariaDB -->
-              <a href="/MariaDB-hosting"><i class="fa fa-database"></i> MariaDB Hosting</a>
-              <!-- bbPress -->
-              <a href="/bbPress-hosting"><i class="fa fa-database"></i> bbPress Hosting</a>
-              <!-- Softaculous -->
-              <a href="/softaculous-hosting"><i class="fa fa-cube"></i> Softaculous</a>
+              <a href="/hosting/wordpress"><i class="fa fa-wordpress"></i> WordPress Hosting</a>
               <!-- PrestaShop -->
-              <a href="/prestashop-hosting"><i class="fa fa-shopping-cart"></i> PrestaShop</a>
+              <a href="/hosting/prestashop"><i class="fa fa-shopping-cart"></i> PrestaShop</a>
+              <!-- Joomla -->
+              <a href="/hosting/joomla"><i class="fa fa-joomla"></i> Joomla Hosting</a>
+              <!-- WHMCS -->
+              <a href="/hosting/whmcs"><i class="fa fa-cogs"></i> WHMCS Hosting</a>
+              <!-- MyBB -->
+              <a href="/hosting/mybb"><i class="fa fa-comments"></i> MyBB Hosting</a>
+              <!-- MariaDB -->
+              <a href="/hosting/maria-db"><i class="fa fa-database"></i> MariaDB Hosting</a>
+              <!-- bbPress -->
+              <a href="/hosting/bbpress"><i class="fa fa-database"></i> bbPress Hosting</a>
+              <!-- Softaculous -->
+              <a href="/hosting/softaculous"><i class="fa fa-cube"></i> Softaculous</a>
             </div>
           </div>
         </div>
