@@ -71,7 +71,7 @@ require "include/route.php";
 
   <!-- Page content -->
   <div class="page">
-    <?php include $base->include; ?>
+    <?php include $base->get_include(); ?>
   </div>
 
   <!-- Footer -->
