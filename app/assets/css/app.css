@@ -76,6 +76,45 @@ p {
 }
 
 
+/* Buttons */
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #337ab7;
+    -webkit-transition: ease-in-out all 0.2s;
+    -moz-transition: ease-in-out all 0.2s;
+    transition: ease-in-out all 0.2s;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+    background: #337ab7;
+    color: #fff;
+}
+
+.btn-outline.success {
+    border-color: #5cb85c;
+    color: #5cb85c;
+}
+
+.btn-outline.success:hover,
+.btn-outline.success:focus {
+    background: #5cb85c;
+    color: #fff;
+}
+
+.btn-outline.dark {
+    border-color: #444;
+    color: #444;
+}
+
+.btn-outline.dark:hover,
+.btn-outline.dark:focus {
+    background: #444;
+    color: #fff;
+}
+
+
 /* Cover */
 
 .cover {
@@ -197,15 +236,15 @@ p {
 
 /* Why list */
 
-.why-list>div {
+.icon-title>div {
     margin-bottom: 40px;
 }
 
-.why-list .row div:first-of-type {
+.icon-title .row div:first-of-type {
     text-align: right;
 }
 
-.why-list .fa {
+.icon-title .fa {
     font-size: 40px;
     text-align: center;
     width: 85px;
@@ -217,16 +256,19 @@ p {
     margin-top: 25px;
 }
 
-.why-list p {
+.icon-title p {
     opacity: 0.8;
 }
 
 @media (max-width: 768px) {
-    .why-list .fa {
+    .icon-title .fa {
         margin: 0 0 10px 0 !important;
     }
-    .why-list .row div {
+    .icon-title .row div {
         text-align: center !important;
+    }
+    .btn-outline {
+        font-size: 12px;
     }
 }
 
