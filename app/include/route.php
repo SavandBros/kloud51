@@ -97,6 +97,21 @@ class Route {
 
   public static function add($name, $url = "/", $title = null, $dropdown = null, $is_html = false) {
     return static::$instances[$name] = new static($name, $url, $title, $dropdown, $is_html);
+  // Get the include url of the page
+  public function get_include() {
+    $ext = "php";
+
+    if ($this->is_html) {
+      $ext = "html";
+    }
+
+    $path = "pages/";
+
+    if ($this->dropdown) {
+      $path = $path . $this->dropdown . "/";
+    }
+
+    return $path . $this->name . "." . $ext;
   }
 }
 
