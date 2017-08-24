@@ -12,6 +12,10 @@
     margin-top: 50px;
 }
 
+.s-pad-top {
+    padding-top: 50px;
+}
+
 .s-mar-top-hard {
     margin-top: 100px;
 }
@@ -36,7 +40,7 @@
         padding: 20px 0 20px 0;
     }
     .s-mobile-soft {
-        padding: 10px 0 10px 0;        
+        padding: 10px 0 10px 0;
     }
     .text-center-mobile {
         text-align: center;
@@ -118,6 +122,7 @@
 .cur-no {
     pointer-events: none;
 }
+
 
 /* Font Awesome */
 
