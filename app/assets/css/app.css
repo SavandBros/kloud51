@@ -287,6 +287,7 @@ hr[light] {
 /* Containers */
 
 .container-dark {
+    background-color: #222;
     background-image: url("../img/dark.jpg");
     color: #eee;
 }
