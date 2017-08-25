@@ -209,7 +209,7 @@ require "include/route.php";
               <!-- MyBB -->
               <a href="/hosting/mybb"><i class="fa fa-comments"></i> MyBB Hosting</a>
               <!-- MariaDB -->
-              <a href="/hosting/maria-db"><i class="fa fa-database"></i> MariaDB Hosting</a>
+              <a href="/hosting/mariadb"><i class="fa fa-database"></i> MariaDB Hosting</a>
               <!-- bbPress -->
               <a href="/hosting/bbpress"><i class="fa fa-database"></i> bbPress Hosting</a>
               <!-- Softaculous -->
