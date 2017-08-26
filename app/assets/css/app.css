@@ -113,24 +113,6 @@ hr[light] {
 }
 
 
-/* List Group */
-
-.item-list a:first-child {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-}
-
-.item-list p {
-    opacity: 0.8;
-}
-
-@media (min-width : 992px) {
-    .item-list a:nth-child(even) {
-        border-left: none;
-    }
-}
-
-
 /* Plans */
 
 .plan-wrapper {
