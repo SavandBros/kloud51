@@ -73,11 +73,6 @@ hr[light] {
     .navbar-brand {
         margin-right: 80px;
     }
-    .btn-launch {
-        font-size: 22px;
-        padding: 20px;
-        width: 100%;
-    }
 }
 
 
@@ -89,6 +84,16 @@ hr[light] {
     text-align: center;
 }
 
+
+/* Buttons */
+
+@media (min-width: 768px) {
+    .btn-launch {
+        font-size: 22px;
+        padding: 20px;
+        width: 100%;
+    }
+}
 
 /* Cover */
 
