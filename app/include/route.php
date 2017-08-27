@@ -138,6 +138,7 @@ Route::add("refund", "/legal/refunds", "Refund Policy", "Legal");
 Route::add("mybb", "/hosting/mybb", "MyBB", "Hosting");
 Route::add("mariadb", "/hosting/mariadb", "MariaDB", "Hosting");
 Route::add("bbpress", "/hosting/bbpress", "bbPress", "Hosting");
+Route::add("ssd-vps", "/hosting/ssd-vps", "SSD VPS", "Hosting");
 Route::add("wordpress", "/hosting/wordpress", "Wordpress", "Hosting");
 
 // Default route
