@@ -114,6 +114,13 @@ hr[light] {
 }
 
 
+/* List Group */
+
+.list-group-item h3 {
+    color: #337ab7;
+}
+
+
 /* Plans */
 
 .plan-wrapper {
