@@ -87,12 +87,13 @@ hr[light] {
 
 /* Buttons */
 
-.btn-launch {
-    font-size: 22px;
-    padding: 20px;
-    width: 100%;
+@media (min-width: 768px) {
+    .btn-launch {
+        font-size: 22px;
+        padding: 20px;
+        width: 100%;
+    }
 }
-
 
 /* Cover */
 
@@ -110,6 +111,13 @@ hr[light] {
 
 .bg-header {
     background-image: url("../img/header.jpg");
+}
+
+
+/* List Group */
+
+.list-group-item h3 {
+    color: #337ab7;
 }
 
 
@@ -287,6 +295,7 @@ hr[light] {
 /* Containers */
 
 .container-dark {
+    background-color: #222;
     background-image: url("../img/dark.jpg");
     color: #eee;
 }
