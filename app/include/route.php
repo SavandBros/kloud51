@@ -140,6 +140,7 @@ Route::add("mariadb", "/hosting/mariadb", "MariaDB", "Hosting");
 Route::add("bbpress", "/hosting/bbpress", "bbPress", "Hosting");
 Route::add("ssd-vps", "/hosting/ssd-vps", "SSD VPS", "Hosting");
 Route::add("wordpress", "/hosting/wordpress", "Wordpress", "Hosting");
+Route::add("joomla", "/hosting/joomla", "joomla", "Hosting");
 
 // Default route
 $base = Route::find("home");
