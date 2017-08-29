@@ -134,3 +134,10 @@
 .fa-6x {
     font-size: 6em;
 }
+
+
+/* Borders */
+
+.img-rounded {
+    border-radius: 6px;
+}
