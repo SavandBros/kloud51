@@ -80,7 +80,7 @@ require "include/route.php";
     <!-- Social -->
     <div class="social container-fluid s-pad-no">
       <div class="row">
-        <a class="col-md-2 col-xs-4" target="_blank" href="https://forum.kloud51.com" title="Kloud51 Forum">
+        <a class="col-md-2 col-xs-4" target="_blank" href="http://forum.kloud51.com" title="Kloud51 Forum">
           <i class="fa fa-cloud"></i>
         </a>                    
         <a class="col-md-2 col-xs-4" target="_blank" href="https://twitter.com/Kloud51" style="background: #0084b4">
@@ -112,9 +112,9 @@ require "include/route.php";
             <!-- Links -->
             <div class="links">
               <!-- What's up -->
-              <a href="https://forum.kloud51.com/t/what-s-up"><i class="fa fa-comment-o"></i> What's Up</a>
+              <a href="http://forum.kloud51.com/t/what-s-up"><i class="fa fa-comment-o"></i> What's Up</a>
               <!-- Community -->
-              <a href="https://forum.kloud51.com/"><i class="fa fa-comments-o"></i> Community</a>
+              <a href="http://forum.kloud51.com/"><i class="fa fa-comments-o"></i> Community</a>
               <!-- Announcements -->
               <a href="//kloud51.com/announcements.php"><i class="fa fa-bullhorn"></i> Announcements</a>
               <!-- About -->
@@ -179,7 +179,7 @@ require "include/route.php";
               <!-- VM Manager -->              
               <a href="https://vmanager.kloud51.com"><i class="fa fa-server"></i> VM Manager</a>
               <!-- Requests -->              
-              <a href="https://forum.kloud51.com/t/feature-requests">
+              <a href="http://forum.kloud51.com/t/feature-requests">
                 <i class="fa fa-star-half-o"></i> Feature Requests
               </a>
               <!-- Knowledgebase -->              
