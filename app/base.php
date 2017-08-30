@@ -66,12 +66,8 @@ require "include/route.php";
           <?php endforeach; ?>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="https://billing.kloud51.com/register.php">Register</a>
-          </li>
-          <li>
-            <a href="https://billing.kloud51.com/clientarea.php">Login</a>
-          </li>
+          <li><a href="https://billing.kloud51.com/register.php">Register</a></li>
+          <li><a href="https://billing.kloud51.com/clientarea.php">Login</a></li>
         </ul>
       </div>
     </div>
