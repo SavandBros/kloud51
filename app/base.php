@@ -64,6 +64,7 @@ require "include/route.php";
           </li>
           <?php endif; ?>
           <?php endforeach; ?>
+          <li><a href="https://billing.kloud51.com/knowledgebase.php">Knowledgebase</a></li>
         </ul>
       </div>
     </div>
