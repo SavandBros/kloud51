@@ -64,11 +64,11 @@ require "include/route.php";
           </li>
           <?php endif; ?>
           <?php endforeach; ?>
-          <li><a href="https://billing.kloud51.com/knowledgebase.php">Knowledgebase</a></li>
+          <li><a href="//billing.kloud51.com/knowledgebase.php">Knowledgebase</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="https://billing.kloud51.com/register.php">Register</a></li>
-          <li><a href="https://billing.kloud51.com/clientarea.php">Login</a></li>
+          <li><a href="//billing.kloud51.com/register.php">Register</a></li>
+          <li><a href="//billing.kloud51.com/clientarea.php">Login</a></li>
         </ul>
       </div>
     </div>
@@ -146,23 +146,23 @@ require "include/route.php";
             <!-- Links -->
             <div class="links">
               <!-- Web Hosting (cPanel) -->
-              <a href="https://billing.kloud51.com/cart.php?gid=1">
+              <a href="//billing.kloud51.com/cart.php?gid=1">
                 <i class="fa fa-server"></i> Web Hosting (cPanel)
               </a>
               <!-- SSD -->
-              <a href="https://billing.kloud51.com/cart.php?gid=4">
+              <a href="//billing.kloud51.com/cart.php?gid=4">
                 <i class="fa fa-spinner"></i> SSD Virtual Private Server (VPS)
               </a>
               <!-- Reseller -->
-              <a href="https://billing.kloud51.com/cart.php?gid=3">
+              <a href="//billing.kloud51.com/cart.php?gid=3">
                 <i class="fa fa-repeat"></i> Reseller Linux Web Hosting
               </a>
               <!-- SSL -->
-              <a href="https://billing.kloud51.com/cart.php?gid=2">
+              <a href="//billing.kloud51.com/cart.php?gid=2">
                 <i class="fa fa-shield"></i> SSL Certificates
               </a>
               <!-- Software & Server Licenses -->
-              <a href="https://billing.kloud51.com/cart.php?gid=5">
+              <a href="//billing.kloud51.com/cart.php?gid=5">
                 <i class="fa fa-file-text-o"></i> Software &amp; Server Licenses
               </a>
               <!-- Affiliate Army -->
@@ -188,11 +188,11 @@ require "include/route.php";
                 <i class="fa fa-star-half-o"></i> Feature Requests
               </a>
               <!-- Knowledgebase -->              
-              <a href="//kloud51.com/knowledgebase.php"><i class="fa fa-book"></i> Knowledgebase</a>
+              <a href="//billing.kloud51.com/knowledgebase.php"><i class="fa fa-book"></i> Knowledgebase</a>
               <!-- Server Status -->              
-              <a href="https://kloud51.com/serverstatus.php"><i class="fa fa-info-circle"></i> Server Status</a>
+              <a href="//billing.kloud51.com/serverstatus.php"><i class="fa fa-info-circle"></i> Server Status</a>
               <!-- Contact Us -->              
-              <a href="https://kloud51.com/contact.php"><i class="fa fa-comments"></i> Contact Us</a>
+              <a href="//billing.kloud51.com/contact.php"><i class="fa fa-comments"></i> Contact Us</a>
             </div>
           </div>
           <!-- Hosting -->
