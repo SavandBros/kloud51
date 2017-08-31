@@ -8,6 +8,14 @@
     margin: 0;
 }
 
+.s-mar-bottom {
+    margin-bottom: 50px;
+}
+
+.s-mar-bottom-soft {
+    margin-bottom: 25px;
+}
+
 .s-mar-top {
     margin-top: 50px;
 }
@@ -133,4 +141,11 @@
 
 .fa-6x {
     font-size: 6em;
+}
+
+
+/* Borders */
+
+.img-rounded {
+    border-radius: 6px;
 }

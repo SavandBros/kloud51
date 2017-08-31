@@ -142,6 +142,8 @@ Route::add("ssd-vps", "/hosting/ssd-vps", "SSD VPS", "Hosting");
 Route::add("wordpress", "/hosting/wordpress", "Wordpress", "Hosting");
 Route::add("whmcs", "/hosting/whmcs", "WHMCS", "Hosting");
 Route::add("joomla", "/hosting/joomla", "Joomla", "Hosting");
+Route::add("softaculous", "/hosting/softaculous", "Softaculous", "Hosting");
+Route::add("prestashop", "/hosting/prestashop", "Prestashop", "Hosting");
 
 // Default route
 $base = Route::find("home");

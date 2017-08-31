@@ -64,6 +64,11 @@ require "include/route.php";
           </li>
           <?php endif; ?>
           <?php endforeach; ?>
+          <li><a href="https://billing.kloud51.com/knowledgebase.php">Knowledgebase</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://billing.kloud51.com/register.php">Register</a></li>
+          <li><a href="https://billing.kloud51.com/clientarea.php">Login</a></li>
         </ul>
       </div>
     </div>
@@ -127,10 +132,10 @@ require "include/route.php";
               </a>
               <!-- Legal (dropdown) -->
               <ul class="dropdown-menu">
-                <li><a href="/tos">Terms of Service</a></li>
-                <li><a href="/acceptable-use-policy">Acceptable Use Policy</a></li>
-                <li><a href="/refunds">Refund Policy</a></li>
-                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="/legal/tos">Terms of Service</a></li>
+                <li><a href="/legal/acceptable-use-policy">Acceptable Use Policy</a></li>
+                <li><a href="/legal/refunds">Refund Policy</a></li>
+                <li><a href="/legal/privacy">Privacy Policy</a></li>
               </ul>
             </div>
           </div>
