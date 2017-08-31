@@ -123,7 +123,7 @@ require "include/route.php";
               <!-- Announcements -->
               <a href="//kloud51.com/announcements.php"><i class="fa fa-bullhorn"></i> Announcements</a>
               <!-- About -->
-              <a href="//kloud51.com/about"><i class="fa fa-info-circle"></i> About</a>
+              <a href="/about"><i class="fa fa-info-circle"></i> About</a>
               <!-- Badges -->
               <a href="http://badge.kloud51.com"><i class="fa fa-tags"></i> Badges</a>
               <!-- Legal -->
