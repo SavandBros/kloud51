@@ -126,6 +126,7 @@ class Route {
 
 // Let's add some routes
 Route::add("home", "/", null, null, false, true);
+Route::add("about", "/about", "About Us", null, true, true);
 
 Route::add("affiliate", "/program/affiliate-army", "Afflicate Army Program", "Program", true, true);
 Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true, true);
