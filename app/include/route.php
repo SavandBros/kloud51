@@ -129,6 +129,7 @@ Route::add("home", "/", null, null, false, true);
 
 Route::add("affiliate", "/program/affiliate-army", "Afflicate Army Program", "Program", true, true);
 Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true, true);
+Route::add("about", "/about", "About", null, true, true);
 
 Route::add("tos", "/legal/tos", "Terms Of Service", "Legal");
 Route::add("aup", "/legal/acceptable-use-policy", "Acceptable Use Policy", "Legal");
