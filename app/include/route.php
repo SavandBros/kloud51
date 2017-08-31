@@ -49,7 +49,7 @@ class Route {
 
     // Add dash at the end of the title (if has title)
     if ($title) {
-      $this->title = $title . " - ";
+      $this->title = $title . " &bull; ";
     }
   }
 
