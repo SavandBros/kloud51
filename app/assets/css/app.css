@@ -466,3 +466,21 @@ hr[small] {
     padding-top: 20px;
 }
 
+
+/* Carousel */
+
+.carousel-control .fa {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.carousel-indicators li {
+    border-color: #337ab7;
+}
+
+.carousel-indicators li.active {
+    background-color: #337ab7;
+}
+
+
