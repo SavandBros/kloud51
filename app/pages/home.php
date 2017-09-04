@@ -203,8 +203,8 @@ $plans = $db->select("SELECT * FROM `plans`");
             <div class="review-avatar" style="background: #006BC9">
               <span>A</span>
               <div class="review-stars">
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
               </div>
             </div>
           </div>
@@ -237,8 +237,8 @@ $plans = $db->select("SELECT * FROM `plans`");
             <div class="review-avatar">
               <span>CG</span>
               <div class="review-stars">
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
               </div>
             </div>
           </div>
@@ -265,8 +265,8 @@ $plans = $db->select("SELECT * FROM `plans`");
             <div class="review-avatar" style="background: darkcyan">
               <span>DW</span>
               <div class="review-stars">
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
               </div>
             </div>
           </div>
@@ -295,8 +295,8 @@ $plans = $db->select("SELECT * FROM `plans`");
             <div class="review-avatar" style="background: blueviolet">
               <span>A</span>
               <div class="review-stars">
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
               </div>
             </div>
           </div>
@@ -323,8 +323,8 @@ $plans = $db->select("SELECT * FROM `plans`");
             <div class="review-avatar" style="background: cornflowerblue">
               <span>L</span>
               <div class="review-stars">
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
               </div>
             </div>
           </div>
@@ -353,8 +353,8 @@ $plans = $db->select("SELECT * FROM `plans`");
             <div class="review-avatar" style="background: deeppink">
               <span>J</span>
               <div class="review-stars">
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
               </div>
             </div>
           </div>
@@ -380,8 +380,8 @@ $plans = $db->select("SELECT * FROM `plans`");
             <div class="review-avatar" style="background: orange">
               <span>O</span>
               <div class="review-stars">
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
               </div>
             </div>
           </div>
@@ -408,8 +408,8 @@ $plans = $db->select("SELECT * FROM `plans`");
             <div class="review-avatar" style="background: lime">
               <span>R</span>
               <div class="review-stars">
-                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i> <i class="fa fa-star"></i>
               </div>
             </div>
           </div>
