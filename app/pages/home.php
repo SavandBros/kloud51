@@ -183,3 +183,261 @@ $plans = $db->select("SELECT * FROM `plans`");
     </div>
   </div>
 </div>
+
+<div class="container-fluid s-pad-no bg-1 br-top" id="ratings">
+  <div id="reviews" class="carousel slide" data-ride="carousel" data-interval="false">
+    <ol class="carousel-indicators">
+      <li data-target="#reviews" data-slide-to="0" class="active"></li>
+      <li data-target="#reviews" data-slide-to="1"></li>
+      <li data-target="#reviews" data-slide-to="2"></li>
+      <li data-target="#reviews" data-slide-to="3"></li>
+      <li data-target="#reviews" data-slide-to="4"></li>
+      <li data-target="#reviews" data-slide-to="5"></li>
+      <li data-target="#reviews" data-slide-to="6"></li>
+      <li data-target="#reviews" data-slide-to="7"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="review col-md-8 col-md-offset-2">
+          <div class="col-md-3 text-center">
+            <div class="review-avatar" style="background: #006BC9">
+              <span>A</span>
+              <div class="review-stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading">Great Linux Web Hosting</div>
+              <div class="panel-body">
+                First, I started with their Free Linux Web Hosting, it had everything I needed.
+                Don't get it wrong if it says "Free" it has the Enterprise features.
+                <br><br> SSH Access, Unlimited FTP, Emails, Websites, Domains, Addon-Domains,
+                +400 app auto installers that will take only 1 click to install and setup website,
+                much more and comes with 24/7 support as well and daily backups.
+                <br><br> Their support is completely dedicated to what they do and never failed me,
+                always responsible and professional and very polite.
+                <br><br> Now I'm subscribed to their Paid Plans and get my friends and own client to get from Kloud51.
+                <br><br> Thank you for the great services. Excellent, I would recommend Kloud51 to anyone.
+                <hr small>
+                <em class="text-right dis-b">
+                  <small>Kloud51 reviewed by</small>
+                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                </em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="review col-md-8 col-md-offset-2">
+          <div class="col-md-3 text-center">
+            <div class="review-avatar">
+              <span>CG</span>
+              <div class="review-stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading">A Very Good Service!</div>
+              <div class="panel-body">
+                I have a reseller account and I'm very happy that my customers have excellent services. Price are
+                good for every pocket! Their services are best as compared to other hosting companies. Also great
+                hosting, 99% uptime, and no problem with it at all.
+                <hr small>
+                <em class="text-right dis-b">
+                  <small>Kloud51 reviewed by</small>
+                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                </em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="review col-md-8 col-md-offset-2">
+          <div class="col-md-3 text-center">
+            <div class="review-avatar" style="background: darkcyan">
+              <span>DW</span>
+              <div class="review-stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading">Great VPS Service</div>
+              <div class="panel-body">
+                Kloud51 is a fantastic Linux VPS hosting service for a great price. You can choose your flavor of
+                Linux and jump right into it with Cpanel and RDP. I'm currently using the ARCH Desktop and its quick
+                and smooth. You can really tell they care by the support they offer though I haven't had to contact
+                them because I haven't experienced any downtime of any sort. All in all, I would recommend Kloud51
+                to anyone, they are fast and reliable.
+                <hr small>
+                <em class="text-right dis-b">
+                  <small>Kloud51 reviewed by</small>
+                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                </em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="review col-md-8 col-md-offset-2">
+          <div class="col-md-3 text-center">
+            <div class="review-avatar" style="background: blueviolet">
+              <span>A</span>
+              <div class="review-stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading">Awesome VPS &amp; Awesome Hosting</div>
+              <div class="panel-body">
+                I'm using Kloud51's VPS for 3 months now and what should I say? They have awesome service and great
+                support team. they added all features that I want, helped me start working with Linux.<br><br>Also
+                great hosting, 99% uptime, and no problem with it at all.
+                <hr small>
+                <em class="text-right dis-b">
+                  <small>Kloud51 reviewed by</small>
+                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                </em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="review col-md-8 col-md-offset-2">
+          <div class="col-md-3 text-center">
+            <div class="review-avatar" style="background: cornflowerblue">
+              <span>L</span>
+              <div class="review-stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading">Excelent service</div>
+              <div class="panel-body">
+                My experience here was great, the VPS work 24/7, I started using with 0 knowledge ArchLinux Desktop
+                (Super Fast) [Remote Desktop Ready], they got one support forum and individual support team, and
+                the results were great. I pushed the VPS to the limits and worked excellently.
+                <br><br>When they changed 50GB HDD to 10GB SSD they suspended my VPS because I got 40GB+ full, I sent
+                a ticket to support team and in some hours, it was solved.
+                <hr small>
+                <em class="text-right dis-b">
+                  <small>Kloud51 reviewed by</small>
+                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                </em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="review col-md-8 col-md-offset-2">
+          <div class="col-md-3 text-center">
+            <div class="review-avatar" style="background: deeppink">
+              <span>J</span>
+              <div class="review-stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading">Awesome service</div>
+              <div class="panel-body">
+                Bought five VPS from kloud51, the VPSs were running on 1 GB RAM and Arch Linux OS. Never had
+                problems using them, VPS runs smoothly. I recommend them.
+                <hr small>
+                <em class="text-right dis-b">
+                  <small>Kloud51 reviewed by</small>
+                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                </em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="review col-md-8 col-md-offset-2">
+          <div class="col-md-3 text-center">
+            <div class="review-avatar" style="background: orange">
+              <span>O</span>
+              <div class="review-stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading">Excellent! The best in the business</div>
+              <div class="panel-body">
+                Their service is solid,their network is fast, I never had an issue with that.Great support, quick
+                and accurate, the best I had so far. I bought 10 VPS ArchLinux Desktop (Super Fast)
+                [Remote Desktop Ready],easy to use,never crashed.check it out here at Kloud51.com
+                <hr small>
+                <em class="text-right dis-b">
+                  <small>Kloud51 reviewed by</small>
+                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                </em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="review col-md-8 col-md-offset-2">
+          <div class="col-md-3 text-center">
+            <div class="review-avatar" style="background: lime">
+              <span>R</span>
+              <div class="review-stars">
+                <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                <i class="fa fa-star"></i><i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading">One of the best &amp; Easy to use VPS Provider</div>
+              <div class="panel-body">
+                I've been looking for good VPS providers for a while, and finally found out this Reliable provider.
+                No issues, 100% Satisfied.<br>I bought VPS 1 GB RAM from them and it is Performing really well With
+                high Uptime.<br>It is really Beginner-friendly, with the Available option of Preinstalled Desktop
+                &amp; All required stuff. Everything was setup, So fast without the need for manual installation of
+                the needed Things. Really happy with the Service.
+                <hr small>
+                <em class="text-right dis-b">
+                  <small>Kloud51 reviewed by</small>
+                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                </em>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#reviews" data-slide="prev">
+      <span class="fa fa-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="right carousel-control" href="#reviews" data-slide="next">
+      <span class="fa fa-chevron-right" aria-hidden="true"></span>
+    </a>
+  </div>
+</div>
