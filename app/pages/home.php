@@ -224,7 +224,7 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56844ef90000ff00092aa251">Aga</a>
                 </em>
               </div>
             </div>
@@ -252,7 +252,7 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56e011c90000ff000943eb28">Ciobanu Ioan Georgian</a>
                 </em>
               </div>
             </div>
@@ -282,7 +282,7 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56e134050000ff0009443ffd">David Williams</a>
                 </em>
               </div>
             </div>
@@ -310,7 +310,7 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56debfa30000ff0009437b34">Andrew</a>
                 </em>
               </div>
             </div>
@@ -340,7 +340,7 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56e42f780000ff0009450f4b">Leandro</a>
                 </em>
               </div>
             </div>
@@ -367,7 +367,7 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56ea5e680000ff000946a92b">Julie</a>
                 </em>
               </div>
             </div>
@@ -395,7 +395,7 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56f18fb70000ff00094882eb">Ovidiu</a>
                 </em>
               </div>
             </div>
@@ -425,7 +425,7 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="REVIEW_LINK">REVIEW_NAME</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56f28be60000ff000948c1ad">Risin</a>
                 </em>
               </div>
             </div>
