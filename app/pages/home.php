@@ -252,7 +252,9 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="https://www.trustpilot.com/reviews/56e011c90000ff000943eb28">Ciobanu Ioan Georgian</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56e011c90000ff000943eb28">
+                    Ciobanu Ioan Georgian
+                  </a>
                 </em>
               </div>
             </div>
@@ -282,7 +284,9 @@ $plans = $db->select("SELECT * FROM `plans`");
                 <hr small>
                 <em class="text-right dis-b">
                   <small>Kloud51 reviewed by</small>
-                  <a target="_blank" href="https://www.trustpilot.com/reviews/56e134050000ff0009443ffd">David Williams</a>
+                  <a target="_blank" href="https://www.trustpilot.com/reviews/56e134050000ff0009443ffd">
+                    David Williams
+                  </a>
                 </em>
               </div>
             </div>
