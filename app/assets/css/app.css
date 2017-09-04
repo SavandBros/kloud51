@@ -99,6 +99,7 @@ hr[small] {
     }
 }
 
+
 /* Cover */
 
 .cover {
@@ -431,3 +432,37 @@ hr[small] {
     font-weight: 100;
     font-style: italic;
 }
+
+
+/* Review */
+
+.review {
+    padding: 40px;
+    display: inline-block;
+}
+
+.review .review-avatar {
+    text-align: center;
+    background: tomato;
+    color: #FFF;
+    width: 128px;
+    height: 128px;
+    line-height: 128px;
+    font-size: 4em;
+    border-radius: 100%;
+    border-bottom: 6px solid rgba(0, 0, 0, 0.20);
+    display: inline-block;
+    margin-bottom: 60px;
+}
+
+.review .review-avatar span {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.review .review-stars {
+    font-size: small;
+    color: #337ab7;
+    line-height: normal;
+    padding-top: 20px;
+}
+
