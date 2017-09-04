@@ -149,3 +149,8 @@
 .img-rounded {
     border-radius: 6px;
 }
+/* Displays */
+
+.dis-b {
+    display: block;
+}
