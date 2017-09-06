@@ -116,7 +116,7 @@ class Route {
     $path = "pages/";
 
     if ($this->dropdown) {
-      $path = $path . $this->dropdown . "/";
+      $path = $path . strtolower($this->dropdown) . "/";
     }
 
     return $path . $this->name . "." . $ext;
