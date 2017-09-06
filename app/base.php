@@ -67,8 +67,7 @@ require "include/route.php";
           <li><a href="//dash.kloud51.com/knowledgebase.php">Knowledgebase</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="//dash.kloud51.com/register.php">Register</a></li>
-          <li><a href="//dash.kloud51.com/clientarea.php">Login</a></li>
+          <li><a href="https://dash.kloud51.com/clientarea.php">Member Area</a></li>
         </ul>
       </div>
     </div>
