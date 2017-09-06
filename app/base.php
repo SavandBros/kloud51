@@ -121,7 +121,7 @@ require "include/route.php";
               <!-- Community -->
               <a href="http://forum.kloud51.com/"><i class="fa fa-comments-o"></i> Community</a>
               <!-- Announcements -->
-              <a href="//kloud51.com/announcements.php"><i class="fa fa-bullhorn"></i> Announcements</a>
+              <a href="//dash.kloud51.com/announcements.php"><i class="fa fa-bullhorn"></i> Announcements</a>
               <!-- About -->
               <a href="/about"><i class="fa fa-info-circle"></i> About</a>
               <!-- Badges -->
@@ -166,11 +166,11 @@ require "include/route.php";
                 <i class="fa fa-file-text-o"></i> Software &amp; Server Licenses
               </a>
               <!-- Affiliate Army -->
-              <a href="/affiliate-army-program">
+              <a href="/program/affiliate-army-program">
                 <i class="fa fa-rebel"></i> Affiliate Army
               </a>
               <!-- Sponsorship -->
-              <a href="/sponsorship">
+              <a href="/program/sponsorship">
                 <i class="fa fa-users"></i> Sponsorship
               </a>
             </div>
