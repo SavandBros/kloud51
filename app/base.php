@@ -16,7 +16,7 @@ require "include/route.php";
 
   <!-- Load stylesheets -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//fontawesome.io/assets/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/assets/css/shorties.css">
   <link rel="stylesheet" href="/assets/css/app.css">
 </head>
