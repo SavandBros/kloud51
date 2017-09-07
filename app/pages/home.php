@@ -37,7 +37,7 @@ $plans = $db->select("SELECT * FROM `plans`");
             <div>
               <small>$</small>
               <span><?=$plan["price"]?></span>
-              <small>.99</small>
+              <small>.51</small>
             </div>
           </div>
           <div class="detail">
