@@ -2,8 +2,8 @@ Options -MultiViews
 
 RewriteEngine On
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ base.php [QSA,L]
-
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://kloud51.com/$1 [R,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ base.php [QSA,L]
