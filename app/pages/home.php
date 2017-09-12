@@ -19,7 +19,8 @@ $plan_features = $db->select("SELECT * FROM plan_features");
 <div class="container-fluid bg-1 s-pad-y-hard" id="plans">
   <div class="container">
     <!-- Title -->
-    <h1 class="header"><a href="#plans">Web Hosting Plans</a></h1>
+    <h1 class="title-header"><a href="#plans">Web Hosting Plans</a></h1>
+    <hr>
     <!-- Plans -->
     <div class="row s-mar-top">
       <?php foreach ($plans as $plan): ?>
@@ -52,7 +53,7 @@ $plan_features = $db->select("SELECT * FROM plan_features");
           </div>
         </div>
       </div>
-      <?php endforeach; ?>
+      <?php endforeach ?>
     </div>
   </div>
 </div>
@@ -72,7 +73,8 @@ $plan_features = $db->select("SELECT * FROM plan_features");
 <!-- Main features -->
 <div class="container s-pad-y-hard" id="main-features">
   <!-- Title -->
-  <h1 class="header"><a href="#main-features">Main Features</a></h1>
+  <h1 class="title-header"><a href="#main-features">Main Features</a></h1>
+  <hr>
   <!-- Feature list -->
   <div class="row s-mar-top text-center">
     <div class="col-md-4">
@@ -106,7 +108,8 @@ $plan_features = $db->select("SELECT * FROM plan_features");
 <div class="container-fluid bg-1" id="why">
   <div class="container s-pad-y-hard">
     <!-- Title -->
-    <h1 class="header"><a href="#why">Why Kloud51?</a></h1>
+    <h1 class="title-header"><a href="#why">Why Kloud51?</a></h1>
+    <hr>
     <!-- Reasons -->
     <div class="row icon-title">
       <div class="col-lg-6">
