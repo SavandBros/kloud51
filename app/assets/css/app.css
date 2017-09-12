@@ -221,6 +221,35 @@ hr[small] {
 }
 
 
+/* Plan features */
+
+.plan-feature {
+    display: inline-block;
+    border: 1px solid #1abc9c;
+    border-radius: 2px;
+    margin: 5px 3px;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: default;
+    color: #444;
+    transition: all 0.2s ease-in-out;
+}
+
+.plan-feature:hover {
+    color: #000;
+    background: #eee;
+}
+
+.plan-feature.highlight-1 {
+    background: #1abc9c;
+    color: #fff;
+}
+
+.plan-feature.highlight-1:hover {
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 /* Feature image */
 
 .feature-image {
