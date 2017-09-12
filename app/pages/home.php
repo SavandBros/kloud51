@@ -3,7 +3,7 @@
 $db = new Db();
 
 // Get plans
-$plans = $db->select("SELECT * FROM `plans`");
+$plans = $db->select("SELECT * FROM plans WHERE hidden=false");
 ?>
 
 <!-- Cover -->
@@ -22,7 +22,7 @@ $plans = $db->select("SELECT * FROM `plans`");
     <!-- Plans -->
     <div class="row s-mar-top">
       <?php foreach ($plans as $plan): ?>
-      <div class="plan-wrapper col-md-3 col-sm-6">
+      <div class="plan-wrapper col-md-4 col-sm-6">
         <div class="plan">
           <?php if ($plan['featured']): ?>
           <span class="featured" style="background: <?=$plan['color']?>" title="Featured Plan">

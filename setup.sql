@@ -10,5 +10,6 @@ CREATE TABLE `plans` (
  `color` varchar(50) NOT NULL,
  `button_label` varchar(50) NOT NULL DEFAULT 'Order Now',
  `button_link` varchar(1000) NOT NULL DEFAULT '#',
+ `hidden` BOOLEAN NOT NULL DEFAULT FALSE,
  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
