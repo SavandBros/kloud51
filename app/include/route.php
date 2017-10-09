@@ -125,28 +125,29 @@ class Route {
 
 
 // Let's add some routes
-Route::add("home", "/", null, null, false, true);
+Route::add("home", "/", null, null, false, false);
 
 Route::add("admin", "/admin");
-
-Route::add("affiliate", "/program/affiliate-army", "Affiliate Army Program", "Program", true, true);
-Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true, true);
-Route::add("about", "/about", "About", null, true, true);
 
 Route::add("tos", "/legal/tos", "Terms Of Service", "Legal");
 Route::add("aup", "/legal/acceptable-use-policy", "Acceptable Use Policy", "Legal");
 Route::add("privacy", "/legal/privacy", "Privacy Policy", "Legal");
 Route::add("refund", "/legal/refunds", "Refund Policy", "Legal");
 
-Route::add("mybb", "/hosting/mybb", "MyBB", "Hosting");
-Route::add("mariadb", "/hosting/mariadb", "MariaDB", "Hosting");
-Route::add("bbpress", "/hosting/bbpress", "bbPress", "Hosting");
-Route::add("ssd-vps", "/hosting/ssd-vps", "SSD VPS", "Hosting");
-Route::add("wordpress", "/hosting/wordpress", "Wordpress", "Hosting");
-Route::add("whmcs", "/hosting/whmcs", "WHMCS", "Hosting");
-Route::add("joomla", "/hosting/joomla", "Joomla", "Hosting");
-Route::add("softaculous", "/hosting/softaculous", "Softaculous", "Hosting");
-Route::add("prestashop", "/hosting/prestashop", "Prestashop", "Hosting");
+Route::add("business", "/hosting/business-hosting", "Business Hosting", "Hosting", false, true, true);
+Route::add("mybb", "/hosting/mybb", "MyBB", "Hosting", true, true, true);
+Route::add("mariadb", "/hosting/mariadb", "MariaDB", "Hosting", true, true, true);
+Route::add("bbpress", "/hosting/bbpress", "bbPress", "Hosting", true, true, true);
+Route::add("ssd-vps", "/hosting/ssd-vps", "SSD VPS", "Hosting", true, true, true);
+Route::add("wordpress", "/hosting/wordpress", "Wordpress", "Hosting", true, true, true);
+Route::add("whmcs", "/hosting/whmcs", "WHMCS", "Hosting", true, true, true);
+Route::add("joomla", "/hosting/joomla", "Joomla", "Hosting", true, true, true);
+Route::add("softaculous", "/hosting/softaculous", "Softaculous", "Hosting", true, true, true);
+Route::add("prestashop", "/hosting/prestashop", "Prestashop", "Hosting", true, true, true);
+
+Route::add("affiliate", "/program/affiliate-army", "Affiliate Army Program", "Program", true, true);
+Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true, true);
+Route::add("about", "/about", "About", null, true, true);
 
 // Default route
 $base = Route::find("home");
