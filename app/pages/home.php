@@ -56,6 +56,12 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
       </div>
       <?php endforeach ?>
     </div>
+    <!-- More plans -->
+    <div class="row row-launch">
+      <a href="/hosting/business-hosting" class="btn btn-default btn-launch">
+        View Business Hosting Plans <i class="fa fa-fw fa-chevron-right"></i>
+      </a>
+    </div>
   </div>
 </div>
 
