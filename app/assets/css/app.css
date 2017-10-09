@@ -27,6 +27,20 @@ li {
     line-height: 25px;
 }
 
+::-webkit-scrollbar-track,
+::-webkit-scrollbar {
+    background: white;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+}
+
 
 /* HR */
 
@@ -91,12 +105,15 @@ hr[small] {
 
 /* Buttons */
 
-@media (min-width: 768px) {
-    .btn-launch {
-        font-size: 22px;
-        padding: 20px;
-        width: 100%;
-    }
+.btn-launch {
+    font-size: 22px;
+    padding: 20px;
+    width: 100%;
+}
+
+.row-launch .btn-launch {
+    margin: 0 5px;
+    width: calc(100% - 10px);
 }
 
 
@@ -122,6 +139,10 @@ hr[small] {
     background-image: url("../img/header.jpg");
 }
 
+.bg-computer {
+    background-image: url("../img/computer.jpg");
+}
+
 
 /* List Group */
 
@@ -133,7 +154,7 @@ hr[small] {
 /* Plans */
 
 .plan-wrapper {
-    padding: 5px;
+    padding: 25px 5px;
 }
 
 .plan {
@@ -143,38 +164,37 @@ hr[small] {
     text-align: center;
 }
 
-.plan * {
-    margin: 0;
-}
-
 .plan>div {
     padding: 20px 0;
     background: #fff;
 }
 
-.plan .featured {
+.plan .message {
     position: absolute;
-    top: -30px;
+    top: -14px;
     left: 20px;
     background: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    font-size: larger;
 }
 
 .plan .head {
     background: #333;
     color: #fff;
-    padding-bottom: 90px;
+    padding-bottom: 60px;
     border-top: 6px solid #333;
 }
 
 .plan .head h1 {
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .plan .head p {
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .plan .price {
@@ -184,26 +204,39 @@ hr[small] {
 
 .plan .price div {
     border: 6px solid #333;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    line-height: 140px;
+    width: 240px;
+    height: 90px;
+    border-radius: 1000px;
     background: #fff;
-    margin-top: -75px;
     display: inline-block;
+    margin-top: -50px;
 }
 
 .plan .price span {
-    font-size: 5em;
+    font-size: 3em;
+    font-weight: bold;
 }
 
 .plan .price small {
-    font-size: 2em;
+    font-size: 1.5em;
+}
+
+.plan .price .renew {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: -8px;
+    font-weight: bold;
 }
 
 .plan .detail {
+    padding: 20px 0;
+}
+
+.plan .detail p {
     line-height: 2em;
+    font-size: larger;
+    margin: 0;
 }
 
 .plan .order {
@@ -247,6 +280,13 @@ hr[small] {
 
 .plan-feature.highlight-1:hover {
     box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Feature */
+
+.feature {
+    margin: 30px 0;
 }
 
 
@@ -319,6 +359,16 @@ hr[small] {
 .title-header {
     display: block;
     text-align: center;
+    font-weight: bold;
+}
+
+.title-header,
+.title-header a {
+    color: #333;
+}
+
+.title-header a:hover {
+    color: #337ab7;
 }
 
 .title-header+hr {
@@ -519,4 +569,24 @@ hr[small] {
     font-size: 20px;
     padding: 15px;
     border-bottom-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/* List 2x icons */
+
+.list-2x .fa {
+    font-size: 2em;
+    position: relative;
+    top: 3px;
+}
+
+
+/* Flex list */
+
+.list-flex li {
+    display: flex;
+}
+
+.list-flex li .fa {
+    margin-right: 10px;
 }

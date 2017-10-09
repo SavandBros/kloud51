@@ -48,6 +48,10 @@
     padding-bottom: 100px;
 }
 
+.s-full {
+    max-width: 100%;
+}
+
 @media (max-width: 992px) {
     .s-mobile {
         padding: 20px 0 20px 0;
@@ -110,6 +114,10 @@
     font-size: 2em;
 }
 
+.t-emerald {
+    color: #2ecc71;
+}
+
 
 /* Opacities */
 
@@ -148,6 +156,10 @@
 
 .img-rounded {
     border-radius: 6px;
+}
+
+.img-circle {
+    border-radius: 10000px;
 }
 
 .br-top {
