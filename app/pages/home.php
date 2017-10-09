@@ -58,18 +58,6 @@ $plan_features = $db->select("SELECT * FROM plan_features");
   </div>
 </div>
 
-<!-- Plan features -->
-<div class="container-fluid s-pad-y bg-2 text-center" id="plan-features">
-  <!-- Title -->
-  <h1 class="title-header"><a href="#plan-features">Included With Every Plan</a></h1>
-  <hr>
-  <!-- Feature list -->
-  <?php foreach ($plan_features as $feature): ?>
-    <!-- Feature -->
-    <div class="plan-feature highlight-<?=$feature["highlight"]?>"><?=$feature["content"]?></div>
-  <?php endforeach ?>
-</div>
-
 <!-- Main features -->
 <div class="container s-pad-y-hard" id="main-features">
   <!-- Title -->
