@@ -219,6 +219,39 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
           </div>
         </div>
       </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fa fa-arrow-up" style="color: #3498db"></i>
+          </div>
+          <div class="col-sm-9 grid-3">
+            <h3>Level up!</h3>
+            <p>
+              We have resources – CPU, memory, entry processes, I/O – at the ready for when you need them
+              (we'll alert you when you're close.) Or you can really stay on top of things through our robust stats
+              dashboard. Either way, leveling up is a one-click affair.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fa fa-lock" style="color: #e67e22"></i>
+          </div>
+          <div class="col-sm-9 grid-3">
+            <h3>Security</h3>
+            <p>
+              It’s hard to believe anyone would want to harm your website, but they do. Thankfully, our security team is
+              on the job 24/7 to meticulously monitor, thwart suspicious activity and deflect DDoS attacks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Hosting apps -->
 <div class="container-fluid bg-grad-2">
   <div class="container s-pad-y-hard">
