@@ -45,7 +45,7 @@ require "include/route.php";
           <!-- Dropdown -->
           <li class="dropdown">
             <!-- Dropdown label -->
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="<?=$link["dropdown"]?>">
               <?=$link["dropdown"]?> <span class="caret"></span>
             </a>
             <!-- Dropdown links -->
