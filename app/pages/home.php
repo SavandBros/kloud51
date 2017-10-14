@@ -7,10 +7,18 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
 ?>
 
 <!-- Cover -->
-<div class="container-fluid cover bg-header">
+<div class="container-fluid cover cover-dark bg-evening">
   <div class="container">
-    <h1 class="t-5"><b>Kloud51</b></h1>
-    <h1>Web Hosting, Domain Names and SSL Certificate.</h1>
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="t-bold">Kloud51</h1>
+        <h1 class="t-5"><b>Build your own professional website</b></h1>
+        <br>
+        <a class="btn btn-lg btn-primary br-rad-no" onClick="animateScroll('#plans')">
+          Get Started <i class="fa fa-fw fa-arrow-circle-down"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
