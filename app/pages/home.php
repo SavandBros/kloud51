@@ -197,6 +197,8 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
         </a>
       </div>
     </div>
+    <!-- More text -->
+    <h3 class="text-center t-white">More than 300 apps ready to be installed in 1-click</h3>
   </div>
 </div>
 
