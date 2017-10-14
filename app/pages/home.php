@@ -26,7 +26,7 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
 <div class="container-fluid bg-1 s-pad-y-hard" id="plans">
   <div class="container">
     <!-- Title -->
-    <h1 class="title-header"><a href="#plans">Web Hosting Plans</a></h1>
+    <h1 class="title"><a href="#plans" class="t-dark">Web Hosting Plans</a></h1>
     <hr>
     <!-- Plans -->
     <div class="row s-mar-top">
@@ -74,9 +74,9 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
 </div>
 
 <!-- Main features -->
-<div class="container s-pad-y-hard" id="main-features">
+<div class="container s-pad-y-hard">
   <!-- Title -->
-  <h1 class="title-header"><a href="#main-features">Main Features</a></h1>
+  <h1 class="title">Main Features</h1>
   <hr>
   <!-- Feature list -->
   <div class="row s-mar-top text-center">
@@ -108,10 +108,10 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
 </div>
 
 <!-- Why kloud51 -->
-<div class="container-fluid bg-1" id="why">
+<div class="container-fluid bg-1">
   <div class="container s-pad-y-hard">
     <!-- Title -->
-    <h1 class="title-header"><a href="#why">Why Kloud51?</a></h1>
+    <h1 class="title">Why Kloud51?</h1>
     <hr>
     <!-- Reasons -->
     <div class="row icon-title">
@@ -203,7 +203,8 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
   </div>
 </div>
 
-<div class="container-fluid s-pad-no bg-1 br-top" id="ratings">
+<!-- Ratings -->
+<div class="container-fluid s-pad-no bg-1">
   <div id="reviews" class="carousel slide" data-ride="carousel" data-interval="false">
     <ol class="carousel-indicators">
       <li data-target="#reviews" data-slide-to="0" class="active"></li>
