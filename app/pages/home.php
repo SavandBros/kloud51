@@ -107,6 +107,26 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
   </div>
 </div>
 
+<!-- Member area -->
+<div class="container-fluid bg-grad">
+  <div class="container s-pad-y-hard">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="s-mar-top hidden-xs hidden-sm"></div>
+        <h1 class="title">Powerful Dashboard</h1>
+        <h3 class="t-line">
+          Manage all of your services and account in one place, a control panel has been
+          carefully designed and crafted to let you manage your account easily.
+        </h3>
+      </div>
+      <div class="col-md-8">
+        <div class="s-mar-top hidden-md hidden-lg"></div>
+        <img class="img-shadow s-full" src="/assets/img/home/memberarea.png">
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Why kloud51 -->
 <div class="container-fluid bg-1">
   <div class="container s-pad-y-hard">
