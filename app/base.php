@@ -64,7 +64,6 @@ require "include/route.php";
           </li>
           <?php endif; ?>
           <?php endforeach; ?>
-          <li><a href="//dash.kloud51.com/knowledgebase.php">Knowledgebase</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="https://dash.kloud51.com/clientarea.php">Member Area</a></li>
