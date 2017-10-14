@@ -20,6 +20,10 @@
     margin-top: 50px;
 }
 
+.s-mar-top-soft {
+    margin-top: 25px;
+}
+
 .s-mar-y {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -118,6 +122,26 @@
     color: #2ecc71;
 }
 
+.t-white {
+    color: #fff;
+}
+
+a.t-white:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a.t-dark {
+    color: #333;
+}
+
+a.t-dark:hover {
+    color: #337ab7;
+}
+
+.t-line {
+    line-height: 1.5em;
+}
+
 
 /* Opacities */
 
@@ -164,6 +188,20 @@
 
 .br-top {
     border-top: 2px solid #337ab7;
+}
+
+.br-rad-no {
+    border-radius: 0 !important;
+}
+
+.br-no {
+    border: 0 !important;
+}
+
+.img-softaculous {
+    padding: 10px;
+    width: 160px !important;
+    background: #fff;
 }
 
 
