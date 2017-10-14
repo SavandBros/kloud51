@@ -107,21 +107,94 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
   </div>
 </div>
 
-<!-- Member area -->
-<div class="container-fluid bg-grad">
+<!-- Hosting apps -->
+<div class="container-fluid bg-grad-2">
   <div class="container s-pad-y-hard">
+    <!-- Title -->
+    <h1 class="title">AWESOME HOSTING APPS</h1>
+    <br>
+    <!-- Apps -->
     <div class="row">
-      <div class="col-md-4">
-        <div class="s-mar-top hidden-xs hidden-sm"></div>
-        <h1 class="title">Powerful Dashboard</h1>
-        <h3 class="t-line">
-          Manage all of your services and account in one place, a control panel has been
-          carefully designed and crafted to let you manage your account easily.
-        </h3>
+      <!-- Wordpress -->
+      <div class="col-xs-6 col-md-4">
+        <a class="app" href="/hosting/wordpress">
+          <div class="logo">
+            <i class="fa fa-fw fa-wordpress" style="color: #3498db"></i>
+          </div>
+          <span>WordPress</span>
+        </a>
       </div>
-      <div class="col-md-8">
-        <div class="s-mar-top hidden-md hidden-lg"></div>
-        <img class="img-shadow s-full" src="/assets/img/home/memberarea.png">
+      <!-- PrestaShop -->
+      <div class="col-xs-6 col-md-4">
+        <a class="app" href="/hosting/prestashop">
+          <div class="logo">
+            <img src="/assets/img/page/prestashop.svg">
+          </div>
+          <span>PrestaShop</span>
+        </a>
+      </div>
+      <!-- Joomla -->
+      <div class="col-xs-6 col-md-4">
+        <a class="app" href="/hosting/joomla">
+          <div class="logo">
+            <i class="fa fa-fw fa-joomla" style="color: #e67e22"></i>
+          </div>
+          <span>Joomla</span>
+        </a>
+      </div>
+      <!-- SSD VPS -->
+      <div class="col-xs-6 col-md-4">
+        <a class="app" href="/hosting/ssd-vps">
+          <div class="logo">
+            <i class="fa fa-fw fa-server"></i>
+          </div>
+          <span>SSD VPS</span>
+        </a>
+      </div>
+      <!-- WHMCS -->
+      <div class="col-xs-6 col-md-4">
+        <a class="app" href="/hosting/whmcs">
+          <div class="logo">
+            <img src="/assets/img/page/whmcs.png">
+          </div>
+          <span>WHMCS</span>
+        </a>
+      </div>
+      <!-- MyBB -->
+      <div class="col-xs-6 col-md-4">
+        <a class="app" href="/hosting/mybb">
+          <div class="logo">
+            <img src="/assets/img/page/mybb.png">
+          </div>
+          <span>MyBB</span>
+        </a>
+      </div>
+      <!-- MariaDB -->
+      <div class="col-xs-6 col-md-4">
+        <a class="app" href="/hosting/mariadb">
+          <div class="logo">
+            <img src="/assets/img/page/mariadb.png">
+          </div>
+          <span>MariaDB</span>
+        </a>
+      </div>
+      <!-- bbPress -->
+      <div class="col-xs-6 col-md-4">
+        <a class="app" href="/hosting/bbpress">
+          <div class="logo">
+            <img src="/assets/img/page/bbpress.png">
+          </div>
+          <span>bbPress</span>
+        </a>
+      </div>
+      <!-- Softaculous -->
+      <div class="col-xs-6 col-md-4">
+        <a class="app" href="/hosting/softaculous">
+          <div class="logo">
+            <img src="/assets/img/page/softaculous.gif" class="img-circle img-softaculous">
+          </div>
+          <span>Softaculous</span>
+        </a>
       </div>
     </div>
   </div>
@@ -252,94 +325,21 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
   </div>
 </div>
 
-<!-- Hosting apps -->
-<div class="container-fluid bg-grad-2">
+<!-- Member area -->
+<div class="container-fluid bg-grad">
   <div class="container s-pad-y-hard">
-    <!-- Title -->
-    <h1 class="title">AWESOME HOSTING APPS</h1>
-    <br>
-    <!-- Apps -->
     <div class="row">
-      <!-- Wordpress -->
-      <div class="col-xs-6 col-md-4">
-        <a class="app" href="/hosting/wordpress">
-          <div class="logo">
-            <i class="fa fa-fw fa-wordpress" style="color: #3498db"></i>
-          </div>
-          <span>WordPress</span>
-        </a>
+      <div class="col-md-4">
+        <div class="s-mar-top hidden-xs hidden-sm"></div>
+        <h1 class="title">Powerful Dashboard</h1>
+        <h3 class="t-line">
+          Manage all of your services and account in one place, a control panel has been
+          carefully designed and crafted to let you manage your account easily.
+        </h3>
       </div>
-      <!-- PrestaShop -->
-      <div class="col-xs-6 col-md-4">
-        <a class="app" href="/hosting/prestashop">
-          <div class="logo">
-            <img src="/assets/img/page/prestashop.svg">
-          </div>
-          <span>PrestaShop</span>
-        </a>
-      </div>
-      <!-- Joomla -->
-      <div class="col-xs-6 col-md-4">
-        <a class="app" href="/hosting/joomla">
-          <div class="logo">
-            <i class="fa fa-fw fa-joomla" style="color: #e67e22"></i>
-          </div>
-          <span>Joomla</span>
-        </a>
-      </div>
-      <!-- SSD VPS -->
-      <div class="col-xs-6 col-md-4">
-        <a class="app" href="/hosting/ssd-vps">
-          <div class="logo">
-            <i class="fa fa-fw fa-server"></i>
-          </div>
-          <span>SSD VPS</span>
-        </a>
-      </div>
-      <!-- WHMCS -->
-      <div class="col-xs-6 col-md-4">
-        <a class="app" href="/hosting/whmcs">
-          <div class="logo">
-            <img src="/assets/img/page/whmcs.png">
-          </div>
-          <span>WHMCS</span>
-        </a>
-      </div>
-      <!-- MyBB -->
-      <div class="col-xs-6 col-md-4">
-        <a class="app" href="/hosting/mybb">
-          <div class="logo">
-            <img src="/assets/img/page/mybb.png">
-          </div>
-          <span>MyBB</span>
-        </a>
-      </div>
-      <!-- MariaDB -->
-      <div class="col-xs-6 col-md-4">
-        <a class="app" href="/hosting/mariadb">
-          <div class="logo">
-            <img src="/assets/img/page/mariadb.png">
-          </div>
-          <span>MariaDB</span>
-        </a>
-      </div>
-      <!-- bbPress -->
-      <div class="col-xs-6 col-md-4">
-        <a class="app" href="/hosting/bbpress">
-          <div class="logo">
-            <img src="/assets/img/page/bbpress.png">
-          </div>
-          <span>bbPress</span>
-        </a>
-      </div>
-      <!-- Softaculous -->
-      <div class="col-xs-6 col-md-4">
-        <a class="app" href="/hosting/softaculous">
-          <div class="logo">
-            <img src="/assets/img/page/softaculous.gif" class="img-circle img-softaculous">
-          </div>
-          <span>Softaculous</span>
-        </a>
+      <div class="col-md-8">
+        <div class="s-mar-top hidden-md hidden-lg"></div>
+        <img class="img-shadow s-full" src="/assets/img/home/memberarea.png">
       </div>
     </div>
   </div>
