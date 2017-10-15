@@ -134,6 +134,7 @@ Route::add("aup", "/legal/acceptable-use-policy", "Acceptable Use Policy", "Lega
 Route::add("privacy", "/legal/privacy", "Privacy Policy", "Legal");
 Route::add("refund", "/legal/refunds", "Refund Policy", "Legal");
 
+Route::add("web", "/hosting/web-hosting", "Web Hosting", "Hosting", false, true, true);
 Route::add("business", "/hosting/business-hosting", "Business Hosting", "Hosting", false, true, true);
 Route::add("mybb", "/hosting/mybb", "MyBB", "Hosting", true, true, true);
 Route::add("mariadb", "/hosting/mariadb", "MariaDB", "Hosting", true, true, true);
