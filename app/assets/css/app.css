@@ -679,3 +679,53 @@ hr[small] {
     width: 100px;
     margin-top: -20px;
 }
+
+
+/* Compare table */
+
+.compare-table-wrapper {
+    background: #fff;
+}
+
+@media (max-width: 768px) {
+    .compare-table-wrapper {
+        overflow-x: scroll;
+    }
+}
+
+.compare-table {
+    margin: 0;
+}
+
+.compare-table th {
+    font-weight: normal;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px !important;
+    vertical-align: middle;
+    text-shadow: none;
+    color: #000;
+}
+
+.compare-table .active {
+    background: #27ae60 !important;
+    color: #fff;
+    font-weight: bold;
+}
+
+.compare-table .col-md-4 {
+    text-align: left;
+    font-weight: bold;
+}
+
+.compare-table thead th {
+    font-weight: bold;
+    font-size: 1.6em;
+    background: #333;
+    color: #fff;
+    border-color: #666 !important;
+}
+
+.compare-table th {
+    border-color: #eee !important;
+}
