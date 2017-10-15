@@ -68,7 +68,7 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='business'
     </div>
     <!-- More plans -->
     <div class="row row-launch">
-      <a href="/" class="btn btn-default btn-launch">
+      <a href="/hosting/web-hosting" class="btn btn-default btn-launch">
         View Web Hosting Plans <i class="fa fa-fw fa-chevron-right"></i>
       </a>
     </div>
