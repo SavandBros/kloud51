@@ -325,6 +325,63 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
       </div>
     </div>
   </div>
+</div><!-- Compare hosting solutions -->
+<div class="container-fluid bg-grad s-pad-y-hard">
+  <div class="container">
+    <!-- Ttile -->
+    <h1 class="title">COMPARE HOSTING SOLUTIONS</h1>
+    <!-- List -->
+    <div class="compare-table-wrapper img-shadow">
+      <table class="table table-stripe table-hover compare-table">
+        <thead>
+          <tr>
+            <th class="col-md-4"></th>
+            <th>Web Hosting</th>
+            <th>Business Hosting</th>
+            <th>VPS Hosting</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="col-md-4">Suited for</th>
+            <th class="active">Basic websites and less resource-hungry web apps</th>
+            <th>E-commerce, high traffic and data-intensive (video or file-heavy) web apps</th>
+            <th>Resource-intensive (CPU, RAM) web apps that need more control and flexibility</th>
+          </tr>
+          <tr>
+            <th class="col-md-4">Level of technical skills</th>
+            <th class="active">Basic</th>
+            <th>Basic</th>
+            <th>Advanced</th>
+          </tr>
+          <tr>
+            <th class="col-md-4">Site visitors</th>
+            <th class="active">Low to moderate</th>
+            <th>High</th>
+            <th>High</th>
+          </tr>
+          <tr>
+            <th class="col-md-4">Memory</th>
+            <th class="active">Shared with others</th>
+            <th>Dedicated</th>
+            <th>Dedicated</th>
+          </tr>
+          <tr>
+            <th class="col-md-4">Disk Space</th>
+            <th class="active">Shared with others</th>
+            <th>Dedicated</th>
+            <th>Dedicated</th>
+          </tr>
+          <tr>
+            <th class="col-md-4">Control panel</th>
+            <th class="active">Easy-to-use cPanel</th>
+            <th>Easy-to-use cPanel</th>
+            <th>Default WHM / cPanel</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 <!-- Your questions, out answers -->
