@@ -149,7 +149,7 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='business'
   <div class="container text-center">
     <h1 class="t-bold">More power, less complexity.</h1>
     <p>Get high-powered performance and dedicated resources AND an easy-to-use control panel.</p>
-    <a href="https://dash.kloud51.com/cart.php" class="btn btn-primary t-bold btn-lg">Get Started</a>
+    <a href="https://dash.kloud51.com/cart.php?gid=12" class="btn btn-primary t-bold btn-lg">Get Started</a>
   </div>
 </div>
 
