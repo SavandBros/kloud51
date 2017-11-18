@@ -148,6 +148,8 @@ Route::add("prestashop", "/hosting/prestashop", "Prestashop", "Hosting", true, t
 
 Route::add("affiliate", "/program/affiliate-army", "Affiliate Army Program", "Program", true, true);
 Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true, true);
+Route::add("grant", "/program/grant", "Grant", "Program", false, true);
+
 Route::add("forum", "http://forum.kloud51.com/", "Forum", null, null, true);
 Route::add("about", "/about", "About", null, true, true);
 

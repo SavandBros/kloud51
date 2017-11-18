@@ -24,6 +24,7 @@ function showHostings() {
 }
 
 $(function () {
+  $(".dropdown-toggle").dropdown();
   $("[tooltip]").tooltip();
   showDebugElements();
   grid(".grid");
