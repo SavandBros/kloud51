@@ -5,44 +5,66 @@ from fabric.api import env
 from fabric.context_managers import cd, prefix
 from fabric.operations import run, local, put
 
-REMOTE_USER = os.environ.get('REMOTE_USER')
-APP_NAME = os.environ.get('APP_NAME')
-APPS_PATH = f'/home/{REMOTE_USER}/python_apps'
-APP_PATH = f'{APPS_PATH}/{APP_NAME}'
-VENV_PATH = f'/home/{REMOTE_USER}/virtualenv/python__apps_{APP_NAME}/3.5'
-VENV_ACTIVATE_PATH = f'source {VENV_PATH}/bin/activate'
-LANGUAGES = ('en', 'fa', )
 
+REMOTE_USER = os.environ.get('REMOTE_USER')
+LANGUAGES = ('en', 'fa', )
 env.user = REMOTE_USER
 env.port = int(os.environ.get('REMOTE_PORT'))
+
+class AppConfig:
+    def __init__(self):
+        self.app_name = os.environ.get('APP_NAME')
+
+    def get_app_name(self):
+        return self.app_name
+
+    def get_app_path(self):
+        return f'/home/{REMOTE_USER}/python_apps'
+
+    def get_apps_path(self):
+        return f'{self.apps_path}/{self.app_name}'
+
+    def get_venv_path(self):
+        app_name = self.app_name
+        return f'/home/{REMOTE_USER}/virtualenv/python__apps_{app_name}/3.5'
+
+    def get_venv_activate_path(self):
+        return f'source {self.get_venv_path()}/bin/activate'
+
+
+app_cfg = AppConfig()
 
 
 @contextmanager
 def venv():
     """Activate the virtualenv."""
-    with cd(VENV_PATH):
-        with prefix(VENV_ACTIVATE_PATH):
+    with cd(app_cfg.get_venv_path()):
+        with prefix(app_cfg.get_venv_activate_path()):
             yield
 
 
 def set_staging():
     """Set the host target to staging machines."""
     env.hosts = [os.environ.get('REMOTE_HOST_STAGING'), ]
+    app_cfg.app_name = os.environ.get('APP_NAME_STAGING')
 
 
 def set_prod():
     """Set the host target to production machines."""
     env.hosts = [os.environ.get('REMOTE_HOST_PROD'), ]
+    app_cfg.app_name = os.environ.get('APP_NAME_PROD')
 
 
 def deploy():
     """Deploying to production."""
+    app_name = app_cfg.get_app_name()
+
     local('git archive HEAD --format=zip > latest.zip')
-    put('latest.zip', APPS_PATH)
+    put('latest.zip', app_cfg.get_apps_path())
 
     with cd(APPS_PATH):
-        run(f'rm -rf {APP_NAME}')
-        run(f'unzip latest.zip -d {APP_NAME}')
+        run(f'rm -rf {app_name}')
+        run(f'unzip latest.zip -d {app_name}')
         run('rm latest.zip')
 
     with venv():
@@ -53,7 +75,7 @@ def deploy():
             run('chmod 644 tmp/restart.txt')
 
     run(f'selectorctl --interpreter python '
-        f'--restart-webapp python_apps/{APP_NAME}')
+        f'--restart-webapp python_apps/{app_name}')
 
     local('rm latest.zip')
 
