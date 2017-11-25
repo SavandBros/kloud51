@@ -67,7 +67,7 @@ def deploy():
         run('rm latest.zip')
 
     with venv():
-        with cd(APP_PATH):
+        with cd(app_name):
             run('pip install -r requirements.txt')
             run('python manage.py collectstatic --noinput')
             run('django-admin.py compilemessages')
