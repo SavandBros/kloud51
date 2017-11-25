@@ -16,10 +16,7 @@ ALLOWED_HOSTS = [
 ROOT_URLCONF = 'kloud51.urls'
 WSGI_APPLICATION = 'kloud51.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {'default': dj_database_url.config()}
+DATABASES = {'default': dj_database_url.config(conn_max_age=600)}
 
 # Internationalization
 LANGUAGE_CODE = 'en'
