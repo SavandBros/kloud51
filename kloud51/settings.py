@@ -1,3 +1,4 @@
+import dj_database_url
 import os
 
 gettext = lambda s: s
@@ -18,17 +19,7 @@ WSGI_APPLICATION = 'kloud51.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'localhost',
-        'NAME': 'project.db',
-        'PASSWORD': '',
-        'PORT': '',
-        'USER': ''
-    }
-}
+DATABASES = {'default': dj_database_url.config()}
 
 # Internationalization
 LANGUAGE_CODE = 'en'
