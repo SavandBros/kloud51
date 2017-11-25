@@ -19,3 +19,5 @@ html5lib>=0.999999,<0.99999999
 Pillow>=3.0
 django-sekizai>=0.9
 six
+Fabric3==1.13.1.post1
+whitenoise==3.3.1
