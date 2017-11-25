@@ -5,11 +5,11 @@ from fabric.api import env
 from fabric.context_managers import cd, prefix
 from fabric.operations import run, local, put
 
-
 REMOTE_USER = os.environ.get('REMOTE_USER')
 LANGUAGES = ('en', 'fa', )
 env.user = REMOTE_USER
 env.port = int(os.environ.get('REMOTE_PORT'))
+
 
 class AppConfig:
     def __init__(self):
@@ -62,7 +62,7 @@ def deploy():
     local('git archive HEAD --format=zip > latest.zip')
     put('latest.zip', app_cfg.get_apps_path())
 
-    with cd(APPS_PATH):
+    with cd(app_name):
         run(f'rm -rf {app_name}')
         run(f'unzip latest.zip -d {app_name}')
         run('rm latest.zip')
