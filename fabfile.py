@@ -14,7 +14,6 @@ VENV_ACTIVATE_PATH = f'source {VENV_PATH}/bin/activate'
 LANGUAGES = ('en', 'fa', )
 
 env.user = REMOTE_USER
-env.hosts = [os.environ.get('REMOTE_HOST'), ]
 env.port = int(os.environ.get('REMOTE_PORT'))
 
 
@@ -24,6 +23,16 @@ def venv():
     with cd(VENV_PATH):
         with prefix(VENV_ACTIVATE_PATH):
             yield
+
+
+def set_staging():
+    """Set the host target to staging machines."""
+    env.hosts = [os.environ.get('REMOTE_HOST_STAGING'), ]
+
+
+def set_prod():
+    """Set the host target to production machines."""
+    env.hosts = [os.environ.get('REMOTE_HOST_PROD'), ]
 
 
 def deploy():
