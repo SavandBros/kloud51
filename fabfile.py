@@ -8,6 +8,7 @@ from fabric.operations import run, local, put
 REMOTE_USER = os.environ.get('REMOTE_USER')
 LANGUAGES = ('en', 'fa', )
 env.user = REMOTE_USER
+env.hosts = [os.environ.get('REMOTE_HOST'), ]
 env.port = int(os.environ.get('REMOTE_PORT'))
 
 
@@ -45,13 +46,11 @@ def venv():
 
 def set_staging():
     """Set the host target to staging machines."""
-    env.hosts = [os.environ.get('REMOTE_HOST_STAGING'), ]
     app_cfg.app_name = os.environ.get('APP_NAME_STAGING')
 
 
 def set_prod():
     """Set the host target to production machines."""
-    env.hosts = [os.environ.get('REMOTE_HOST_PROD'), ]
     app_cfg.app_name = os.environ.get('APP_NAME_PROD')
 
 
