@@ -181,7 +181,8 @@ CMS_TEMPLATES = (
     ('sidebar_right.html', 'Sidebar Right'),
     ('custom/home.html', 'Home'),
     ('custom/business-hosting.html', 'Business Hosting'),
-    ('custom/affiliate-army.html', 'Affiliate Army')
+    ('custom/affiliate-army.html', 'Affiliate Army'),
+    ('custom/sponsorship.html', 'Sponsorship')
 )
 
 CMS_PERMISSION = True
