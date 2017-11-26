@@ -1,7 +1,8 @@
 from currencies import Currency
 from django.db import models
-from planet import conf
 from django.utils.translation import ugettext_lazy as _
+
+from planet import conf
 
 
 class MoneyCurrency(models.Model):
