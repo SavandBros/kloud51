@@ -12,6 +12,8 @@ ALLOWED_HOSTS = [
     '192.168.56.1',
     'staging.kloud51.com',
     'kloud51.com',
+    'localhost',
+    '127.0.0.1',
 ]
 ROOT_URLCONF = 'kloud51.urls'
 WSGI_APPLICATION = 'kloud51.wsgi.application'
