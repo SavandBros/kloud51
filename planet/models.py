@@ -70,6 +70,7 @@ class Product(models.Model):
     slug = models.SlugField(verbose_name=_('slug'), unique=True)
     description = models.TextField(verbose_name='description')
     featured = models.BooleanField(verbose_name=_('featured'))
+    in_stock = models.BooleanField(verbose_name=_('in stock'), default=True)
     group = models.ForeignKey(ProductGroup)
     price = models.ManyToManyField(Price)
 
