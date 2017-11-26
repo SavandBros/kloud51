@@ -1,3 +1,4 @@
+"""Fabric is fabric friend."""
 from contextlib import contextmanager
 
 import os
@@ -13,6 +14,8 @@ env.port = int(os.environ.get('REMOTE_PORT'))
 
 
 class AppConfig:
+    """Application configuration."""
+
     def __init__(self):
         self.app_name = os.environ.get('APP_NAME')
 
