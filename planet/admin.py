@@ -28,3 +28,4 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'slug', 'featured', 'in_stock', )
     list_filter = ('featured', 'in_stock', )
     search_fields = ('name', 'description', )
+    prepopulated_fields = {'slug': ('name', )}
