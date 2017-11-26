@@ -64,7 +64,7 @@ def deploy():
     put('latest.zip', apps_name)
 
     with cd(apps_name):
-        run(f'rm -rf {apps_name}')
+        run(f'rm -rf {app_name}')
         run(f'unzip latest.zip -d {app_name}')
         run('rm latest.zip')
 
