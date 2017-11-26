@@ -21,3 +21,4 @@ tests/report/
 *.pot
 *.pyc
 .idea/
+*.db
