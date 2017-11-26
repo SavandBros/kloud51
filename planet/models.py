@@ -7,48 +7,28 @@ from planet import conf
 
 class MoneyCurrency(models.Model):
     """Money Currency."""
-    currency = models.CharField(
-        verbose_name=_("currency"),
-        max_length=113,
-        null=True,
-        blank=True,
+    code = models.CharField(
+        verbose_name=_("code"),
+        max_length=3,
+        unique=True,
         choices=((k, k) for k in Currency.get_currency_formats())
     )
-
-    def get_currency_parser(self):
-        """Return Money Currency parser."""
-        return Currency(self.currency)
+    rate = models.DecimalField(
+        verbose_name=_('rate'),
+        decimal_places=6,
+        max_digits=25,
+    )
 
     class Meta:
         verbose_name = _('Money Currency')
         verbose_name_plural = _('Money Currencies')
 
+    def get_currency_parser(self):
+        """Return Money Currency parser."""
+        return Currency(self.code)
 
-class Price(models.Model):
-    """Price model."""
-    PRICING_TYPE_CHOICES = (
-        (conf.PricingType.HOURLY, _('Hourly')),
-        (conf.PricingType.MONTHLY, _('Monthly')),
-        (conf.PricingType.QUARTERLY, _('Quarterly')),
-        (conf.PricingType.SEMI_ANNUALLY, _('Semi-Annually')),
-        (conf.PricingType.ANNUALLY, _('Annually')),
-        (conf.PricingType.BIENNIALLY, _('Biennially')),
-        (conf.PricingType.TRIENNIALLY, _('Triennially')),
-    )
-    currency = models.ForeignKey(MoneyCurrency)
-    pricing_type = models.IntegerField(
-        verbose_name=_('pricing type'),
-        choices=PRICING_TYPE_CHOICES,
-    )
-    price = models.DecimalField(
-        verbose_name=_('price'),
-        decimal_places=3,
-        max_digits=10,
-    )
-
-    class Meta:
-        verbose_name = _('Price')
-        verbose_name_plural = _('Prices')
+    def __str__(self):
+        return self.code
 
 
 class ProductGroup(models.Model):
@@ -73,7 +53,6 @@ class Product(models.Model):
     featured = models.BooleanField(verbose_name=_('featured'))
     in_stock = models.BooleanField(verbose_name=_('in stock'), default=True)
     group = models.ForeignKey(ProductGroup)
-    prices = models.ManyToManyField(Price)
 
     class Meta:
         verbose_name = _('Product')
@@ -82,3 +61,49 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+
+class Price(models.Model):
+    """Price model."""
+    PRICING_TYPE_CHOICES = (
+        (conf.PricingType.HOURLY, _('Hourly')),
+        (conf.PricingType.MONTHLY, _('Monthly')),
+        (conf.PricingType.QUARTERLY, _('Quarterly')),
+        (conf.PricingType.SEMI_ANNUALLY, _('Semi-Annually')),
+        (conf.PricingType.ANNUALLY, _('Annually')),
+        (conf.PricingType.BIENNIALLY, _('Biennially')),
+        (conf.PricingType.TRIENNIALLY, _('Triennially')),
+    )
+    currencies = models.ManyToManyField(MoneyCurrency)
+    pricing_type = models.IntegerField(
+        verbose_name=_('pricing type'),
+        choices=PRICING_TYPE_CHOICES,
+    )
+    product = models.ForeignKey(Product)
+    price = models.DecimalField(
+        verbose_name=_('price'),
+        decimal_places=6,
+        max_digits=10,
+    )
+
+    class Meta:
+        verbose_name = _('Price')
+        verbose_name_plural = _('Prices')
+        ordering = ('pricing_type', )
+
+    def __str__(self):
+        return f'{self.price} / {self.get_pricing_type_display()}'
+
+    @property
+    def prices(self):
+        prices = {}
+        for currency in self.currencies.all():
+            total_amount = currency.rate * self.price
+            currency_parser = currency.get_currency_parser()
+
+            prices[currency.currency] = {
+                'total_amount': total_amount,
+                'money_format': currency_parser.get_money_format(total_amount),
+                'money_with_currency_format': currency_parser.get_money_with_currency_format(total_amount),
+            }
+
+        return prices
