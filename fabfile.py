@@ -57,12 +57,13 @@ def set_prod():
 def deploy():
     """Deploying to production."""
     app_name = app_cfg.get_app_name()
+    apps_name = app_cfg.get_apps_path()
 
     local('git archive HEAD --format=zip > latest.zip')
-    put('latest.zip', app_cfg.get_apps_path())
+    put('latest.zip', apps_name)
 
-    with cd(app_name):
-        run(f'rm -rf {app_name}')
+    with cd(apps_name):
+        run(f'rm -rf {apps_name}')
         run(f'unzip latest.zip -d {app_name}')
         run('rm latest.zip')
 
