@@ -151,7 +151,20 @@ CMS_TEMPLATES = (
     ('custom/home.html', 'Home'),
     ('custom/business-hosting.html', 'Business Hosting'),
     ('custom/affiliate-army.html', 'Affiliate Army'),
-    ('custom/sponsorship.html', 'Sponsorship')
+    ('custom/about.html', 'About'),
+    ('custom/tos.html', 'Terms of Service'),
+    ('custom/acceptable-use-policy.html', 'Acceptable Use Policy'),
+    ('custom/refunds.html', 'Refunds'),
+    ('custom/privacy.html', 'Privacy Policy'),
+    ('custom/hosting/bbpress.html', 'bbPress'),
+    ('custom/hosting/mariadb.html', 'MariaDB'),
+    ('custom/hosting/my-bb.html', 'MyBB'),
+    ('custom/hosting/ssd-vps.html', 'SSD VPS'),
+    ('custom/hosting/whmcs.html', 'WHMCS'),
+    ('custom/hosting/wordpress.html', 'WordPress'),
+    ('custom/hosting/softaculous.html', 'Softaculous'),
+    ('custom/hosting/joomla.html', 'Joomla'),
+    ('custom/hosting/prestashop.html', 'Prestashop')
 )
 
 CMS_PERMISSION = True
