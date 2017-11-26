@@ -39,7 +39,9 @@ SITE_ID = 1
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'kloud51', 'templates'), ],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'kloud51', 'templates'),
+        ],
         'OPTIONS': {
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
@@ -106,7 +108,9 @@ INSTALLED_APPS = (
     'djangocms_snippet',
     'djangocms_googlemap',
     'djangocms_video',
-    'kloud51'
+    'kloud51',
+    # Apps and Plugins
+    'cmsplugin_pure_text',
 )
 
 LANGUAGES = (
