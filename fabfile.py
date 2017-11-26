@@ -19,11 +19,11 @@ class AppConfig:
     def get_app_name(self):
         return self.app_name
 
-    def get_app_path(self):
+    def get_apps_path(self):
         return f'/home/{REMOTE_USER}/python_apps'
 
-    def get_apps_path(self):
-        return f'{self.apps_path}/{self.app_name}'
+    def get_app_path(self):
+        return f'{self.get_apps_path()}/{self.get_app_name()}'
 
     def get_venv_path(self):
         app_name = self.app_name
