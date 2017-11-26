@@ -35,7 +35,7 @@ class Price(models.Model):
         (conf.PricingType.BIENNIALLY, _('Biennially')),
         (conf.PricingType.TRIENNIALLY, _('Triennially')),
     )
-    currency = models.ManyToManyField(MoneyCurrency)
+    currency = models.ForeignKey(MoneyCurrency)
     pricing_type = models.IntegerField(
         verbose_name=_('pricing type'),
         choices=PRICING_TYPE_CHOICES,
@@ -73,7 +73,7 @@ class Product(models.Model):
     featured = models.BooleanField(verbose_name=_('featured'))
     in_stock = models.BooleanField(verbose_name=_('in stock'), default=True)
     group = models.ForeignKey(ProductGroup)
-    price = models.ManyToManyField(Price)
+    prices = models.ManyToManyField(Price)
 
     class Meta:
         verbose_name = _('Product')

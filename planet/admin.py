@@ -3,6 +3,11 @@ from django.contrib import admin
 from planet.models import MoneyCurrency, Price, ProductGroup, Product
 
 
+class PriceInline(admin.TabularInline):
+    """Price Inline."""
+    model = Price
+
+
 @admin.register(MoneyCurrency)
 class MoneyCurrencyAdmin(admin.ModelAdmin):
     list_display = ('currency', )
@@ -29,3 +34,4 @@ class ProductAdmin(admin.ModelAdmin):
     list_filter = ('featured', 'in_stock', )
     search_fields = ('name', 'description', )
     prepopulated_fields = {'slug': ('name', )}
+    inlines = [PriceInline, ]
