@@ -72,7 +72,7 @@ def deploy():
         with cd(app_path):
             run('pip install -r requirements.txt')
             run('python manage.py collectstatic --noinput')
-            run('django-admin.py compilemessages')
+            run('python manage.py  migrate')
             run('chmod 644 tmp/restart.txt')
 
     run(f'selectorctl --interpreter python '
