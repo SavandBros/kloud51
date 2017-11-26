@@ -57,6 +57,7 @@ def set_prod():
 def deploy():
     """Deploying to production."""
     app_name = app_cfg.get_app_name()
+    app_path = app_cfg.get_app_path()
     apps_name = app_cfg.get_apps_path()
 
     local('git archive HEAD --format=zip > latest.zip')
@@ -68,7 +69,7 @@ def deploy():
         run('rm latest.zip')
 
     with venv():
-        with cd(app_name):
+        with cd(app_path):
             run('pip install -r requirements.txt')
             run('python manage.py collectstatic --noinput')
             run('django-admin.py compilemessages')
