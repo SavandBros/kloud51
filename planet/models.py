@@ -91,7 +91,9 @@ class Price(models.Model):
         ordering = ('pricing_type', )
 
     def __str__(self):
-        return f'{self.price} / {self.get_pricing_type_display()}'
+        return '{price} / {pricing_type}'.format(
+            price=self.price, pricing_type=self.get_pricing_type_display()
+        )
 
     @property
     def prices(self):
