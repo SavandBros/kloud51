@@ -112,6 +112,7 @@ INSTALLED_APPS = (
     'djangocms_video',
     'kloud51',
     # Apps and Plugins
+    'planet',
     'cmsplugin_pure_text',
 )
 

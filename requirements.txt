@@ -23,3 +23,4 @@ Fabric3==1.13.1.post1
 whitenoise==3.3.1
 dj-database-url==0.4.2
 psycopg2==2.7.3.2
+currencies==2014.7.13
