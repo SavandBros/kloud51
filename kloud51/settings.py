@@ -113,6 +113,7 @@ INSTALLED_APPS = (
     'kloud51',
     # Apps and Plugins
     'planet',
+    'planet_cms_integration',
     'cmsplugin_pure_text',
 )
 
