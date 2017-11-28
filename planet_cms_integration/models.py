@@ -10,7 +10,7 @@ class ProductGroupPluginModel(CMSPlugin):
     """Product Group Plugin Model."""
     product_group = models.ForeignKey(ProductGroup)
     name = models.CharField(verbose_name=_('name'), max_length=50)
-    description = models.TextField(verbose_name='description')
+    description = HTMLField(verbose_name='description')
 
     def __str__(self):
         return self.name
@@ -22,8 +22,8 @@ class ProductPluginModel(CMSPlugin):
     group = models.ForeignKey(ProductGroupPluginModel)
     description = HTMLField(verbose_name='description')
     name = models.CharField(verbose_name=_('name'), max_length=50)
-    info = models.CharField(verbose_name=_('info'), blank=True, null=True)
-    label = models.CharField(verbose_name=_('label'), blank=True, null=True)
+    info = models.CharField(verbose_name=_('info'), blank=True, null=True, max_length=250)
+    label = models.CharField(verbose_name=_('label'), blank=True, null=True, max_length=100)
     order_link = models.URLField()
 
     def __str__(self):
