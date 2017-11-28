@@ -2,9 +2,12 @@
     {% for product in instance.productgroupmodel_set.all %}
         <div class="plan-wrapper col-md-4 col-sm-6">
             <div class="plan">
+                {% if product.label %}
+                    <span class="message" style="background: #00B700">{{ product.label }}</span>
+                {% endif %}
                 <div class="head" style="border-top-color: #ffb300">
                     <h1>{{ product.name }}</h1>
-                    <p>{{ product.infof }}</p>
+                    <p>{{ product.info }}</p>
                 </div>
                 <div class="price" style="color: #ffb300">
                     <div>
