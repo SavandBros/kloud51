@@ -114,6 +114,7 @@ INSTALLED_APPS = (
     # Apps and Plugins
     'planet',
     'cmsplugin_pure_text',
+    'cmsplugin_cover',
 )
 
 LANGUAGES = (
