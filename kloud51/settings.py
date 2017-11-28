@@ -154,6 +154,7 @@ CMS_TEMPLATES = (
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
+    ('ten-sections.html', 'Ten Sections'),
     ('custom/home.html', 'Home'),
     ('custom/business-hosting.html', 'Business Hosting'),
     ('custom/affiliate-army.html', 'Affiliate Army'),
