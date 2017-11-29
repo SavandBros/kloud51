@@ -1,5 +1,5 @@
 <div class="row s-mar-top">
-    {% for product in instance.productgroupmodel_set.all %}
+        {% for product in instance.product_group.product_set.all %}
         <div class="plan-wrapper col-md-4 col-sm-6">
             <div class="plan">
                 {% if product.label %}
