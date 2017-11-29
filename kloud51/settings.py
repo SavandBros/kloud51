@@ -7,6 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DJANGO_DEBUG') != 'False'
+USE_S3 = os.environ.get('USE_S3') == 'True'
 
 ALLOWED_HOSTS = [
     '192.168.56.1',
@@ -23,7 +24,7 @@ DATABASES = {'default': dj_database_url.config(conn_max_age=600)}
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.environ.get('K51_MEDIA_ROOT', os.path.join(DATA_DIR, 'media'))
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = os.environ.get('K51_STATIC_ROOT', os.path.join(DATA_DIR, 'static'))
 
 STATICFILES_DIRS = (
@@ -105,6 +106,7 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'kloud51',
+    'storages',
     # Apps and Plugins
     'planet',
     'cmsplugin_pure_text',
@@ -198,3 +200,15 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+if USE_S3:
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+    AWS_S3_OBJECT_PARAMETERS = {
+        'CacheControl': 'max-age=864000',
+    }
+    AWS_QUERYSTRING_AUTH = False
