@@ -2,12 +2,16 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
+from django.conf import settings
+import filer.fields.image
 import djangocms_text_ckeditor.fields
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
+        ('cms', '0016_auto_20160608_1535'),
+        migrations.swappable_dependency(settings.FILER_IMAGE_MODEL),
     ]
 
     operations = [
@@ -103,6 +107,78 @@ class Migration(migrations.Migration):
                 'verbose_name': 'Product Group',
                 'verbose_name_plural': 'Product Groups',
             },
+        ),
+        migrations.CreateModel(
+            name='ProductGroupPluginModel',
+            fields=[
+                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_productgrouppluginmodel', parent_link=True, to='cms.CMSPlugin')),
+                ('product_group', models.ForeignKey(to='planet.ProductGroup')),
+            ],
+            options={
+                'abstract': False,
+            },
+            bases=('cms.cmsplugin',),
+        ),
+        migrations.CreateModel(
+            name='Team',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('name', models.CharField(verbose_name='name', max_length=50)),
+                ('name_en', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('name_hi', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('name_fa', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('name_ru', models.CharField(verbose_name='name', max_length=50, null=True)),
+            ],
+            options={
+                'verbose_name': 'Team',
+                'verbose_name_plural': 'Teams',
+            },
+        ),
+        migrations.CreateModel(
+            name='TeamMember',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('name', models.CharField(verbose_name='name', max_length=100)),
+                ('name_en', models.CharField(verbose_name='name', max_length=100, null=True)),
+                ('name_hi', models.CharField(verbose_name='name', max_length=100, null=True)),
+                ('name_fa', models.CharField(verbose_name='name', max_length=100, null=True)),
+                ('name_ru', models.CharField(verbose_name='name', max_length=100, null=True)),
+                ('bio', models.TextField(verbose_name='bio')),
+                ('bio_en', models.TextField(verbose_name='bio', null=True)),
+                ('bio_hi', models.TextField(verbose_name='bio', null=True)),
+                ('bio_fa', models.TextField(verbose_name='bio', null=True)),
+                ('bio_ru', models.TextField(verbose_name='bio', null=True)),
+                ('date_joined', models.DateField(verbose_name='date joined')),
+                ('picture', filer.fields.image.FilerImageField(verbose_name='image', blank=True, null=True, to=settings.FILER_IMAGE_MODEL)),
+                ('team', models.ForeignKey(to='planet.Team')),
+            ],
+            options={
+                'verbose_name': 'Team Member',
+                'verbose_name_plural': 'Team Members',
+                'ordering': ('date_joined',),
+            },
+        ),
+        migrations.CreateModel(
+            name='TeamMemberPluginModel',
+            fields=[
+                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_teammemberpluginmodel', parent_link=True, to='cms.CMSPlugin')),
+                ('team_member', models.ForeignKey(to='planet.TeamMember')),
+            ],
+            options={
+                'abstract': False,
+            },
+            bases=('cms.cmsplugin',),
+        ),
+        migrations.CreateModel(
+            name='TeamPluginModel',
+            fields=[
+                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_teampluginmodel', parent_link=True, to='cms.CMSPlugin')),
+                ('team', models.ForeignKey(to='planet.Team')),
+            ],
+            options={
+                'abstract': False,
+            },
+            bases=('cms.cmsplugin',),
         ),
         migrations.AddField(
             model_name='product',
