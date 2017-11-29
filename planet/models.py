@@ -1,6 +1,9 @@
+from cms.models import CMSPlugin
 from currencies import Currency
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from djangocms_text_ckeditor.fields import HTMLField
+from filer.fields.image import FilerImageField
 
 from planet import conf
 
@@ -35,7 +38,7 @@ class ProductGroup(models.Model):
     """Product Group model."""
     name = models.CharField(verbose_name=_('name'), max_length=50)
     slug = models.SlugField(verbose_name=_('slug'), unique=True)
-    description = models.TextField(verbose_name='description')
+    description = HTMLField(verbose_name='description')
 
     class Meta:
         verbose_name = _('Product Group')
@@ -47,11 +50,15 @@ class ProductGroup(models.Model):
 
 class Product(models.Model):
     """Product model."""
-    name = models.CharField(verbose_name=_('name'), max_length=50)
     slug = models.SlugField(verbose_name=_('slug'), unique=True)
-    description = models.TextField(verbose_name='description')
+    name = models.CharField(verbose_name=_('name'), max_length=50)
+    description = HTMLField(verbose_name='description')
     featured = models.BooleanField(verbose_name=_('featured'))
     in_stock = models.BooleanField(verbose_name=_('in stock'), default=True)
+    info = models.CharField(verbose_name=_('info'), blank=True, null=True, max_length=250)
+    label = models.CharField(verbose_name=_('label'), blank=True, null=True, max_length=100)
+    order_link = models.URLField()
+
     group = models.ForeignKey(ProductGroup)
 
     class Meta:
@@ -109,3 +116,53 @@ class Price(models.Model):
             }
 
         return prices
+
+
+class Team(models.Model):
+    name = models.CharField(verbose_name=_('name'), max_length=50)
+
+    class Meta:
+        verbose_name = _('Team')
+        verbose_name_plural = _('Teams')
+
+    def __str__(self):
+        return self.name
+
+
+class TeamMember(models.Model):
+    team = models.ForeignKey(Team)
+    name = models.CharField(verbose_name=_('name'), max_length=100)
+    bio = models.TextField(verbose_name=_('bio'))
+    picture = FilerImageField(verbose_name=_('image'), blank=True, null=True)
+    date_joined = models.DateField(verbose_name=_('date joined'))
+
+    class Meta:
+        verbose_name = _('Team Member')
+        verbose_name_plural = _('Team Members')
+        ordering = ('date_joined', )
+
+    def __str__(self):
+        return self.name
+
+
+# CMS Plugin Models
+class ProductGroupPluginModel(CMSPlugin):
+    """Product Group Plugin Model."""
+    product_group = models.ForeignKey(ProductGroup)
+
+    def __str__(self):
+        return self.product_group.name
+
+
+class TeamPluginModel(CMSPlugin):
+    team = models.ForeignKey(Team)
+
+    def __str__(self):
+        return self.team.name
+
+
+class TeamMemberPluginModel(CMSPlugin):
+    team_member = models.ForeignKey(TeamMember)
+
+    def __str__(self):
+        return self.team_member.name

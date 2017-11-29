@@ -1,4 +1,5 @@
 from django.contrib import admin
+from modeltranslation.admin import TranslationAdmin
 
 from planet.models import MoneyCurrency, Price, ProductGroup, Product
 
@@ -22,14 +23,14 @@ class PriceAdmin(admin.ModelAdmin):
 
 
 @admin.register(ProductGroup)
-class ProductGroupAdmin(admin.ModelAdmin):
+class ProductGroupAdmin(TranslationAdmin):
     list_display = ('name', 'slug', )
     search_fields = ('name', 'description', )
     prepopulated_fields = {'slug': ('name', )}
 
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(TranslationAdmin):
     list_display = ('name', 'slug', 'featured', 'in_stock', )
     list_filter = ('featured', 'in_stock', )
     search_fields = ('name', 'description', )
