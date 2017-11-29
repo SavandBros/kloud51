@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
+import djangocms_text_ckeditor.fields
 
 
 class Migration(migrations.Migration):
@@ -40,11 +41,38 @@ class Migration(migrations.Migration):
             name='Product',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
-                ('name', models.CharField(verbose_name='name', max_length=50)),
                 ('slug', models.SlugField(verbose_name='slug', unique=True)),
-                ('description', models.TextField(verbose_name='description')),
+                ('slug_en', models.SlugField(verbose_name='slug', unique=True, null=True)),
+                ('slug_hi', models.SlugField(verbose_name='slug', unique=True, null=True)),
+                ('slug_fa', models.SlugField(verbose_name='slug', unique=True, null=True)),
+                ('slug_ru', models.SlugField(verbose_name='slug', unique=True, null=True)),
+                ('name', models.CharField(verbose_name='name', max_length=50)),
+                ('name_en', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('name_hi', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('name_fa', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('name_ru', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('description', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description')),
+                ('description_en', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
+                ('description_hi', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
+                ('description_fa', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
+                ('description_ru', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
                 ('featured', models.BooleanField(verbose_name='featured')),
                 ('in_stock', models.BooleanField(verbose_name='in stock', default=True)),
+                ('info', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
+                ('info_en', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
+                ('info_hi', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
+                ('info_fa', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
+                ('info_ru', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
+                ('label', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
+                ('label_en', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
+                ('label_hi', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
+                ('label_fa', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
+                ('label_ru', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
+                ('order_link', models.URLField()),
+                ('order_link_en', models.URLField(null=True)),
+                ('order_link_hi', models.URLField(null=True)),
+                ('order_link_fa', models.URLField(null=True)),
+                ('order_link_ru', models.URLField(null=True)),
             ],
             options={
                 'verbose_name': 'Product',
@@ -56,8 +84,20 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
                 ('name', models.CharField(verbose_name='name', max_length=50)),
+                ('name_en', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('name_hi', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('name_fa', models.CharField(verbose_name='name', max_length=50, null=True)),
+                ('name_ru', models.CharField(verbose_name='name', max_length=50, null=True)),
                 ('slug', models.SlugField(verbose_name='slug', unique=True)),
-                ('description', models.TextField(verbose_name='description')),
+                ('slug_en', models.SlugField(verbose_name='slug', unique=True, null=True)),
+                ('slug_hi', models.SlugField(verbose_name='slug', unique=True, null=True)),
+                ('slug_fa', models.SlugField(verbose_name='slug', unique=True, null=True)),
+                ('slug_ru', models.SlugField(verbose_name='slug', unique=True, null=True)),
+                ('description', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description')),
+                ('description_en', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
+                ('description_hi', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
+                ('description_fa', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
+                ('description_ru', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
             ],
             options={
                 'verbose_name': 'Product Group',
