@@ -30,7 +30,7 @@ class AppConfig:
 
     def get_venv_path(self):
         app_name = self.app_name
-        return f'/home/{REMOTE_USER}/virtualenv/python__apps_{app_name}/3.5'
+        return f'/home/{REMOTE_USER}/virtualenv/python__apps_{app_name}/3.6'
 
     def get_venv_activate_path(self):
         return f'source {self.get_venv_path()}/bin/activate'
