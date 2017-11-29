@@ -21,13 +21,6 @@ WSGI_APPLICATION = 'kloud51.wsgi.application'
 
 DATABASES = {'default': dj_database_url.config(conn_max_age=600)}
 
-# Internationalization
-LANGUAGE_CODE = 'en'
-TIME_ZONE = 'Asia/Dubai'
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
@@ -89,6 +82,7 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.sites',
     'django.contrib.sitemaps',
@@ -118,10 +112,19 @@ INSTALLED_APPS = (
     'cmsplugin_pure_text',
 )
 
+
+# Internationalization
+LANGUAGE_CODE = 'en'
+TIME_ZONE = 'Asia/Dubai'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
 LANGUAGES = (
     ('en', gettext('English')),
     ('hi', gettext('Hindi')),
     ('fa', gettext('Persian')),
+    ('ru', gettext('Russian')),
 )
 
 CMS_LANGUAGES = {
@@ -143,6 +146,11 @@ CMS_LANGUAGES = {
             'name': gettext('Persian'),
             'public': True,
         },
+        {
+            'code': 'ru',
+            'name': gettext('Russian'),
+            'public': True,
+        },
     ],
     'default': {
         'redirect_on_fallback': True,
@@ -150,6 +158,10 @@ CMS_LANGUAGES = {
         'hide_untranslated': False,
     },
 }
+
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
+MODELTRANSLATION_LANGUAGES = ('en', 'hi', 'fa', 'ru', )
+MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'en'
 
 CMS_TEMPLATES = (
     ('fullwidth.html', 'Fullwidth'),
