@@ -1,3 +1,5 @@
+from typing import Union
+
 from cms.models import CMSPlugin, Page
 from colorfield.fields import ColorField
 from currencies import Currency
@@ -5,7 +7,6 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from djangocms_text_ckeditor.fields import HTMLField
 from filer.fields.image import FilerImageField
-from typing import Union
 
 from planet import conf
 
