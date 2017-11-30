@@ -7,6 +7,7 @@ from planet.models import (
     TeamPluginModel,
     TeamMemberPluginModel,
     SectionPluginModel,
+    CoverPlugin,
 )
 
 
@@ -53,4 +54,15 @@ class SectionPluginPublisher(CMSPluginBase):
         self.render_template = instance.template
         context.update({'instance': instance})
 
+        return context
+
+
+@plugin_pool.register_plugin
+class CoverPluginPublisher(CMSPluginBase):
+    model = CoverPlugin
+    name = _('Cover Plugin')
+    render_template = 'planet/cms/cover.html'
+
+    def render(self, context, instance, placeholder):
+        context.update({'instance': instance})
         return context
