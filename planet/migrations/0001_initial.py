@@ -172,7 +172,7 @@ class Migration(migrations.Migration):
             name='SectionPlugin',
             fields=[
                 ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_sectionplugin', parent_link=True, to='cms.CMSPlugin')),
-                ('template', models.CharField(verbose_name='template', max_length=100, choices=[('planet/cms/sections/feature_icon.html', 'Features with Icons'), ('planet/cms/sections/feature_images_title.html', 'Feature with Images & and Title.')])),
+                ('template', models.CharField(verbose_name='template', max_length=100)),
                 ('section', models.ForeignKey(to='planet.Section')),
             ],
             options={

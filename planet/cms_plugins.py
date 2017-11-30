@@ -2,6 +2,7 @@ from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
 
+from planet.forms import SectionPluginPublisherForm
 from planet.models import (
     ProductGroupPlugin,
     TeamPlugin,
@@ -47,6 +48,7 @@ class TeamMemberPluginPublisher(CMSPluginBase):
 @plugin_pool.register_plugin
 class SectionPluginPublisher(CMSPluginBase):
     model = SectionPlugin
+    form = SectionPluginPublisherForm
     name = _('Section')
     render_template = 'planet/cms/sections/feature_icon.html'
 

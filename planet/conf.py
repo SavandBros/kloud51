@@ -14,4 +14,5 @@ SECTION_TEMPLATES = (
     ('planet/cms/sections/feature_icon.html', 'Features with Icons'),
     ('planet/cms/sections/feature_images_title.html',
      'Feature with Images & and Title.'),
+    ('planet/cms/sections/feature_images_title.html', 'Simple FAQ'),
 )
