@@ -1,6 +1,15 @@
+from typing import Tuple
+
 from modeltranslation.translator import translator, TranslationOptions
 
-from planet.models import Product, ProductGroup, Team, TeamMember
+from planet.models import (
+    Product,
+    ProductGroup,
+    Team,
+    TeamMember,
+    Section,
+    SectionItem,
+)
 
 
 class ProductTranslationOptions(TranslationOptions):
@@ -19,7 +28,17 @@ class TeamMemberTranslationOptions(TranslationOptions):
     fields = ('name', 'bio', )
 
 
+class SectionTranslationOptions(TranslationOptions):
+    fields: Tuple[str] = ('name', 'description', )
+
+
+class SectionItemTranslationOptions(TranslationOptions):
+    fields: Tuple[str] = ('title', 'description', )
+
+
 translator.register(Product, ProductTranslationOptions)
 translator.register(ProductGroup, ProductGroupTranslationOptions)
 translator.register(Team, TeamTranslationOptions)
 translator.register(TeamMember, TeamMemberTranslationOptions)
+translator.register(Section, SectionTranslationOptions)
+translator.register(SectionItem, SectionItemTranslationOptions)
