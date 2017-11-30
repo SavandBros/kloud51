@@ -148,9 +148,32 @@ class TeamMember(models.Model):
 
 class Section(models.Model):
     """Section model."""
-    name = models.CharField(verbose_name=_('name'), max_length=250)
+    name = models.CharField(
+        verbose_name=_('name'),
+        max_length=250,
+        help_text=_('Internal user only.')
+    )
+    title = models.CharField(
+        verbose_name=_('title'),
+        max_length=250,
+        help_text=_(
+            'Public title of the section, visitors will be able to see it.',
+        )
+    )
     description = HTMLField(
         verbose_name=_('description'),
+        blank=True,
+        null=True,
+    )
+    image = FilerImageField(
+        verbose_name=_('image'),
+        help_text=_('Can be used for background image or the whole section.'),
+        blank=True,
+        null=True
+    )
+    css_classes = models.CharField(
+        verbose_name=_('css classes'),
+        max_length=25,
         blank=True,
         null=True,
     )
