@@ -111,7 +111,6 @@ INSTALLED_APPS = (
     'storages',
     'adminsortable2',
     'colorfield',
-    'django_select2',
     # Apps and Plugins
     'planet',
     'cmsplugin_pure_text',
