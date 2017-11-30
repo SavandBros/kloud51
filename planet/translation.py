@@ -29,7 +29,7 @@ class TeamMemberTranslationOptions(TranslationOptions):
 
 
 class SectionTranslationOptions(TranslationOptions):
-    fields: Tuple[str] = ('name', 'description', )
+    fields: Tuple[str] = ('title', 'description', )
 
 
 class SectionItemTranslationOptions(TranslationOptions):
