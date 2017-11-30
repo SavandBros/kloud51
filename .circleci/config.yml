@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/savandbros
+    working_directory: ~/kloud51
     docker:
       - image: circleci/python:3.6.2
     steps:
@@ -31,6 +31,10 @@ jobs:
                 . venv/bin/activate
                 echo "Deploying to Staging."
                 fab set_staging deploy
+            elif [ "${CIRCLE_BRANCH}" == "production" ]; then
+                . venv/bin/activate
+                echo "Deploying to Production."
+                fab set_prod deploy
             else
                 echo "NO DEPLOYMENT FOR NOW."
             fi
