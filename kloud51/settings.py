@@ -111,6 +111,7 @@ INSTALLED_APPS = (
     'storages',
     'adminsortable2',
     'colorfield',
+    'django_select2',
     # Apps and Plugins
     'planet',
     'cmsplugin_pure_text',
@@ -186,12 +187,8 @@ CMS_TEMPLATES = (
 )
 
 CMS_PERMISSION = True
-
 CMS_PLACEHOLDER_CONF = {}
-
-MIGRATION_MODULES = {
-
-}
+MIGRATION_MODULES = {}
 
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
