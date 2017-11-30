@@ -2,14 +2,15 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-from django.conf import settings
 import filer.fields.image
+from django.conf import settings
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.FILER_IMAGE_MODEL),
+        ('cms', '0016_auto_20160608_1535'),
         ('planet', '0001_initial'),
     ]
 
@@ -26,6 +27,10 @@ class Migration(migrations.Migration):
             model_name='section',
             name='name_ru',
         ),
+        migrations.RemoveField(
+            model_name='sectionitem',
+            name='link',
+        ),
         migrations.AddField(
             model_name='section',
             name='css_classes',
@@ -39,7 +44,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='section',
             name='title',
-            field=models.CharField(verbose_name='title', max_length=250, default='Make me!', help_text='Public title of the section, visitors will be able to see it.'),
+            field=models.CharField(verbose_name='title', max_length=250, default='make', help_text='Public title of the section, visitors will be able to see it.'),
             preserve_default=False,
         ),
         migrations.AddField(
@@ -56,6 +61,16 @@ class Migration(migrations.Migration):
             model_name='section',
             name='title_ru',
             field=models.CharField(verbose_name='title', max_length=250, null=True, help_text='Public title of the section, visitors will be able to see it.'),
+        ),
+        migrations.AddField(
+            model_name='sectionitem',
+            name='external_link',
+            field=models.URLField(verbose_name='external link', blank=True, null=True),
+        ),
+        migrations.AddField(
+            model_name='sectionitem',
+            name='internal_link',
+            field=models.ForeignKey(verbose_name='internal link', blank=True, null=True, to='cms.Page'),
         ),
         migrations.AlterField(
             model_name='section',

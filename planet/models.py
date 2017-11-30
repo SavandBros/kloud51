@@ -1,4 +1,4 @@
-from cms.models import CMSPlugin
+from cms.models import CMSPlugin, Page
 from colorfield.fields import ColorField
 from currencies import Currency
 from django.db import models
@@ -206,7 +206,17 @@ class SectionItem(models.Model):
     )
     icon_color = ColorField(blank=True, null=True)
     image = FilerImageField(verbose_name=_('image'), blank=True, null=True)
-    link = models.URLField(verbose_name=_('link'), blank=True, null=True)
+    external_link = models.URLField(
+        verbose_name=_('external link'),
+        blank=True,
+        null=True
+    )
+    internal_link = models.ForeignKey(
+        Page,
+        verbose_name=_('internal link'),
+        blank=True,
+        null=True,
+    )
     item_order = models.PositiveIntegerField(
         default=0,
         blank=False,
