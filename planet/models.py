@@ -199,9 +199,8 @@ class SectionItem(models.Model):
         return f'{self.title} | {self.section}'
 
 
-
 # CMS Plugin Models
-class ProductGroupPluginModel(CMSPlugin):
+class ProductGroupPlugin(CMSPlugin):
     """Product Group Plugin Model."""
     product_group = models.ForeignKey(ProductGroup)
 
@@ -209,21 +208,21 @@ class ProductGroupPluginModel(CMSPlugin):
         return self.product_group.name
 
 
-class TeamPluginModel(CMSPlugin):
+class TeamPlugin(CMSPlugin):
     team = models.ForeignKey(Team)
 
     def __str__(self):
         return self.team.name
 
 
-class TeamMemberPluginModel(CMSPlugin):
+class TeamMemberPlugin(CMSPlugin):
     team_member = models.ForeignKey(TeamMember)
 
     def __str__(self):
         return self.team_member.name
 
 
-class SectionPluginModel(CMSPlugin):
+class SectionPlugin(CMSPlugin):
     """Section CMS Plugin model."""
     section = models.ForeignKey(Section)
     template = models.CharField(
