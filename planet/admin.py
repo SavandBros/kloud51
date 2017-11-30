@@ -8,6 +8,7 @@ from modeltranslation.admin import (
     TranslationStackedInline,
 )
 
+from planet.forms import SectionItemModelForm
 from planet.models import (
     MoneyCurrency,
     Price,
@@ -54,6 +55,7 @@ class ProductAdmin(TabbedDjangoJqueryTranslationAdmin):
 
 class SectionItemInline(SortableInlineAdminMixin, TranslationStackedInline):
     model = SectionItem
+    form = SectionItemModelForm
 
 
 @admin.register(Section)
@@ -69,3 +71,4 @@ class SectionAdmin(TabbedTranslationAdmin):
 class SectionItemAdmin(SortableAdminMixin, TabbedDjangoJqueryTranslationAdmin):
     list_display: Tuple[str] = ('section', 'title', 'icon', )
     search_fields: Tuple[str] = ('title', 'description', )
+    form = SectionItemModelForm
