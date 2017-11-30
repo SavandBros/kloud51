@@ -225,11 +225,7 @@ class TeamMemberPlugin(CMSPlugin):
 class SectionPlugin(CMSPlugin):
     """Section CMS Plugin model."""
     section = models.ForeignKey(Section)
-    template = models.CharField(
-        verbose_name=_('template'),
-        max_length=100,
-        choices=conf.SECTION_TEMPLATES,
-    )
+    template = models.CharField(verbose_name=_('template'), max_length=100)
 
     def __str__(self) -> str:
         return self.section.name
