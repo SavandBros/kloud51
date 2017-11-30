@@ -107,6 +107,8 @@ INSTALLED_APPS = (
     'djangocms_video',
     'kloud51',
     'storages',
+    'adminsortable2',
+    'colorfield',
     # Apps and Plugins
     'planet',
     'cmsplugin_pure_text',

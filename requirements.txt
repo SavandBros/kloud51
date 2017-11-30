@@ -27,3 +27,5 @@ currencies==2014.7.13
 django-modeltranslation==0.12.1
 django-storages==1.6.5
 boto3==1.4.8
+django-admin-sortable2==0.6.16
+django-colorfield==0.1.14
