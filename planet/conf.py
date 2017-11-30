@@ -1,3 +1,6 @@
+"""Planet configuration file."""
+
+
 class PricingType:
     """Pricing Types."""
     HOURLY = 0
@@ -15,4 +18,5 @@ SECTION_TEMPLATES = (
     ('planet/cms/sections/feature_images_title.html',
      'Feature with Images & and Title.'),
     ('planet/cms/sections/feature_images_title.html', 'Simple FAQ'),
+    ('planet/cms/sections/feature_image.html', 'Features with Image')
 )
