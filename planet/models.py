@@ -5,6 +5,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from djangocms_text_ckeditor.fields import HTMLField
 from filer.fields.image import FilerImageField
+from typing import Union
 
 from planet import conf
 
@@ -230,6 +231,18 @@ class SectionItem(models.Model):
 
     def __str__(self) -> str:
         return f'{self.title} | {self.section}'
+
+    @property
+    def link(self) -> Union[str, None]:
+        link = None
+
+        if self.internal_link:
+            link = self.internal_link.get_absolute_url()
+
+        if self.external_link:
+            link = self.external_link
+
+        return link
 
 
 # CMS Plugin Models
