@@ -29,11 +29,11 @@ class TeamMemberTranslationOptions(TranslationOptions):
 
 
 class SectionTranslationOptions(TranslationOptions):
-    fields: Tuple[str] = ('name', 'description', )
+    fields: Tuple[str] = ('title', 'description', )
 
 
 class SectionItemTranslationOptions(TranslationOptions):
-    fields: Tuple[str] = ('title', 'description', )
+    fields: Tuple[str] = ('title', 'description', 'external_link', )
 
 
 translator.register(Product, ProductTranslationOptions)

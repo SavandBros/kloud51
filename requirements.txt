@@ -12,7 +12,7 @@ djangocms-column>=1.6
 easy_thumbnails
 django-filer>=1.2
 cmsplugin-filer>=1.1
-Django<1.9
+Django==1.11.7
 pytz
 django-classy-tags>=0.7
 html5lib>=0.999999,<0.99999999
@@ -30,3 +30,4 @@ boto3==1.4.8
 django-admin-sortable2==0.6.16
 django-colorfield==0.1.14
 brotlipy==0.7.0
+django-select2==6.0.0

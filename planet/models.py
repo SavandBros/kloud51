@@ -1,4 +1,6 @@
-from cms.models import CMSPlugin
+from typing import Union
+
+from cms.models import CMSPlugin, Page
 from colorfield.fields import ColorField
 from currencies import Currency
 from django.db import models
@@ -148,9 +150,32 @@ class TeamMember(models.Model):
 
 class Section(models.Model):
     """Section model."""
-    name = models.CharField(verbose_name=_('name'), max_length=250)
+    name = models.CharField(
+        verbose_name=_('name'),
+        max_length=250,
+        help_text=_('Internal user only.')
+    )
+    title = models.CharField(
+        verbose_name=_('title'),
+        max_length=250,
+        help_text=_(
+            'Public title of the section, visitors will be able to see it.',
+        )
+    )
     description = HTMLField(
         verbose_name=_('description'),
+        blank=True,
+        null=True,
+    )
+    image = FilerImageField(
+        verbose_name=_('image'),
+        help_text=_('Can be used for background image or the whole section.'),
+        blank=True,
+        null=True
+    )
+    css_classes = models.CharField(
+        verbose_name=_('css classes'),
+        max_length=25,
         blank=True,
         null=True,
     )
@@ -183,7 +208,17 @@ class SectionItem(models.Model):
     )
     icon_color = ColorField(blank=True, null=True)
     image = FilerImageField(verbose_name=_('image'), blank=True, null=True)
-    link = models.URLField(verbose_name=_('link'), blank=True, null=True)
+    external_link = models.URLField(
+        verbose_name=_('external link'),
+        blank=True,
+        null=True
+    )
+    internal_link = models.ForeignKey(
+        Page,
+        verbose_name=_('internal link'),
+        blank=True,
+        null=True,
+    )
     item_order = models.PositiveIntegerField(
         default=0,
         blank=False,
@@ -197,6 +232,18 @@ class SectionItem(models.Model):
 
     def __str__(self) -> str:
         return f'{self.title} | {self.section}'
+
+    @property
+    def link(self) -> Union[str, None]:
+        link = None
+
+        if self.internal_link:
+            link = self.internal_link.get_absolute_url()
+
+        if self.external_link:
+            link = self.external_link
+
+        return link
 
 
 # CMS Plugin Models

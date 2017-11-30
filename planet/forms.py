@@ -1,7 +1,8 @@
+from cms.forms.fields import PageSelectFormField
 from django import forms
 
 from planet import conf
-from planet.models import SectionPlugin
+from planet.models import SectionPlugin, SectionItem
 
 
 class SectionPluginPublisherForm(forms.ModelForm):
@@ -20,3 +21,20 @@ class SectionPluginPublisherForm(forms.ModelForm):
         fields = ('section', 'template', )
 
     template = forms.ChoiceField(choices=conf.SECTION_TEMPLATES)
+
+
+class SectionItemModelForm(forms.ModelForm):
+    """Section Item Model Form."""
+    class Meta:
+        model = SectionItem
+        fields = (
+            'title',
+            'description',
+            'internal_link',
+            'external_link',
+            'icon',
+            'icon_color',
+            'image',
+        )
+
+    internal_link = PageSelectFormField(required=False)
