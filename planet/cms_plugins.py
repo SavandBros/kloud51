@@ -6,6 +6,7 @@ from planet.models import (
     ProductGroupPluginModel,
     TeamPluginModel,
     TeamMemberPluginModel,
+    SectionPluginModel,
 )
 
 
@@ -39,4 +40,17 @@ class TeamMemberPluginPublisher(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context.update({'instance': instance})
+        return context
+
+
+@plugin_pool.register_plugin
+class SectionPluginPublisher(CMSPluginBase):
+    model = SectionPluginModel
+    name = _('Section')
+    render_template = 'planet/cms/sections/feature_icon.html'
+
+    def render(self, context, instance: SectionPluginModel, placeholder):
+        self.render_template = instance.template
+        context.update({'instance': instance})
+
         return context
