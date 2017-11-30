@@ -1,4 +1,5 @@
 from cms.models import CMSPlugin
+from colorfield.fields import ColorField
 from currencies import Currency
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
@@ -145,6 +146,59 @@ class TeamMember(models.Model):
         return self.name
 
 
+class Section(models.Model):
+    """Section model."""
+    name = models.CharField(verbose_name=_('name'), max_length=250)
+    description = HTMLField(
+        verbose_name=_('description'),
+        blank=True,
+        null=True,
+    )
+
+    class Meta:
+        verbose_name = _('Section')
+        verbose_name_plural = _('Sections')
+
+    def __str__(self) -> str:
+        return self.name
+
+
+class SectionItem(models.Model):
+    """Section Item."""
+    section = models.ForeignKey(Section, related_name='items')
+    title = models.CharField(verbose_name=_('title'), max_length=250)
+    description = HTMLField(
+        verbose_name=_('description'),
+        blank=True,
+        null=True,
+    )
+    icon = models.CharField(
+        verbose_name=_('icon'),
+        help_text=_(
+            'an Icon from our icon/font framework, for instance "fa fa-login"'
+        ),
+        max_length=25,
+        blank=True,
+        null=True,
+    )
+    icon_color = ColorField(blank=True, null=True)
+    image = FilerImageField(verbose_name=_('image'), blank=True, null=True)
+    link = models.URLField(verbose_name=_('link'), blank=True, null=True)
+    item_order = models.PositiveIntegerField(
+        default=0,
+        blank=False,
+        null=False,
+    )
+
+    class Meta:
+        verbose_name = _('Section')
+        verbose_name_plural = _('Section Items')
+        ordering = ('item_order',)
+
+    def __str__(self) -> str:
+        return f'{self.title} | {self.section}'
+
+
 # CMS Plugin Models
 class ProductGroupPluginModel(CMSPlugin):
     """Product Group Plugin Model."""
@@ -166,3 +220,16 @@ class TeamMemberPluginModel(CMSPlugin):
 
     def __str__(self):
         return self.team_member.name
+
+
+class SectionPluginModel(CMSPlugin):
+    """Section CMS Plugin model."""
+    section = models.ForeignKey(Section)
+    template = models.CharField(
+        verbose_name=_('template'),
+        max_length=100,
+        choices=conf.SECTION_TEMPLATES,
+    )
+
+    def __str__(self) -> str:
+        return self.section.name
