@@ -36,3 +36,22 @@ class ProductAdmin(TranslationAdmin):
     search_fields = ('name', 'description', )
     prepopulated_fields = {'slug': ('name', )}
     inlines = [ProductPriceInline, ]
+
+
+class SectionItemInline(SortableInlineAdminMixin, TranslationStackedInline):
+    model = SectionItem
+
+
+@admin.register(Section)
+class SectionAdmin(TabbedTranslationAdmin):
+    list_display: Tuple[str] = ('name', )
+    search_fields: Tuple[str] = ('name', 'description', )
+    inlines = [
+        SectionItemInline,
+    ]
+
+
+@admin.register(SectionItem)
+class SectionItemAdmin(SortableAdminMixin, TabbedDjangoJqueryTranslationAdmin):
+    list_display: Tuple[str] = ('section', 'title', 'icon', )
+    search_fields: Tuple[str] = ('title', 'description', )
