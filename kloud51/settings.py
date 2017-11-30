@@ -12,6 +12,7 @@ USE_S3 = os.environ.get('USE_S3') == 'True'
 ALLOWED_HOSTS = [
     '192.168.56.1',
     'staging.kloud51.com',
+    'beta.kloud51.com',
     'kloud51.com',
     'localhost',
     '127.0.0.1',
