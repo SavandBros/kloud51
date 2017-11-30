@@ -27,6 +27,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = os.environ.get('K51_STATIC_ROOT', os.path.join(DATA_DIR, 'static'))
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'kloud51', 'static'),
@@ -210,3 +211,4 @@ if USE_S3:
         'CacheControl': 'max-age=864000',
     }
     AWS_QUERYSTRING_AUTH = False
+
