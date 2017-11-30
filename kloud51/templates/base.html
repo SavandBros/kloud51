@@ -1,4 +1,6 @@
-{% load cms_tags menu_tags sekizai_tags %}
+{% load cms_tags menu_tags i18n sekizai_tags %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +22,7 @@
   {% render_block "css" %}
 </head>
 
-<body>
+<body dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">
   <!-- CMS Toolbar -->
   {% cms_toolbar %}
 

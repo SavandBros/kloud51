@@ -3,15 +3,17 @@ from cms.plugin_pool import plugin_pool
 from django.utils.translation import ugettext_lazy as _
 
 from planet.models import (
-    ProductGroupPluginModel,
-    TeamPluginModel,
-    TeamMemberPluginModel,
+    ProductGroupPlugin,
+    TeamPlugin,
+    TeamMemberPlugin,
+    SectionPlugin,
+    CoverPlugin,
 )
 
 
 @plugin_pool.register_plugin
 class ProductGroupPluginPublisher(CMSPluginBase):
-    model = ProductGroupPluginModel
+    model = ProductGroupPlugin
     name = _('Product Group')
     render_template = 'planet/cms/product_group.html'
 
@@ -22,7 +24,7 @@ class ProductGroupPluginPublisher(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class TeamPluginPublisher(CMSPluginBase):
-    model = TeamPluginModel
+    model = TeamPlugin
     name = _('Team')
     render_template = 'planet/cms/team.html'
 
@@ -33,9 +35,33 @@ class TeamPluginPublisher(CMSPluginBase):
 
 @plugin_pool.register_plugin
 class TeamMemberPluginPublisher(CMSPluginBase):
-    model = TeamMemberPluginModel
+    model = TeamMemberPlugin
     name = _('Team Member')
     render_template = 'planet/cms/team_member.html'
+
+    def render(self, context, instance, placeholder):
+        context.update({'instance': instance})
+        return context
+
+
+@plugin_pool.register_plugin
+class SectionPluginPublisher(CMSPluginBase):
+    model = SectionPlugin
+    name = _('Section')
+    render_template = 'planet/cms/sections/feature_icon.html'
+
+    def render(self, context, instance: SectionPlugin, placeholder):
+        self.render_template = instance.template
+        context.update({'instance': instance})
+
+        return context
+
+
+@plugin_pool.register_plugin
+class CoverPluginPublisher(CMSPluginBase):
+    model = CoverPlugin
+    name = _('Cover Plugin')
+    render_template = 'planet/cms/cover.html'
 
     def render(self, context, instance, placeholder):
         context.update({'instance': instance})

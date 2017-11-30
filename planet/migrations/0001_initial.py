@@ -2,9 +2,10 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-from django.conf import settings
-import filer.fields.image
 import djangocms_text_ckeditor.fields
+import colorfield.fields
+import filer.fields.image
+from django.conf import settings
 
 
 class Migration(migrations.Migration):
@@ -15,6 +16,20 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.CreateModel(
+            name='CoverPlugin',
+            fields=[
+                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_coverplugin', parent_link=True, to='cms.CMSPlugin')),
+                ('title', models.CharField(verbose_name='title', max_length=250, blank=True, null=True)),
+                ('sub_title', models.CharField(verbose_name='sub title', max_length=500, blank=True, null=True)),
+                ('detail', djangocms_text_ckeditor.fields.HTMLField(verbose_name='detail', blank=True, null=True)),
+                ('image', filer.fields.image.FilerImageField(verbose_name='image', blank=True, null=True, to=settings.FILER_IMAGE_MODEL)),
+            ],
+            options={
+                'abstract': False,
+            },
+            bases=('cms.cmsplugin',),
+        ),
         migrations.CreateModel(
             name='MoneyCurrency',
             fields=[
@@ -48,34 +63,28 @@ class Migration(migrations.Migration):
                 ('slug', models.SlugField(verbose_name='slug', unique=True)),
                 ('slug_en', models.SlugField(verbose_name='slug', unique=True, null=True)),
                 ('slug_hi', models.SlugField(verbose_name='slug', unique=True, null=True)),
-                ('slug_fa', models.SlugField(verbose_name='slug', unique=True, null=True)),
                 ('slug_ru', models.SlugField(verbose_name='slug', unique=True, null=True)),
                 ('name', models.CharField(verbose_name='name', max_length=50)),
                 ('name_en', models.CharField(verbose_name='name', max_length=50, null=True)),
                 ('name_hi', models.CharField(verbose_name='name', max_length=50, null=True)),
-                ('name_fa', models.CharField(verbose_name='name', max_length=50, null=True)),
                 ('name_ru', models.CharField(verbose_name='name', max_length=50, null=True)),
                 ('description', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description')),
                 ('description_en', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
                 ('description_hi', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
-                ('description_fa', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
                 ('description_ru', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
                 ('featured', models.BooleanField(verbose_name='featured')),
                 ('in_stock', models.BooleanField(verbose_name='in stock', default=True)),
                 ('info', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
                 ('info_en', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
                 ('info_hi', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
-                ('info_fa', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
                 ('info_ru', models.CharField(verbose_name='info', max_length=250, blank=True, null=True)),
                 ('label', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
                 ('label_en', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
                 ('label_hi', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
-                ('label_fa', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
                 ('label_ru', models.CharField(verbose_name='label', max_length=100, blank=True, null=True)),
                 ('order_link', models.URLField()),
                 ('order_link_en', models.URLField(null=True)),
                 ('order_link_hi', models.URLField(null=True)),
-                ('order_link_fa', models.URLField(null=True)),
                 ('order_link_ru', models.URLField(null=True)),
             ],
             options={
@@ -90,17 +99,14 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(verbose_name='name', max_length=50)),
                 ('name_en', models.CharField(verbose_name='name', max_length=50, null=True)),
                 ('name_hi', models.CharField(verbose_name='name', max_length=50, null=True)),
-                ('name_fa', models.CharField(verbose_name='name', max_length=50, null=True)),
                 ('name_ru', models.CharField(verbose_name='name', max_length=50, null=True)),
                 ('slug', models.SlugField(verbose_name='slug', unique=True)),
                 ('slug_en', models.SlugField(verbose_name='slug', unique=True, null=True)),
                 ('slug_hi', models.SlugField(verbose_name='slug', unique=True, null=True)),
-                ('slug_fa', models.SlugField(verbose_name='slug', unique=True, null=True)),
                 ('slug_ru', models.SlugField(verbose_name='slug', unique=True, null=True)),
                 ('description', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description')),
                 ('description_en', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
                 ('description_hi', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
-                ('description_fa', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
                 ('description_ru', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', null=True)),
             ],
             options={
@@ -109,10 +115,65 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='ProductGroupPluginModel',
+            name='ProductGroupPlugin',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_productgrouppluginmodel', parent_link=True, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_productgroupplugin', parent_link=True, to='cms.CMSPlugin')),
                 ('product_group', models.ForeignKey(to='planet.ProductGroup')),
+            ],
+            options={
+                'abstract': False,
+            },
+            bases=('cms.cmsplugin',),
+        ),
+        migrations.CreateModel(
+            name='Section',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('name', models.CharField(verbose_name='name', max_length=250)),
+                ('name_en', models.CharField(verbose_name='name', max_length=250, null=True)),
+                ('name_hi', models.CharField(verbose_name='name', max_length=250, null=True)),
+                ('name_ru', models.CharField(verbose_name='name', max_length=250, null=True)),
+                ('description', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', blank=True, null=True)),
+                ('description_en', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', blank=True, null=True)),
+                ('description_hi', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', blank=True, null=True)),
+                ('description_ru', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', blank=True, null=True)),
+            ],
+            options={
+                'verbose_name': 'Section',
+                'verbose_name_plural': 'Sections',
+            },
+        ),
+        migrations.CreateModel(
+            name='SectionItem',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('title', models.CharField(verbose_name='title', max_length=250)),
+                ('title_en', models.CharField(verbose_name='title', max_length=250, null=True)),
+                ('title_hi', models.CharField(verbose_name='title', max_length=250, null=True)),
+                ('title_ru', models.CharField(verbose_name='title', max_length=250, null=True)),
+                ('description', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', blank=True, null=True)),
+                ('description_en', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', blank=True, null=True)),
+                ('description_hi', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', blank=True, null=True)),
+                ('description_ru', djangocms_text_ckeditor.fields.HTMLField(verbose_name='description', blank=True, null=True)),
+                ('icon', models.CharField(verbose_name='icon', max_length=25, blank=True, null=True, help_text='an Icon from our icon/font framework, for instance "fa fa-login"')),
+                ('icon_color', colorfield.fields.ColorField(max_length=18, blank=True, null=True)),
+                ('link', models.URLField(verbose_name='link', blank=True, null=True)),
+                ('item_order', models.PositiveIntegerField(default=0)),
+                ('image', filer.fields.image.FilerImageField(verbose_name='image', blank=True, null=True, to=settings.FILER_IMAGE_MODEL)),
+                ('section', models.ForeignKey(related_name='items', to='planet.Section')),
+            ],
+            options={
+                'verbose_name': 'Section',
+                'verbose_name_plural': 'Section Items',
+                'ordering': ('item_order',),
+            },
+        ),
+        migrations.CreateModel(
+            name='SectionPlugin',
+            fields=[
+                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_sectionplugin', parent_link=True, to='cms.CMSPlugin')),
+                ('template', models.CharField(verbose_name='template', max_length=100, choices=[('planet/cms/sections/feature_icon.html', 'Features with Icons'), ('planet/cms/sections/feature_images_title.html', 'Feature with Images & and Title.')])),
+                ('section', models.ForeignKey(to='planet.Section')),
             ],
             options={
                 'abstract': False,
@@ -126,7 +187,6 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(verbose_name='name', max_length=50)),
                 ('name_en', models.CharField(verbose_name='name', max_length=50, null=True)),
                 ('name_hi', models.CharField(verbose_name='name', max_length=50, null=True)),
-                ('name_fa', models.CharField(verbose_name='name', max_length=50, null=True)),
                 ('name_ru', models.CharField(verbose_name='name', max_length=50, null=True)),
             ],
             options={
@@ -141,12 +201,10 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(verbose_name='name', max_length=100)),
                 ('name_en', models.CharField(verbose_name='name', max_length=100, null=True)),
                 ('name_hi', models.CharField(verbose_name='name', max_length=100, null=True)),
-                ('name_fa', models.CharField(verbose_name='name', max_length=100, null=True)),
                 ('name_ru', models.CharField(verbose_name='name', max_length=100, null=True)),
                 ('bio', models.TextField(verbose_name='bio')),
                 ('bio_en', models.TextField(verbose_name='bio', null=True)),
                 ('bio_hi', models.TextField(verbose_name='bio', null=True)),
-                ('bio_fa', models.TextField(verbose_name='bio', null=True)),
                 ('bio_ru', models.TextField(verbose_name='bio', null=True)),
                 ('date_joined', models.DateField(verbose_name='date joined')),
                 ('picture', filer.fields.image.FilerImageField(verbose_name='image', blank=True, null=True, to=settings.FILER_IMAGE_MODEL)),
@@ -159,9 +217,9 @@ class Migration(migrations.Migration):
             },
         ),
         migrations.CreateModel(
-            name='TeamMemberPluginModel',
+            name='TeamMemberPlugin',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_teammemberpluginmodel', parent_link=True, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_teammemberplugin', parent_link=True, to='cms.CMSPlugin')),
                 ('team_member', models.ForeignKey(to='planet.TeamMember')),
             ],
             options={
@@ -170,9 +228,9 @@ class Migration(migrations.Migration):
             bases=('cms.cmsplugin',),
         ),
         migrations.CreateModel(
-            name='TeamPluginModel',
+            name='TeamPlugin',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_teampluginmodel', parent_link=True, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(primary_key=True, serialize=False, auto_created=True, related_name='planet_teamplugin', parent_link=True, to='cms.CMSPlugin')),
                 ('team', models.ForeignKey(to='planet.Team')),
             ],
             options={

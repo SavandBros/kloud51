@@ -107,6 +107,8 @@ INSTALLED_APPS = (
     'djangocms_video',
     'kloud51',
     'storages',
+    'adminsortable2',
+    'colorfield',
     # Apps and Plugins
     'planet',
     'cmsplugin_pure_text',
@@ -123,7 +125,6 @@ USE_TZ = True
 LANGUAGES = (
     ('en', gettext('English')),
     ('hi', gettext('Hindi')),
-    ('fa', gettext('Persian')),
     ('ru', gettext('Russian')),
 )
 
@@ -142,11 +143,6 @@ CMS_LANGUAGES = {
             'public': True,
         },
         {
-            'code': 'fa',
-            'name': gettext('Persian'),
-            'public': True,
-        },
-        {
             'code': 'ru',
             'name': gettext('Russian'),
             'public': True,
@@ -160,13 +156,14 @@ CMS_LANGUAGES = {
 }
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
-MODELTRANSLATION_LANGUAGES = ('en', 'hi', 'fa', 'ru', )
+MODELTRANSLATION_LANGUAGES = ('en', 'hi', 'ru', )
 MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'en'
 
 CMS_TEMPLATES = (
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
+    ('ten-sections.html', 'Ten Sections'),
     ('custom/home.html', 'Home'),
     ('custom/business-hosting.html', 'Business Hosting'),
     ('custom/affiliate-army.html', 'Affiliate Army'),

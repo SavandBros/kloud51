@@ -22,3 +22,5 @@ tests/report/
 *.pyc
 .idea/
 *.db
+media/
+
