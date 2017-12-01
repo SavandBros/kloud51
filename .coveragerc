@@ -8,6 +8,7 @@ omit=
     *fabfile*
     kloud51/*
     venv/*
+    passenger_wsgi.py
 
 [report]
 # Regexes for lines to exclude from consideration

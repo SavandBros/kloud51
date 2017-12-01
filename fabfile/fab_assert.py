@@ -76,7 +76,7 @@ def coverage() -> None:
         os.remove(COVERAGE_REPORT_FILE)
 
     local("coverage run --source='.' manage.py {0}".format(get_test_command(
-        parallel=False, fake_migrations=False
+        parallel=False, fake_migrations=False, keep_db=False
     )))
 
     local("coverage report --skip-covered")

@@ -21,7 +21,7 @@ jobs:
       - run:
           command: |
             . venv/bin/activate
-            fab coverage cq
+            fab coverage
             bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
       - add_ssh_keys:
           fingerprints:
