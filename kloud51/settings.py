@@ -111,6 +111,7 @@ INSTALLED_APPS = (
     'storages',
     'adminsortable2',
     'colorfield',
+    'whitenoise',
     # Apps and Plugins
     'planet',
     'cmsplugin_pure_text',
