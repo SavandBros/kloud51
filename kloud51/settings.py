@@ -169,6 +169,7 @@ CMS_TEMPLATES = (
     ('custom/home.html', 'Home'),
     ('custom/business-hosting.html', 'Business Hosting'),
     ('custom/affiliate-army.html', 'Affiliate Army'),
+    ('custom/sponsorship.html', 'Sponsorship'),
     ('custom/about.html', 'About'),
     ('custom/tos.html', 'Terms of Service'),
     ('custom/acceptable-use-policy.html', 'Acceptable Use Policy'),
