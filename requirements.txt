@@ -25,9 +25,9 @@ dj-database-url==0.4.2
 psycopg2==2.7.3.2
 currencies==2014.7.13
 django-modeltranslation==0.12.1
-django-storages==1.6.5
+#django-storages==1.6.5
+https://github.com/bxm156/django-storages/archive/bmarty_fix_boto3_content_type.zip#egg=django-storages==1.6.5.1
 boto3==1.4.8
-boto==2.48.0
 django-admin-sortable2==0.6.16
 django-colorfield==0.1.14
 brotlipy==0.7.0
