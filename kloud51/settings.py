@@ -182,6 +182,7 @@ CMS_TEMPLATES = (
     ('custom/acceptable-use-policy.html', 'Acceptable Use Policy'),
     ('custom/refunds.html', 'Refunds'),
     ('custom/privacy.html', 'Privacy Policy'),
+    ('custom/grant.html', 'Grant Application'),
     ('custom/hosting/bbpress.html', 'bbPress'),
     ('custom/hosting/mariadb.html', 'MariaDB'),
     ('custom/hosting/my-bb.html', 'MyBB'),
