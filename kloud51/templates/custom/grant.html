@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block content %}
+
+  <!-- Cover -->
+  <div class="container-fluid cover cover-dark cover-holder bg-computer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Title -->
+          <h1 class="t-5"><b>{% placeholder "title" %}</b></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Info -->
+  <div class="container s-pad bg-white img-rounded">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Sub title -->
+        <h3 class="t-bold">{% placeholder "benefits title" %}</h3>
+        <hr>
+        <!-- List -->
+        <div class="list-2x">
+          {% placeholder "benefits detail" %}
+        </div>
+        <br>
+      </div>
+      <!-- Info -->
+      <div class="col-md-6">
+        <!-- Sub title -->
+        <h3 class="t-bold">{% placeholder "grant program title" %}</h3>
+        <hr>
+        <!-- Info -->
+        <h4 class="t-line">
+          {% placeholder "grant program detail 1" %}
+        </h4>
+        <!-- Info -->
+        <h4 class="t-line">
+          {% placeholder "grant program detail 2" %}
+        </h4>
+        <br>
+        <!-- Sub title -->
+        <h3 class="t-bold">{% placeholder "grant coverage title" %}</h3>
+        <hr>
+        <!-- Info -->
+        <h4 class="t-line">
+          {% placeholder "grant coverage detail" %}
+        </h4>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Form -->
+  <div class="container-fluid container-content bg-2">
+    <div class="container s-pad-y-hard">
+      <!-- Title -->
+      <h1 class="title-header">{% placeholder "grant application title" %}</h1>
+      <hr>
+      <!-- Form -->
+      <form action="/program/grant" method="POST" class="panel panel-body panel-default" style="padding: 40px">
+        {% placeholder "grant form" %}
+      </form>
+    </div>
+  </div>
+
+{% endblock content %}
