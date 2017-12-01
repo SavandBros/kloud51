@@ -158,7 +158,7 @@ $base = Route::find("home");
 
 // Check current route to use in base and pages
 foreach (Route::all() as $route) {
-  if ($_SERVER["REQUEST_URI"] == $route->url) {
+  if (strpos($route->url, strtok($_SERVER["REQUEST_URI"], "?")) !== false) {
         $base = $route;
         break;
     }
