@@ -13,11 +13,72 @@
     // More headers
     $headers .= "From: <".$_POST["cio_email"].">" . "\r\n";
 
-    mail("ali@savandbros.com", "Kloud51 Grant Application", $body, $headers);
+    mail("grantapplication@kloud51.com", "Grant Application", $body, $headers);
   }
 ?>
 
-<!-- Grant -->
+<!-- Cover -->
+<div class="container-fluid cover cover-dark cover-holder bg-computer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <!-- Title -->
+        <h1 class="t-5"><b>Grant Campaign</b></h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Info -->
+<div class="container s-pad bg-white img-rounded">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Sub title -->
+      <h3 class="t-bold">Advantages &amp; Benefits of Hosting</h3>
+      <hr>
+      <!-- List -->
+      <div class="list-2x">
+        <h4><i class="fa fa-fw fa-check t-emerald"></i> Unlimited <b>Disk Space</b></h4>
+        <h4><i class="fa fa-fw fa-check t-emerald"></i> Unlimited <b>Bandwidth</b></h4>
+        <h4><i class="fa fa-fw fa-check t-emerald"></i> 27/7 Customer Support</h4>
+        <h4><i class="fa fa-fw fa-check t-emerald"></i> High Speed</h4>
+        <h4><i class="fa fa-fw fa-check t-emerald"></i> Site Protections</h4>
+        <h4><i class="fa fa-fw fa-check t-emerald"></i> Free SSL Certificate</h4>
+        <h4><i class="fa fa-fw fa-check t-emerald"></i> Free Migrations From Other Provider</h4>
+        <h4><i class="fa fa-fw fa-check t-emerald"></i> One-Click Website Installer</h4>
+        <h4><i class="fa fa-fw fa-check t-emerald"></i> Daily Backups</h4>
+      </div>
+      <br>
+    </div>
+    <!-- Info -->
+    <div class="col-md-6">
+      <!-- Sub title -->
+      <h3 class="t-bold">Grant Programs</h3>
+      <hr>
+      <!-- Info -->
+      <h4 class="t-line">
+        The Kloud51 offers Grant Programs towards a variety of hosting products and services.
+        These Higher Education Grants were created to give Institutions with a smaller IT Budget
+        a chance to implement more secure and up to date hosting services.
+      </h4>
+      <!-- Info -->
+      <h4 class="t-line">
+        This Grant offers your institution a chance to financially take on a development platform
+        with a clear ROI and no hidden costs. This grant is a first of its kind in this segment.
+      </h4>
+      <br>
+      <!-- Sub title -->
+      <h3 class="t-bold">Grant Coverage</h3>
+      <hr>
+      <!-- Info -->
+      <h4 class="t-line">
+        The grant covers a total of 30% over five years in hosting, migration and the support.
+      </h4>
+    </div>
+  </div>
+</div>
+
+<!-- Form -->
 <div class="container-fluid container-content bg-2">
   <div class="container s-pad-y-hard">
     <!-- Title -->
@@ -148,7 +209,7 @@
           placeholder="Do you offer a continuing education program and then if so, approximated how many students does this program serve?">
       </div>
       <br>
-      <h2>Please mark "x" next to all that apply</h2>
+      <h2>Please check all that apply</h2>
       <hr>
       <div class="row">
         <div class="col-md-6">

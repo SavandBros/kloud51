@@ -8,6 +8,10 @@
     margin: 0;
 }
 
+.s-pad {
+    padding: 50px;
+}
+
 .s-mar-bottom {
     margin-bottom: 50px;
 }
@@ -91,6 +95,10 @@
     background: #333;
 }
 
+.bg-white {
+    background: #fff;
+}
+
 
 /* Texts */
 
@@ -140,6 +148,12 @@ a.t-dark:hover {
 
 .t-line {
     line-height: 1.5em;
+}
+
+h3.t-icon .fa {
+    float: right;
+    margin-top: -10px;
+    font-size: 2em;
 }
 
 
