@@ -1,9 +1,12 @@
 import dj_database_url
 import os
+import shutil
+import sys
 
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TESTING = sys.argv[1:2] == ['test']
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DJANGO_DEBUG') != 'False'
@@ -223,3 +226,38 @@ if not DEBUG:
         'branch': 'master',
         'root': os.getcwd(),
     }
+
+
+if TESTING:
+    if os.environ.get('DJANGO_FAKE_MIGRATIONS') == 'YES':
+        class DisableMigrations(object):
+            # https://gist.github.com/NotSqrt/5f3c76cd15e40ef62d09
+            def __contains__(self, item) -> bool:
+                """Just disable all the way down."""
+                return True
+
+            def __getitem__(self, item) -> None:
+                """Making the magic and fool the world."""
+                return None
+
+
+        MIGRATION_MODULES = DisableMigrations()
+        MEDIA_ROOT = os.path.join(BASE_DIR, 'media_test')
+
+        if os.path.isdir(MEDIA_ROOT):
+            shutil.rmtree(MEDIA_ROOT)
+
+        os.makedirs(MEDIA_ROOT)
+
+        CACHES = {
+            'default': {
+                'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+            }
+        }
+
+        LOC_MEM_CACHE = {
+            'default': {
+                'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+                'LOCATION': 'unique-snowflake',
+            }
+        }
