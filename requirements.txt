@@ -31,3 +31,4 @@ boto3==1.4.8
 django-admin-sortable2==0.6.16
 django-colorfield==0.1.14
 brotlipy==0.7.0
+rollbar==0.13.17

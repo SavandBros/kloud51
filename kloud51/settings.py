@@ -8,6 +8,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DJANGO_DEBUG') != 'False'
 USE_S3 = os.environ.get('USE_S3') == 'True'
+DEPLOY_ENV = os.environ.get('DEPLOY_ENV', 'development')
+ROLLBAR_TOKEN = os.environ.get('ROLLBAR_TOKEN')
 
 ALLOWED_HOSTS = [
     '192.168.56.1',
@@ -77,6 +79,7 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
 )
 
 INSTALLED_APPS = (
@@ -200,6 +203,7 @@ THUMBNAIL_PROCESSORS = (
 
 WHITENOISE_MAX_AGE = 864000
 
+
 if USE_S3:
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
@@ -212,3 +216,10 @@ if USE_S3:
     }
     AWS_QUERYSTRING_AUTH = False
 
+if not DEBUG:
+    ROLLBAR = {
+        'access_token': ROLLBAR_TOKEN,
+        'environment': DEPLOY_ENV,
+        'branch': 'master',
+        'root': os.getcwd(),
+    }
