@@ -69,6 +69,10 @@ hr[small] {
     margin: 0;
 }
 
+.cms-toolbar-expanded .navbar-fixed-top {
+    margin-top: 45px;
+}
+
 @media (min-width: 768px) {
     .navbar {
         height: 70px;
