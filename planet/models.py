@@ -162,6 +162,12 @@ class Section(models.Model):
             'Public title of the section, visitors will be able to see it.',
         )
     )
+    sub_title = models.CharField(
+        verbose_name=_('sub title'),
+        max_length=250,
+        blank=True,
+        null=True,
+    )
     description = HTMLField(
         verbose_name=_('description'),
         blank=True,
@@ -172,6 +178,11 @@ class Section(models.Model):
         help_text=_('Can be used for background image or the whole section.'),
         blank=True,
         null=True
+    )
+    secondary_image = models.ImageField(
+        verbose_name=_('secondary image'),
+        blank=True,
+        null=True,
     )
     css_classes = models.CharField(
         verbose_name=_('css classes'),
