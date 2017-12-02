@@ -1,18 +1,21 @@
-<div class="container-fluid cover cover-dark" style="background-image: url('{{ instance.image.url }}')">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        {% if instance.sub_title %}
-          <h1 class="t-bold">{{ instance.sub_title }}</h1>
-        {% endif %}
-        {% if instance.title %}
-          <h1 class="t-5"><b>{{ instance.title }}</b></h1>
-        {% endif %}
-        {% if instance.detail %}
-          <br>
-          {{ instance.detail }}
-        {% endif %}
+<div class="container-fluid cover {% if instance.is_scroll %}bg-scroll{% else %}cover-dark{% endif %}"
+     style="background-image: url('{{ instance.image.url }}')">
+  {% if not instance.is_scroll %}
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          {% if instance.sub_title %}
+            <h1 class="t-bold">{{ instance.sub_title }}</h1>
+          {% endif %}
+          {% if instance.title %}
+            <h1 class="t-5"><b>{{ instance.title }}</b></h1>
+          {% endif %}
+          {% if instance.detail %}
+            <br>
+            {{ instance.detail }}
+          {% endif %}
+        </div>
       </div>
     </div>
-  </div>
+  {% endif %}
 </div>
