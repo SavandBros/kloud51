@@ -1,3 +1,5 @@
+from typing import Tuple
+
 from cms.forms.fields import PageSelectFormField
 from django import forms
 
@@ -27,14 +29,6 @@ class SectionItemModelForm(forms.ModelForm):
     """Section Item Model Form."""
     class Meta:
         model = SectionItem
-        fields = (
-            'title',
-            'description',
-            'internal_link',
-            'external_link',
-            'icon',
-            'icon_color',
-            'image',
-        )
+        exclude: Tuple[str] = ()
 
     internal_link = PageSelectFormField(required=False)
