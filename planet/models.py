@@ -279,7 +279,7 @@ class SectionPlugin(CMSPlugin):
 
 
 class CoverPlugin(CMSPlugin):
-    """Text Model."""
+    """Cover Model."""
     title = models.CharField(
         verbose_name=_('title'),
         max_length=250,
@@ -294,6 +294,7 @@ class CoverPlugin(CMSPlugin):
     )
     image = FilerImageField(verbose_name=_('image'), blank=True, null=True)
     detail = HTMLField(verbose_name=_('detail'), blank=True, null=True)
+    is_scroll = models.BooleanField(verbose_name=_('is scroll'), default=False)
 
     def __str__(self):
         return self.title
