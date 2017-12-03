@@ -121,7 +121,7 @@ INSTALLED_APPS = (
     # Apps and Plugins
     'planet',
     'cmsplugin_pure_text',
-    'menu_builder',
+    'menu_builder.apps',
 )
 
 
@@ -161,7 +161,7 @@ CMS_LANGUAGES = {
     'default': {
         'redirect_on_fallback': True,
         'public': True,
-        'hide_untranslated': False,
+        'hide_untranslated': True,
     },
 }
 
