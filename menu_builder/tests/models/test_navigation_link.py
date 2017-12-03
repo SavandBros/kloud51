@@ -54,4 +54,4 @@ class TestNavigationLink(TestCase):
             label='Go Home!',
         )
 
-        self.assertEqual(str(nav_link.label), nav_link.label)
+        self.assertEqual(str(nav_link), nav_link.label)
