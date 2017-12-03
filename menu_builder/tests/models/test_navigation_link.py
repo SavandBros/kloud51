@@ -46,3 +46,12 @@ class TestNavigationLink(TestCase):
         nav_link.save()
         self.assertEqual(nav_link.link, page2.get_absolute_url())
         self.assertEqual(nav_link.link, '/en/test-page-2/')
+
+    def test_magic_str(self):
+        menu: Menu = Menu.objects.create(name='Header')
+        nav_link: NavigationLink = NavigationLink.objects.create(
+            menu=menu,
+            label='Go Home!',
+        )
+
+        self.assertEqual(str(nav_link.label), nav_link.label)
