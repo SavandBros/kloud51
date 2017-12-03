@@ -308,4 +308,4 @@ class CoverPlugin(CMSPlugin):
     is_scroll = models.BooleanField(verbose_name=_('is scroll'), default=False)
 
     def __str__(self):
-        return self.title
+        return self.title or ''
