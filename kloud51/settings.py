@@ -121,7 +121,7 @@ INSTALLED_APPS = (
     # Apps and Plugins
     'planet',
     'cmsplugin_pure_text',
-    'menu_builder.apps',
+    'menu_builder.apps.MenuBuilderConfig',
 )
 
 
