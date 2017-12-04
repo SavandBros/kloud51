@@ -152,6 +152,11 @@ hr[small] {
     box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.4);
 }
 
+.cover-holder {
+    padding-bottom: 400px;
+    margin-bottom: -300px;
+}
+
 .cover-scroll {
     height: 720px;
     background-attachment: fixed;
