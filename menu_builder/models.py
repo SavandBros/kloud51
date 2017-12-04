@@ -2,6 +2,7 @@ from typing import Union
 
 from cms.models import Page, CMSPlugin
 from django.db import models
+from django.db.models import QuerySet
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -16,10 +17,20 @@ class Menu(models.Model):
     def __str__(self) -> str:
         return self.name
 
+    @property
+    def children(self) -> QuerySet:
+        return NavigationLink.objects.parents(menu=self)
+
+
+class NavigationLinkManager(models.Manager):
+    """Navigation Link Manager."""
+    def parents(self, menu: Menu) -> QuerySet:
+        return self.filter(parent=None, menu=menu)
+
 
 class NavigationLink(models.Model):
     """Navigation Link model."""
-    menu = models.ForeignKey(Menu)
+    menu = models.ForeignKey(Menu, related_name='links')
 
     label = models.CharField(
         verbose_name=_('label'),
@@ -63,6 +74,8 @@ class NavigationLink(models.Model):
         related_name='children',
         db_index=True
     )
+
+    objects = NavigationLinkManager()
 
     class Meta:
         verbose_name = _('Navigation Link')
