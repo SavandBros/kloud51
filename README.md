@@ -1,5 +1,9 @@
 ## Kloud51 main website
 
+[![CircleCI](https://circleci.com/gh/SavandBros/kloud51.svg?style=svg)](https://circleci.com/gh/SavandBros/kloud51)
+[![codecov](https://codecov.io/gh/SavandBros/kloud51/branch/master/graph/badge.svg)](https://codecov.io/gh/SavandBros/kloud51)
+
+
 This code repository holds the source code of Savand Bros Kloud51 main website, reachable at https://kloud51.com
 The code base is tiny but it has been created to be minimal as possible, therefore there's not much of code pipeline, review, 
 testing etc is involved.
