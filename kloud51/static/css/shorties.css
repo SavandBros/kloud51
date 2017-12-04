@@ -8,6 +8,10 @@
     margin: 0;
 }
 
+.s-pad {
+    padding: 50px;
+}
+
 .s-mar-bottom {
     margin-bottom: 50px;
 }
@@ -89,6 +93,10 @@
 
 .bg-dark {
     background: #333;
+}
+
+.bg-white {
+    background: #fff;
 }
 
 
