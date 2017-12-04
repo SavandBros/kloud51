@@ -18,7 +18,7 @@ class Menu(models.Model):
         return self.name
 
     @property
-    def children(self) -> QuerySet:
+    def ancestors(self) -> QuerySet:
         return NavigationLink.objects.parents(menu=self)
 
 
