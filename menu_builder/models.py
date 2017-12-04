@@ -1,6 +1,6 @@
 from typing import Union
 
-from cms.models import Page
+from cms.models import Page, CMSPlugin
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -84,3 +84,11 @@ class NavigationLink(models.Model):
             link = self.external_link
 
         return link
+
+
+class MenuPlugin(CMSPlugin):
+    """Menu model CMS Plugin."""
+    menu = models.ForeignKey(Menu)
+
+    def __str__(self) -> str:
+        return self.menu.name
