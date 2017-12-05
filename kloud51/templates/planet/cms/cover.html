@@ -1,6 +1,8 @@
-<div class="container-fluid cover {% if instance.is_scroll %}cover-scroll{% else %}cover-dark{% endif %}"
+<div class="container-fluid cover
+  {% if instance.is_scroll %}cover-scroll{% endif %}
+  {% if has_content %}cover-dark{% endif %}"
      style="background-image: url('{{ instance.image.url }}')">
-  {% if not instance.is_scroll %}
+  {% if instance.has_content %}
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
