@@ -158,13 +158,13 @@ hr[small] {
 }
 
 .cover-scroll {
-    height: 720px;
+    min-height: 720px;
     background-attachment: fixed;
 }
 
 @media (max-width: 768px) {
   .cover-scroll {
-    height: 480px;
+    min-height: 480px;
   }
 }
 
