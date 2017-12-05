@@ -16,6 +16,9 @@
           {% endif %}
         </div>
       </div>
+      {% if instance.inside_image %}
+        <img src="{{ instance.inside_image.url }}" style="max-width: 100%">
+      {% endif %}
     </div>
   {% endif %}
 </div>
