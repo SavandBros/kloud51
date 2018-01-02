@@ -19,6 +19,7 @@ ALLOWED_HOSTS = [
     'staging.kloud51.com',
     'beta.kloud51.com',
     'kloud51.com',
+    'www.kloud51.com',
     'localhost',
     '127.0.0.1',
 ]

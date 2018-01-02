@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="container s-pad-y-hard">
+    <!-- Title -->
+    <h1 class="title">{{ instance.section.name }}</h1>
+    <hr>
+    <!-- Reasons -->
+    <div class="row s-mar-top text-center">
+      {% for item in instance.section.items.all %}
+      <div class="col-md-4 col-sm-6 grid feature">
+        <i class="feature-icon {{ item.icon }}"></i>
+        <h3 class="t-bold">{{ item.title }}</h3>
+        <br>
+        {{ item.description }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

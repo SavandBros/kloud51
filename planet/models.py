@@ -303,9 +303,16 @@ class CoverPlugin(CMSPlugin):
         blank=True,
         null=True,
     )
-    image = FilerImageField(verbose_name=_('image'), blank=True, null=True)
+    image = FilerImageField(verbose_name=_('image'), blank=True, null=True, related_name='cover_image')
+    inside_image = FilerImageField(verbose_name=_('inside image'), blank=True, null=True, related_name='inside_image')
     detail = HTMLField(verbose_name=_('detail'), blank=True, null=True)
     is_scroll = models.BooleanField(verbose_name=_('is scroll'), default=False)
+
+    @property
+    def has_content(self):
+        if self.title or self.sub_title or self.inside_image:
+            return True
+        return False
 
     def __str__(self):
         return self.title or ''
