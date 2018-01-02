@@ -3,6 +3,8 @@ import os
 import shutil
 import sys
 
+from django.http import Http404
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -222,6 +224,9 @@ if not DEBUG:
         'environment': DEPLOY_ENV,
         'branch': 'master',
         'root': os.getcwd(),
+        'exception_level_filters': [
+            (Http404, 'ignored')
+        ]
     }
 
 
