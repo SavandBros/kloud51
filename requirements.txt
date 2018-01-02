@@ -12,7 +12,7 @@ djangocms-column>=1.6
 easy_thumbnails
 django-filer>=1.2
 cmsplugin-filer>=1.1
-Django==1.11.7
+Django==1.11.9
 pytz
 django-classy-tags>=0.7
 html5lib>=0.999999,<0.99999999
