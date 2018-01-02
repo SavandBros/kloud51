@@ -134,8 +134,7 @@ USE_TZ = True
 
 LANGUAGES = (
     ('en', gettext('English')),
-    ('hi', gettext('Hindi')),
-    ('ru', gettext('Russian')),
+    ('fa', gettext('Persian'))
 )
 
 CMS_LANGUAGES = {
@@ -148,13 +147,8 @@ CMS_LANGUAGES = {
             'redirect_on_fallback': False,
         },
         {
-            'code': 'hi',
-            'name': gettext('Hindi'),
-            'public': True,
-        },
-        {
-            'code': 'ru',
-            'name': gettext('Russian'),
+            'code': 'fa',
+            'name': gettext('Persian'),
             'public': True,
         },
     ],
@@ -166,7 +160,7 @@ CMS_LANGUAGES = {
 }
 
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
-MODELTRANSLATION_LANGUAGES = ('en', 'hi', 'ru', )
+MODELTRANSLATION_LANGUAGES = ('en', 'fa', )
 MODELTRANSLATION_PREPOPULATE_LANGUAGE = 'en'
 
 CMS_TEMPLATES = (
