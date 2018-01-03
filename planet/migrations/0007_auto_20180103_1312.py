@@ -15,10 +15,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='section',
-            name='secondary_image',
-        ),
         migrations.AlterField(
             model_name='section',
             name='image',
