@@ -180,12 +180,12 @@ class Section(models.Model):
         blank=True,
         null=True
     )
-    secondary_image = FilerImageField(
-        related_name='secondary_images',
-        verbose_name=_('secondary image'),
-        blank=True,
-        null=True,
-    )
+    # secondary_image = FilerImageField(
+    #     related_name='secondary_images',
+    #     verbose_name=_('secondary image'),
+    #     blank=True,
+    #     null=True,
+    # )
     css_classes = models.CharField(
         verbose_name=_('css classes'),
         max_length=25,
