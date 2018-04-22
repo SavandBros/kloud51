@@ -1,3 +1,5 @@
 # [Kloud51.com](https://kloud51.com/)
 
-Web Hosting, Blazing Fast SSD VPS, Domain Names and SSL Certificate.
+Build your own professional website.
+
+This is the source code of [Kloud51.com](https://kloud51.com/).
