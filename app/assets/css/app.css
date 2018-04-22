@@ -150,16 +150,17 @@ hr[small] {
     margin-bottom: -300px;
 }
 
+
 /* Backgrounds */
 
 .bg-grad {
-    background: url(http://amir.savandbros.com/assets/css/images/overlay.png), linear-gradient(45deg, #5187ff 0%, #a22ea4 70%, #e05252 100%);
+    background: url("../img/overlay.png"), linear-gradient(45deg, #5187ff 0%, #a22ea4 70%, #e05252 100%);
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .bg-grad-2 {
-    background: url(http://amir.savandbros.com/assets/css/images/overlay.png), linear-gradient(45deg, rgb(189, 0, 0) 0%, #3b557b 50%, #00ff72 100%);
+    background: url("../img/overlay.png"), linear-gradient(45deg, rgb(189, 0, 0) 0%, #3b557b 50%, #00ff72 100%);
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
@@ -175,7 +176,6 @@ hr[small] {
 .bg-evening {
     background-image: url("../img/evening.jpg");
 }
-
 
 
 /* List Group */
