@@ -139,7 +139,6 @@ Route::add("business", "/hosting/business-hosting", "Business Hosting", "Hosting
 Route::add("mybb", "/hosting/mybb", "MyBB", "Hosting", true, true, true);
 Route::add("mariadb", "/hosting/mariadb", "MariaDB", "Hosting", true, true, true);
 Route::add("bbpress", "/hosting/bbpress", "bbPress", "Hosting", true, true, true);
-Route::add("ssd-vps", "/hosting/ssd-vps", "SSD VPS", "Hosting", true, true, true);
 Route::add("wordpress", "/hosting/wordpress", "Wordpress", "Hosting", true, true, true);
 Route::add("whmcs", "/hosting/whmcs", "WHMCS", "Hosting", true, true, true);
 Route::add("joomla", "/hosting/joomla", "Joomla", "Hosting", true, true, true);

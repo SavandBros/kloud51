@@ -147,10 +147,6 @@ require "include/route.php";
               <a href="//dash.kloud51.com/cart.php?gid=1">
                 <i class="fa fa-server"></i> Web Hosting (cPanel)
               </a>
-              <!-- SSD -->
-              <a href="//dash.kloud51.com/cart.php?gid=4">
-                <i class="fa fa-spinner"></i> SSD Virtual Private Server (VPS)
-              </a>
               <!-- Reseller -->
               <a href="//dash.kloud51.com/cart.php?gid=3">
                 <i class="fa fa-repeat"></i> Reseller Linux Web Hosting
@@ -199,8 +195,6 @@ require "include/route.php";
             <h4>Hosting</h4>
             <!-- Links -->
             <div class="links">
-              <!-- SSD -->
-              <a href="/hosting/ssd-vps"><i class="fa fa-server"></i> SSD VPS Hosting</a>
               <!-- WordPress -->
               <a href="/hosting/wordpress"><i class="fa fa-wordpress"></i> WordPress Hosting</a>
               <!-- PrestaShop -->
@@ -258,7 +252,7 @@ require "include/route.php";
           <!-- Goal -->
           <div class="col-md-9 col-lg-9">
             <p>
-              Our goal is to provide out of this world web hosting hosting and Linux SSD VPS services,
+              Our goal is to provide out of this world web hosting services,
               become a loved brand and have a little fun on the side.
               We offer Premium web hosting services at low prices to
               our customers without compromising reliability and great customer service.
