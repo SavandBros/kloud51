@@ -1,0 +1,76 @@
+/* Import */
+
+@import url("//fonts.googleapis.com/css?family=Play:400,700");
+
+/* Global */
+
+body,
+h1,
+h2,
+h3 {
+    font-family: "Play", sans-serif !important;
+}
+
+a {
+    text-decoration: none !important;
+    outline: none !important;
+    cursor: pointer;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar {
+    background: white;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Header */
+
+#header {
+    background: #333 !important;
+    border-radius: 0 !important;
+}
+
+#header a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#header a:hover,
+#header a:focus {
+    color: #fff;
+}
+
+#header #accountNotifications .label {
+    color: transparent;
+    overflow: hidden;
+    display: inline-block;
+    width: 10px;
+    height: 12px;
+    border-radius: 10px;
+    margin-bottom: -2px;
+}
+
+#header .primary-action {
+    border: none;
+}
+
+#header .primary-action a {
+    background-color: #444;
+    border: 1px solid #222;
+}
+
+#header .primary-action a:hover,
+#header .primary-action a:focus {
+    background-color: #222;
+}
