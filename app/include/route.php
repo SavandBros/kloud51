@@ -136,6 +136,7 @@ Route::add("refund", "/legal/refunds", "Refund Policy", "Legal");
 
 Route::add("web", "/hosting/web-hosting", "Web Hosting", "Hosting", false, true, true);
 Route::add("business", "/hosting/business-hosting", "Business Hosting", "Hosting", false, true, true);
+Route::add("prestashop", "/hosting/prestashop", "PrestaShop", "Hosting", true, true, true);
 Route::add("mybb", "/hosting/mybb", "MyBB", "Hosting", true, true, true);
 Route::add("mariadb", "/hosting/mariadb", "MariaDB", "Hosting", true, true, true);
 Route::add("bbpress", "/hosting/bbpress", "bbPress", "Hosting", true, true, true);
@@ -143,7 +144,6 @@ Route::add("wordpress", "/hosting/wordpress", "Wordpress", "Hosting", true, true
 Route::add("whmcs", "/hosting/whmcs", "WHMCS", "Hosting", true, true, true);
 Route::add("joomla", "/hosting/joomla", "Joomla", "Hosting", true, true, true);
 Route::add("softaculous", "/hosting/softaculous", "Softaculous", "Hosting", true, true, true);
-Route::add("prestashop", "/hosting/prestashop", "Prestashop", "Hosting", true, true, true);
 
 Route::add("affiliate", "/program/affiliate-army", "Affiliate Army Program", "Program", true, true);
 Route::add("sponsorship", "/program/sponsorship", "Sponsorship", "Program", true, true);
