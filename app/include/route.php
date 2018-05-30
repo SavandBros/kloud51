@@ -123,7 +123,6 @@ class Route {
   }
 }
 
-
 // Let's add some routes
 Route::add("home", "/", null, null, false, false);
 
