@@ -1,6 +1,6 @@
 /**
  * By Kloud51.com
- * Copyright 2017, all rights reserved.
+ * Copyright 2018, all rights reserved.
  */
 
 /**
@@ -37,7 +37,16 @@ function updateClientArea() {
   $("#main-body").addClass("bg-smoke");
 }
 
-$(function () {
+function noHomeAccess() {
+  // Is in home page
+  if ($("title").text() === "Portal Home - Kloud51") {
+    // Go to main homepage
+    location.href = "https://kloud51.com";
+  }
+}
+
+$(function() {
   // updateAnnouncements();
   // updateClientArea();
+  noHomeAccess();
 });
