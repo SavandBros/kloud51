@@ -69,6 +69,11 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='hosting'"
       <a href="/hosting/business-hosting" class="btn btn-default btn-launch">
         View Business Hosting Plans <i class="fa fa-fw fa-chevron-right"></i>
       </a>
+      <br>
+      <br>
+      <a href="/hosting/prestashop" class="btn btn-info btn-launch">
+        Order Managed Online Store <i class="fa fa-fw fa-chevron-right"></i>
+      </a>
     </div>
   </div>
 </div>
