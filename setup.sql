@@ -1,4 +1,4 @@
-# Setup for kloud51.com database
+-- Setup for Kloud51.com datanase
 
 CREATE TABLE `plans` (
  `id` int(11) NOT NULL AUTO_INCREMENT,
