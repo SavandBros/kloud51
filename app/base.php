@@ -9,7 +9,7 @@ require "include/route.php";
   <!-- Meta data -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <meta http-equiv="cache-control" content="no-cache"/>
+  <!-- <meta http-equiv="cache-control" content="no-cache"/> -->
 
   <!-- Title and favicon -->
   <title><?php if (!empty($base->title)): ?><?=$base->title;?><?php endif ?>Kloud51</title>
