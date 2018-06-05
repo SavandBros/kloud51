@@ -113,9 +113,13 @@ hr[small] {
 
 /* Buttons */
 
-.btn-launch {
+.btn-launch,
+.btn-fat {
     font-size: 22px;
-    padding: 20px;
+    padding: 20px 60px;
+}
+
+.btn-launch {
     width: 100%;
 }
 
@@ -142,7 +146,7 @@ hr[small] {
 }
 
 .cover-dark {
-    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.5);
 }
 
 .cover-holder {
