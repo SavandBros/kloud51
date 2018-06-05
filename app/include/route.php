@@ -135,7 +135,7 @@ Route::add("refund", "/legal/refunds", "Refund Policy", "Legal");
 
 Route::add("web", "/hosting/web-hosting", "Web Hosting", "Hosting", false, true, true);
 Route::add("business", "/hosting/business-hosting", "Business Hosting", "Hosting", false, true, true);
-Route::add("prestashop", "/hosting/prestashop", "PrestaShop", "Hosting", false, true, true);
+Route::add("prestashop", "/hosting/managed-online-store-hosting", "Managed Online Store", "Hosting", false, true, true);
 Route::add("mybb", "/hosting/mybb", "MyBB", "Hosting", true, true, true);
 Route::add("mariadb", "/hosting/mariadb", "MariaDB", "Hosting", true, true, true);
 Route::add("bbpress", "/hosting/bbpress", "bbPress", "Hosting", true, true, true);
