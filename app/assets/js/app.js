@@ -23,7 +23,7 @@ function showHostings() {
   $("#Hosting").trigger("click");
 }
 
-$(function () {
+$(function() {
   $(".dropdown-toggle").dropdown();
   $("[tooltip]").tooltip();
   showDebugElements();

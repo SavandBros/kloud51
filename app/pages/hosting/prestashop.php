@@ -69,6 +69,29 @@
   </div>
 </div>
 
+<!-- Theme Showcase -->
+<div class="bg-grad-3 s-pad-y-hard">
+  <!-- Title -->
+  <h1 class="title" style="font-size: 5em">Theme Showcase</h1>
+  <!-- Sub title -->
+  <h3 class="text-center o-fade">
+    More than 270,000 ecommerce sites run on PrestaShop.<br>
+    Make your business our next success story.
+  </h3>
+  <!-- Showcase wrapper -->
+  <div class="showcase-wrapper" scroll>
+    <!-- Themes -->
+    <div class="showcase">
+      <!-- Theme -->
+      <?php foreach(range(1, 16) as $index): ?>
+      <div class="showcase-item">
+        <img src="/assets/img/page/prestashop/theme/<?=$index?>.jpg" alt="Theme preview">
+      </div>
+      <?php endforeach ?>
+    </div>
+  </div>
+</div>
+
 <!-- Build Your Online Store -->
 <div class="container-fluid bg-1">
   <div class="container s-pad-y-hard">

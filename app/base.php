@@ -9,6 +9,7 @@ require "include/route.php";
   <!-- Meta data -->
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta http-equiv="cache-control" content="no-cache"/>
 
   <!-- Title and favicon -->
   <title><?php if (!empty($base->title)): ?><?=$base->title;?><?php endif ?>Kloud51</title>
@@ -267,6 +268,7 @@ require "include/route.php";
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="/assets/js/grid.js"></script>
+  <script src="/assets/js/scroll.js"></script>
   <script src="/assets/js/app.js"></script>
 
   <!-- Page footer -->
