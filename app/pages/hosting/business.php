@@ -68,12 +68,12 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='business'
     </div>
     <!-- More plans -->
     <div class="row row-launch">
-      <a href="/hosting/web-hosting" class="btn btn-default btn-launch">
+      <a href="<?=Route::find('web')->url?>" class="btn btn-default btn-launch">
         View Web Hosting Plans <i class="fa fa-fw fa-chevron-right"></i>
       </a>
       <br>
       <br>
-      <a href="/hosting/prestashop" class="btn btn-info btn-launch">
+      <a href="<?=Route::find('prestashop')->url?>" class="btn btn-info btn-launch">
         Order Managed Online Store <i class="fa fa-fw fa-chevron-right"></i>
       </a>
     </div>

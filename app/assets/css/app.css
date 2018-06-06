@@ -41,12 +41,18 @@ li {
 }
 
 ::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
+    height: 6px;
     background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.4);
+}
+
+[scroll]::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 
@@ -113,9 +119,13 @@ hr[small] {
 
 /* Buttons */
 
-.btn-launch {
+.btn-launch,
+.btn-fat {
     font-size: 22px;
-    padding: 20px;
+    padding: 20px 60px;
+}
+
+.btn-launch {
     width: 100%;
 }
 
@@ -142,7 +152,7 @@ hr[small] {
 }
 
 .cover-dark {
-    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 0 10000px rgba(0, 0, 0, 0.5);
 }
 
 .cover-holder {
@@ -161,6 +171,12 @@ hr[small] {
 
 .bg-grad-2 {
     background: url("../img/overlay.png"), linear-gradient(45deg, rgb(189, 0, 0) 0%, #3b557b 50%, #00ff72 100%);
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.bg-grad-3 {
+    background: linear-gradient(#251b5b, #840e5f);
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
@@ -733,4 +749,36 @@ hr[small] {
 
 .compare-table th {
     border-color: #eee !important;
+}
+
+
+/* Showcase */
+
+.showcase-wrapper {
+    overflow-x: scroll;
+}
+
+.shocase {
+    width: calc(480px + 10px * 8);
+}
+
+.showcase-item {
+    display: table-cell;
+}
+
+.showcase-item img {
+    width: 480px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    margin: 30px 5px;
+}
+
+@media (min-width: 768px) {
+    .showcase-item img {
+        transform: scale(0.8);
+        transition: all 0.2s;
+    }
+    .showcase-item img:hover {
+        transform: scale(1);
+    }
 }

@@ -1,21 +1,87 @@
+<?php
+// Connect
+$db = new Db();
+
+// Get plans and features
+$plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='store'");
+?>
+
 <!-- Start Your Free Online Store -->
 <div class="container-fluid cover cover-dark"
   style="background-image: url('/assets/img/page/prestashop-background.jpg');">
   <div class="container s-pad-y-hard">
-    <div class="row text-center-mobile">
-      <!-- Image -->
-      <div class="col-md-4 s-mobile">
-        <img src="/assets/img/page/prestashop.svg">
+    <!-- Sub title -->
+    <h3 class="o-fade-soft">Your ecommerce success starts here</h3>
+    <!-- Title -->
+    <h1 style="font-size: 6em;"><b>Start Your <br>Managed Online Store</b></h1>
+    <!-- Launch -->
+    <button class="btn btn-primary btn-fat s-mar-top br-rad-no" onClick="animateScroll('#plans')">
+      <i class="fa fa-fw fa-shopping-bag"></i> SELL ONLINE
+    </button>
+    <br><br>
+    <!-- Demo -->
+    <a class="t-white" target="_blank" href="http://demo.prestashop.com">
+      <i class="fa fa-fw fa-laptop"></i> See the live demo
+    </a>
+  </div>
+</div>
+
+<!-- Web hosting plans -->
+<div class="container-fluid bg-1 s-pad-y-hard" id="plans">
+  <div class="container">
+    <!-- Title -->
+    <h1 class="title-header"><a href="#plans">Managed Online Store Plans</a></h1>
+    <hr>
+    <!-- Plans -->
+    <div class="row s-mar-top">
+      <?php foreach ($plans as $plan): ?>
+      <div class="plan-wrapper col-md-4 col-sm-6">
+        <div class="plan">
+          <?php if ($plan["message"]): ?>
+          <span class="message" style="background: <?=$plan["color"]?>">
+            <?=$plan["message"]?>
+          </span>
+          <?php endif ?>
+          <div class="head" style="border-top-color: <?=$plan["color"]?>">
+            <h1><?=$plan["title"]?></h1>
+            <p><?=$plan["subtitle"]?></p>
+          </div>
+          <div class="price" style="color: <?=$plan["color"]?>">
+            <div>
+              <small>$</small>
+              <span><?=$plan["price"]?></span>
+              <small>/mo</small>
+              <br>
+              <small class="renew">$<?=$plan["price_renew"]?>/mo when you renew</small>
+            </div>
+          </div>
+          <div class="detail">
+            <p class="grid"><?=nl2br($plan["detail"])?></p>
+          </div>
+          <div class="order">
+            <a href="<?=$plan["button_link"]?>" target="_blank"
+              class="btn btn-default <?php if ($plan["featured"]): ?>btn-danger t-bold<?php endif ?>">
+              <?=$plan["button_label"]?>
+            </a>
+          </div>
+        </div>
       </div>
-      <!-- Title and detail -->
-      <div class="col-md-8">
-        <h3 class="o-fade-soft">Your ecommerce success starts here</h3>
-        <h1 style="font-size: 5em;">Start Your Managed <br>Online Store</h1>
-        <a class="btn btn-success btn-lg s-mar-top" href="https://dash.kloud51.com/cart.php?gid=1">Start Your Shop Now</a>
-      </div>
+      <?php endforeach ?>
+    </div>
+    <!-- More plans -->
+    <div class="row row-launch">
+      <a href="<?=Route::find('web')->url?>" class="btn btn-default btn-launch">
+        View Web Hosting Plans <i class="fa fa-fw fa-chevron-right"></i>
+      </a>
+      <br>
+      <br>
+      <a href="<?=Route::find('business')->url?>" class="btn btn-default btn-launch">
+        View Business Hosting Plans <i class="fa fa-fw fa-chevron-right"></i>
+      </a>
     </div>
   </div>
 </div>
+
 
 <!-- Features -->
 <div class="container-fluid">
@@ -68,6 +134,29 @@
   </div>
 </div>
 
+<!-- Theme Showcase -->
+<div class="bg-grad-3 s-pad-y-hard">
+  <!-- Title -->
+  <h1 class="title" style="font-size: 5em">Theme Showcase</h1>
+  <!-- Sub title -->
+  <h3 class="text-center o-fade">
+    More than 270,000 ecommerce sites run on PrestaShop.<br>
+    Make your business our next success story.
+  </h3>
+  <!-- Showcase wrapper -->
+  <div class="showcase-wrapper" scroll>
+    <!-- Themes -->
+    <div class="showcase">
+      <!-- Theme -->
+      <?php foreach(range(1, 16) as $index): ?>
+      <div class="showcase-item">
+        <img src="/assets/img/page/prestashop/theme/<?=$index?>.jpg" alt="Theme preview">
+      </div>
+      <?php endforeach ?>
+    </div>
+  </div>
+</div>
+
 <!-- Build Your Online Store -->
 <div class="container-fluid bg-1">
   <div class="container s-pad-y-hard">
@@ -84,7 +173,7 @@
           purchase everywhere.
         </p>
         <div class="s-mobile text-center-mobile">
-          <a class="btn btn-success" href="https://dash.kloud51.com/cart.php?gid=1">Create Your Online Shop Now</a>            
+          <button class="btn btn-success" onClick="animateScroll('#plans')">Create Your Online Shop Now</button> 
         </div>
       </div>
       <div class="col-md-8 text-center">
@@ -157,7 +246,7 @@
           stores from one location. Developers can also build on our open source code.
         </p>
         <div class="s-mobile text-center-mobile">
-          <a class="btn btn-success" href="https://dash.kloud51.com/cart.php?gid=1">Start Your Shop Now</a>            
+          <button class="btn btn-success" onClick="animateScroll('#plans')">Start Your Shop Now</button> 
         </div>
       </div>
     </div>
@@ -248,9 +337,9 @@
       </div>
     </div>
     <div class="text-center s-pad-top">
-      <a href="https://dash.kloud51.com/cart.php?gid=1" class="btn btn-success btn-launch">
+      <button onClick="animateScroll('#plans')" class="btn btn-success btn-launch">
         <i class="fa fa-shopping-cart fa-fw"></i> Start Your Shop Now
-      </a>
+      </button>
     </div>
   </div>
 </div>
