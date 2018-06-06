@@ -173,7 +173,7 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='store'");
           purchase everywhere.
         </p>
         <div class="s-mobile text-center-mobile">
-          <a class="btn btn-success" href="https://dash.kloud51.com/cart.php?gid=1">Create Your Online Shop Now</a>            
+          <button class="btn btn-success" onClick="animateScroll('#plans')">Create Your Online Shop Now</button> 
         </div>
       </div>
       <div class="col-md-8 text-center">
@@ -246,7 +246,7 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='store'");
           stores from one location. Developers can also build on our open source code.
         </p>
         <div class="s-mobile text-center-mobile">
-          <a class="btn btn-success" href="https://dash.kloud51.com/cart.php?gid=1">Start Your Shop Now</a>            
+          <button class="btn btn-success" onClick="animateScroll('#plans')">Start Your Shop Now</button> 
         </div>
       </div>
     </div>
@@ -337,9 +337,9 @@ $plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='store'");
       </div>
     </div>
     <div class="text-center s-pad-top">
-      <a href="https://dash.kloud51.com/cart.php?gid=1" class="btn btn-success btn-launch">
+      <button onClick="animateScroll('#plans')" class="btn btn-success btn-launch">
         <i class="fa fa-shopping-cart fa-fw"></i> Start Your Shop Now
-      </a>
+      </button>
     </div>
   </div>
 </div>
