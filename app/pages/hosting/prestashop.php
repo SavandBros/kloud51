@@ -1,3 +1,11 @@
+<?php
+// Connect
+$db = new Db();
+
+// Get plans and features
+$plans = $db->select("SELECT * FROM plans WHERE hidden=false and type='store'");
+?>
+
 <!-- Start Your Free Online Store -->
 <div class="container-fluid cover cover-dark"
   style="background-image: url('/assets/img/page/prestashop-background.jpg');">
@@ -7,9 +15,9 @@
     <!-- Title -->
     <h1 style="font-size: 6em;"><b>Start Your <br>Managed Online Store</b></h1>
     <!-- Launch -->
-    <a class="btn btn-primary btn-fat s-mar-top br-rad-no" href="https://dash.kloud51.com/cart.php?gid=1">
+    <button class="btn btn-primary btn-fat s-mar-top br-rad-no" onClick="animateScroll('#plans')">
       <i class="fa fa-fw fa-shopping-bag"></i> SELL ONLINE
-    </a>
+    </button>
     <br><br>
     <!-- Demo -->
     <a class="t-white" target="_blank" href="http://demo.prestashop.com">
@@ -17,6 +25,63 @@
     </a>
   </div>
 </div>
+
+<!-- Web hosting plans -->
+<div class="container-fluid bg-1 s-pad-y-hard" id="plans">
+  <div class="container">
+    <!-- Title -->
+    <h1 class="title-header"><a href="#plans">Managed Online Store Plans</a></h1>
+    <hr>
+    <!-- Plans -->
+    <div class="row s-mar-top">
+      <?php foreach ($plans as $plan): ?>
+      <div class="plan-wrapper col-md-4 col-sm-6">
+        <div class="plan">
+          <?php if ($plan["message"]): ?>
+          <span class="message" style="background: <?=$plan["color"]?>">
+            <?=$plan["message"]?>
+          </span>
+          <?php endif ?>
+          <div class="head" style="border-top-color: <?=$plan["color"]?>">
+            <h1><?=$plan["title"]?></h1>
+            <p><?=$plan["subtitle"]?></p>
+          </div>
+          <div class="price" style="color: <?=$plan["color"]?>">
+            <div>
+              <small>$</small>
+              <span><?=$plan["price"]?></span>
+              <small>/mo</small>
+              <br>
+              <small class="renew">$<?=$plan["price_renew"]?>/mo when you renew</small>
+            </div>
+          </div>
+          <div class="detail">
+            <p class="grid"><?=nl2br($plan["detail"])?></p>
+          </div>
+          <div class="order">
+            <a href="<?=$plan["button_link"]?>" target="_blank"
+              class="btn btn-default <?php if ($plan["featured"]): ?>btn-danger t-bold<?php endif ?>">
+              <?=$plan["button_label"]?>
+            </a>
+          </div>
+        </div>
+      </div>
+      <?php endforeach ?>
+    </div>
+    <!-- More plans -->
+    <div class="row row-launch">
+      <a href="<?=Route::find('web')->url?>" class="btn btn-default btn-launch">
+        View Web Hosting Plans <i class="fa fa-fw fa-chevron-right"></i>
+      </a>
+      <br>
+      <br>
+      <a href="<?=Route::find('business')->url?>" class="btn btn-default btn-launch">
+        View Business Hosting Plans <i class="fa fa-fw fa-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
 
 <!-- Features -->
 <div class="container-fluid">
