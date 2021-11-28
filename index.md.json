@@ -1,0 +1,17 @@
+{
+  "version": "0.1.15",
+  "source": "src",
+  "output": "dist",
+  "template": true,
+  "baseTemplate": "src/base.html",
+  "nameAsTitle": false,
+  "firstLineAsTitle": true,
+  "cssVariables": {
+    "--primary": "#FF524C",
+    "--body-color": "#666",
+    "--body-bg": "ivory",
+    "--heading-color": "#444",
+    "--content-bg": "white"
+  },
+  "extraHead": []
+}
