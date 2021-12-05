@@ -1,6 +1,6 @@
 # Kloud51
 
-Build your own professional website. [Order Now](get-started).
+Build your own professional website and online shop.
 
 # Main Features
 

@@ -1,0 +1,45 @@
+<form method="post">
+  <table>
+    <thead>
+    <tr>
+      <th>Service</th>
+      <th>Requirement</th>
+      <th></th>
+      <th>Subtotal</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Admin Users</td>
+      <td><input name="user" type="range" min="1" step="1" max="100" data-price="5" value="1"></td>
+      <td class="value-user">1</td>
+      <td class="subtotal-user">$0</td>
+    </tr>
+    <tr>
+      <td>Storage (GB)</td>
+      <td><input name="storage" type="range" min="50" step="50" max="1000" data-price="0.04" value="50">
+      <td class="value-storage">1</td>
+      <td class="subtotal-storage">$0</td>
+    </tr>
+    <tr>
+      <td title="Number of products in your shop">Products</td>
+      <td><input name="product" type="range" min="200" step="200" max="10000" data-price="0.2" value="200"></td>
+      <td class="value-product">1</td>
+      <td class="subtotal-product">$0</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <th>Total</th>
+      <th>Monthly</th>
+      <th colspan="2" class="total">$0</th>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <th>Annually (10% discount)</th>
+      <th colspan="2" class="total-annually">$0</th>
+    </tr>
+    </tfoot>
+  </table>
+  <button type="submit">Submit Order</button>
+</form>

@@ -4,7 +4,7 @@
   },
   "devDependencies": {
     "fs-extra": "^10.0.0",
-    "htmlmin": "^0.0.7",
+    "html-minifier": "^4.0.0",
     "index.md": "^0.1.16"
   }
 }

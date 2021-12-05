@@ -1,12 +1,11 @@
 const { join } = require("path");
 const fse = require("fs-extra");
 const { exec } = require("child_process");
-const htmlmin = require("htmlmin");
+const { minify } = require("html-minifier")
 const fs = require("fs");
 
 const root = process.cwd();
 const dist = join(root, "dist");
-const src = join(root, "src");
 const assets = join(root, "assets");
 
 const deleteDist = () => {
@@ -24,11 +23,11 @@ const copyAssets = () => {
 const createHtaccess = () => {
   console.log("> createHtaccess");
   fs.writeFileSync(join(dist, ".htaccess"), [
-    'RewriteEngine on',
-    'RewriteCond %{THE_REQUEST} /([^.]+)\\.html [NC]',
-    'RewriteRule ^ /%1 [NC,L,R]',
-    'RewriteCond %{REQUEST_FILENAME}.html -f',
-    'RewriteRule ^ %{REQUEST_URI}.html [NC,L]',
+    "RewriteEngine on",
+    "RewriteCond %{THE_REQUEST} /([^.]+)\\.html [NC]",
+    "RewriteRule ^ /%1 [NC,L,R]",
+    "RewriteCond %{REQUEST_FILENAME}.html -f",
+    "RewriteRule ^ %{REQUEST_URI}.html [NC,L]",
   ].join("\n"));
 };
 
@@ -53,10 +52,17 @@ const compileMD = (callback) => {
 
 const minifyHTML = () => {
   console.log("> minifyHTML");
-  const html = join(dist, "index.html");
-  fs.writeFileSync(html, htmlmin(fs.readFileSync(join(dist, "index.html"), { encoding: "utf-8" })));
+  fs.readdirSync(dist).forEach(file => {
+    if (file.endsWith(".html")) {
+      console.log(`Minifying ${file}`);
+      const filePath = join(dist, file);
+      fs.writeFileSync(filePath, minify(fs.readFileSync(filePath, { encoding: "utf-8" }), {
+        collapseWhitespace: true,
+        removeComments: true,
+      }));
+    }
+  });
 };
-
 
 deleteDist();
 copyAssets();

@@ -1,0 +1,51 @@
+<form method="post">
+  <table>
+    <thead>
+    <tr>
+      <th>Service</th>
+      <th>Requirement</th>
+      <th></th>
+      <th>Subtotal</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Websites</td>
+      <td><input name="website" type="range" min="1" step="1" max="10" data-price="1" value="1"></td>
+      <td class="value-website">1</td>
+      <td class="subtotal-website">$0</td>
+    </tr>
+    <tr>
+      <td>Databases</td>
+      <td><input name="database" type="range" min="0" step="1" max="20" data-price="1" value="0"></td>
+      <td class="value-database">1</td>
+      <td class="subtotal-database">$0</td>
+    </tr>
+    <tr>
+      <td>Storage (GB)</td>
+      <td><input name="storage" type="range" min="50" step="50" max="1000" data-price="0.02" value="50">
+      <td class="value-storage">1</td>
+      <td class="subtotal-storage">$0</td>
+    </tr>
+    <tr>
+      <td>Emails</td>
+      <td><input name="email" type="range" min="0" step="1" max="100" data-price="0.2" value="0"></td>
+      <td class="value-email">1</td>
+      <td class="subtotal-email">$0</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+      <th>Total</th>
+      <th>Monthly</th>
+      <th colspan="2" class="total">$0</th>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <th>Annually (10% discount)</th>
+      <th colspan="2" class="total-annually">$0</th>
+    </tr>
+    </tfoot>
+  </table>
+  <button type="submit">Submit Order</button>
+</form>

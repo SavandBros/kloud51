@@ -11,3 +11,4 @@ tab_width = 4
 
 ij_javascript_force_quote_style = true
 ij_javascript_use_double_quotes = true
+ij_javascript_spaces_within_object_literal_braces = true
