@@ -218,6 +218,10 @@ td {
   .wrapper.footer {
     margin-top: 2px !important;
   }
+
+  .wrapper.footer > .inner {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 800px) {
