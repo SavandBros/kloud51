@@ -23,15 +23,30 @@
     </tr>
     <tr>
       <td>Storage (GB)</td>
-      <td><input name="storage" type="range" min="50" step="50" max="1000" data-price="0.02" value="50">
+      <td><input name="storage" type="range" min="10" step="10" max="1000" data-price="0.25" value="10"></td>
       <td class="value-storage">1</td>
       <td class="subtotal-storage">$0</td>
     </tr>
     <tr>
       <td>Emails</td>
-      <td><input name="email" type="range" min="0" step="1" max="100" data-price="0.2" value="0"></td>
+      <td><input name="email" type="range" min="0" step="1" max="100" data-price="4.25" value="0"></td>
       <td class="value-email">1</td>
       <td class="subtotal-email">$0</td>
+    </tr>
+    <tr>
+      <td colspan="2">Security and Anti-DDoS</td>
+      <td><input name="security" type="checkbox" data-price="50"></td>
+      <td class="subtotal-security">$0</td>
+    </tr>
+    <tr>
+      <td colspan="2">Maintenance (Updates and Plugins)</td>
+      <td><input name="maintenance" type="checkbox" data-price="20"></td>
+      <td class="subtotal-maintenance">$0</td>
+    </tr>
+    <tr>
+      <td colspan="2">Regular Backup</td>
+      <td><input name="backup" type="checkbox" data-price="25"></td>
+      <td class="subtotal-backup">$0</td>
     </tr>
     </tbody>
     <tfoot>
@@ -42,7 +57,7 @@
     </tr>
     <tr>
       <th>Total</th>
-      <th>Annually (10% discount)</th>
+      <th>Annually (5% discount)</th>
       <th colspan="2" class="total-annually">$0</th>
     </tr>
     </tfoot>

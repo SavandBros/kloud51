@@ -13,5 +13,7 @@
     "--heading-color": "#444",
     "--content-bg": "white"
   },
-  "extraHead": []
+  "extraHead": [],
+  "headingsId": true,
+  "headingsIdSlugify": true
 }

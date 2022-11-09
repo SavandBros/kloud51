@@ -2,7 +2,7 @@
   --primary: #FF524C;
   --body-bg: #f9fafc;
   --body-color: #f9fafc;
-  --content-bg: white;
+  --content-bg: #fff;
   --content-color: #1e272e;
   --button-bg: #eee;
   --button-border: #eee;
@@ -156,6 +156,10 @@ td {
 
 .calculator input {
   width: 100%;
+}
+
+.calculator input[type=checkbox] {
+  width: auto;
 }
 
 .calculator tr > *:first-child {

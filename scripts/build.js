@@ -59,7 +59,7 @@ const minifyHTML = () => {
       fs.writeFileSync(filePath, minify(fs.readFileSync(filePath, { encoding: "utf-8" }), {
         collapseWhitespace: true,
         removeComments: true,
-      }));
+      }).replace('CURRENT_YEAR', new Date().getFullYear()));
     }
   });
 };
